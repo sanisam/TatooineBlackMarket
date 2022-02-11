@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "1a31d948-a1c5-4037-86d1-f4645b2b9105": {
+      "ProjectGuid": "1a31d948-a1c5-4037-86d1-f4645b2b9105",
+      "DisplayName": "Solution Items",
+      "ColorIndex": 0
+    },
+    "0f11dfa3-299b-4181-8ee5-1117cf173e2e": {
+      "ProjectGuid": "0f11dfa3-299b-4181-8ee5-1117cf173e2e",
+      "DisplayName": "Solution Items",
+      "ColorIndex": 1
+    },
+    "0f40f38c-74e6-471a-a454-bcb7ecb02745": {
+      "ProjectGuid": "0f40f38c-74e6-471a-a454-bcb7ecb02745",
+      "DisplayName": "Dit.Umb9.Mutobo.Web",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}
