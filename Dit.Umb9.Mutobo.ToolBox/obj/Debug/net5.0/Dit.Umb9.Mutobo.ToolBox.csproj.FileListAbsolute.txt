@@ -1,0 +1,12 @@
+E:\_sss\projects\MGB2\Dit.Umb9.Mutobo\Dit.Umb9.Mutobo.ToolBox\bin\Debug\net5.0\Dit.Umb9.Mutobo.ToolBox.deps.json
+E:\_sss\projects\MGB2\Dit.Umb9.Mutobo\Dit.Umb9.Mutobo.ToolBox\bin\Debug\net5.0\Dit.Umb9.Mutobo.ToolBox.dll
+E:\_sss\projects\MGB2\Dit.Umb9.Mutobo\Dit.Umb9.Mutobo.ToolBox\bin\Debug\net5.0\ref\Dit.Umb9.Mutobo.ToolBox.dll
+E:\_sss\projects\MGB2\Dit.Umb9.Mutobo\Dit.Umb9.Mutobo.ToolBox\bin\Debug\net5.0\Dit.Umb9.Mutobo.ToolBox.pdb
+E:\_sss\projects\MGB2\Dit.Umb9.Mutobo\Dit.Umb9.Mutobo.ToolBox\obj\Debug\net5.0\Dit.Umb9.Mutobo.ToolBox.csproj.AssemblyReference.cache
+E:\_sss\projects\MGB2\Dit.Umb9.Mutobo\Dit.Umb9.Mutobo.ToolBox\obj\Debug\net5.0\Dit.Umb9.Mutobo.ToolBox.GeneratedMSBuildEditorConfig.editorconfig
+E:\_sss\projects\MGB2\Dit.Umb9.Mutobo\Dit.Umb9.Mutobo.ToolBox\obj\Debug\net5.0\Dit.Umb9.Mutobo.ToolBox.AssemblyInfoInputs.cache
+E:\_sss\projects\MGB2\Dit.Umb9.Mutobo\Dit.Umb9.Mutobo.ToolBox\obj\Debug\net5.0\Dit.Umb9.Mutobo.ToolBox.AssemblyInfo.cs
+E:\_sss\projects\MGB2\Dit.Umb9.Mutobo\Dit.Umb9.Mutobo.ToolBox\obj\Debug\net5.0\Dit.Umb9.Mutobo.ToolBox.csproj.CoreCompileInputs.cache
+E:\_sss\projects\MGB2\Dit.Umb9.Mutobo\Dit.Umb9.Mutobo.ToolBox\obj\Debug\net5.0\Dit.Umb9.Mutobo.ToolBox.dll
+E:\_sss\projects\MGB2\Dit.Umb9.Mutobo\Dit.Umb9.Mutobo.ToolBox\obj\Debug\net5.0\ref\Dit.Umb9.Mutobo.ToolBox.dll
+E:\_sss\projects\MGB2\Dit.Umb9.Mutobo\Dit.Umb9.Mutobo.ToolBox\obj\Debug\net5.0\Dit.Umb9.Mutobo.ToolBox.pdb
