@@ -44,6 +44,20 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Mvc.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Umbraco.Cms.Core": {
+              "target": "Package",
+              "version": "[9.3.0, )"
+            },
+            "Umbraco.Cms.Web.Common": {
+              "target": "Package",
+              "version": "[9.3.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
