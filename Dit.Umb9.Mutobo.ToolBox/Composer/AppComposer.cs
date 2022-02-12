@@ -38,18 +38,18 @@ namespace Dit.Umb9.Mutobo.ToolBox.Composer
             builder.Services.AddSingleton<IConfigService, ConfigService>();
             builder.Services.AddTransient<IMutoboContentService, MutoboContentService>();
             builder.Services.AddScoped<ISeoService, SeoService>();
-            //builder.Services.AddScoped<IXmlSitemapService, XmlSitemapService>();
+            builder.Services.AddScoped<IXmlSitemapService, XmlSitemapService>();
             builder.Services.AddSingleton<ICardService, CardService>();
             builder.Services.AddSingleton<ISliderService, SliderService>();
-            //builder.Services.AddScoped<IMailService, MailService>();
-            //builder.Services.AddSingleton<IFlyerservice, FlyerService>();
+            builder.Services.AddScoped<IMailService, MailService>();
+            builder.Services.AddSingleton<IFlyerService, FlyerService>();
             builder.Services.AddSingleton<INavigationService, NavigationService>();
             builder.Services.AddSingleton<IPageLayoutService, PageLayoutService>();
             builder.Services.AddSingleton<IPictureLinkService, PictureLinkService>();
-            //builder.Services.AddScoped<ISearchService, SearchService>();
+            builder.Services.AddScoped<ISearchService, SearchService>();
             builder.Services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
             builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-            //builder.Services.AddSingleton<ICallToActionService, CalllToActionService>();
+            builder.Services.AddSingleton<ICallToActionService, CallToActionService>();
             builder.Services.AddSingleton<IThemeService, ThemeService>();
         }
     }

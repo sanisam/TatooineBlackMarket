@@ -26,11 +26,29 @@ namespace Dit.Umb9.Mutobo.ToolBox.Constants
         }
 
 
+
+
         public static class HeaderConfiguration {
 
             public const string Logo = "logo";
             public const string Link = "logoUrl";
         }
+
+        public static class MailConfiguration
+        {
+            public const string Alias = "mailConfiguration";
+
+            public static class Fields
+            {
+                public const string MailSubject = "mailSubject";
+                public const string MailBody = "mailBody";
+                public const string MailHeader = "mailHeader";
+                public const string MailFooter = "mailFooter";
+                public const string SenderMail = "senderMail";
+                public const string ReceiverMail = "receiverMail";
+            }
+        }
+
 
         #endregion
 
@@ -47,6 +65,49 @@ namespace Dit.Umb9.Mutobo.ToolBox.Constants
         }
         #endregion
 
+
+        #region modules
+
+        public static class CallToActionButton
+        {
+
+            public const string Alias = "callToActionButton";
+
+            public static class Fields
+            {
+                public const string Title = "title";
+                public const string Text = "text";
+                public const string Link = "link";
+            }
+        }
+
+
+        public static class Flyer
+        {
+            public const string Alias = "flyer";
+
+            public static class Fields
+            {
+                public const string Link = "link";
+                public const string Color = "color";
+                public const string Direction = "direction";
+                public const string Width = "width";
+                public const string Height = "height";
+                public const string Rotation = "rotation";
+                public const string Timer = "timer";
+                public const string Position = "position";
+                public const string FlyerTitle = "flyerTitle";
+                public const string FlyerImage = "flyerImage";
+                public const string FlyerTeaserText = "flyerTeaserText";
+                public const string FlyerLink = "website";
+                public const string MarginTop = "marginTop";
+                public const string MarginSide = "marginSide";
+                public const string TextHeight = "textHeight";
+                public const string TextWidth = "textWidth";
+            }
+        }
+
+        #endregion
 
         public static class SearchResults
         {

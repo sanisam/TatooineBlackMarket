@@ -40,6 +40,9 @@ namespace Dit.Umb9.Mutobo.ToolBox.Constants
                 public const string Thumbnail = "thumbnail";
                 public const string ExcludeFromSearch = "excludeFromSearch";
 
+                public const string CallToActionButton = "callToActionButton";
+                public const string ShowCtaButton = "showCtaButton";
+
             }
         }
 
