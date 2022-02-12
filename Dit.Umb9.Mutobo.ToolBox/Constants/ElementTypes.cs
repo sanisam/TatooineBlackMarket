@@ -78,6 +78,42 @@ namespace Dit.Umb9.Mutobo.ToolBox.Constants
             }
         }
 
+        public static class CardContainer
+        {
+            public const string Alias = "cardContainer";
+
+            public static class Fields
+            {
+                public const string Cards = "items";
+            }
+        }
+
+        public static class Card
+        {
+            public const string Alias = "card";
+
+            public static class Fields
+            {
+                public const string DetailPageLink = "detailPageLink";
+                public const string Image = "image";
+            }
+        }
+
+
+        public static class PersonalCard
+        {
+            public const string Alias = "personalCard";
+
+            public static class Fields
+            {
+                public const string Lastname = "lastname";
+                public const string Firstname = "firstname";
+                public const string Function = "function";
+                public const string Description = "description";
+                public const string IsMainPerson = "isMainPerson";
+                public const string DisplayType = "displayType";
+            }
+        }
 
         public static class CallToActionButton
         {

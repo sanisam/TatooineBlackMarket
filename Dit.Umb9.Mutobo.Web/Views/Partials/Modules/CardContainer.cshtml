@@ -1,6 +1,5 @@
-﻿@using Dit.Umb.Mutobo.PoCo
-@using Dit.Umb.Sparx.Constants
-@model Dit.Umb.Mutobo.Modules.CardContainer
+﻿@using Dit.Umb9.Mutobo.ToolBox.Models.PoCo
+@model Dit.Umb9.Mutobo.ToolBox.Modules.CardContainer
 
 <o-teaser-wrapper @(Model.Anchor != string.Empty ? $"id={Model.Anchor}" : "")>
     @*TODO: Remove this CRAP! *@ 
@@ -19,13 +18,17 @@
         ;
         <m-teaser>
             <a @($"{href} {target}")>
-                @card.Image.RenderWcPictureTag(height: $"{card.Image.Height}px", width: $"{card.Image.Width}px")
-                @if (card is Dit.Umb.Mutobo.PoCo.PersonnelCard personnelCard)
+                @if (card.Image != null)
+                {
+                   @card.Image.RenderWcPictureTag(height: $"{card.Image.Height}px", width: $"{card.Image.Width}px")
+                }
+             
+                @if (card is Dit.Umb9.Mutobo.ToolBox.Modules.PersonalCard personalCard)
                 {
                     <br/>
                     <div>
-                        <h3>@personnelCard.Firstname &nbsp; @personnelCard.Lastname</h3>
-                        <p>@personnelCard.Function</p>
+                        <h3>@personalCard.Firstname &nbsp; @personalCard.Lastname</h3>
+                        <p>@personalCard.Function</p>
                     </div>
                 }
             </a>

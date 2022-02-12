@@ -93,124 +93,124 @@ namespace Dit.Umb9.Mutobo.ToolBox.Services
                             break;
 
 
-                            //case DocumentTypes.Heading.Alias:
-                            //    result.Add(new Heading(element.value, null)
-                            //    {
-                            //        SortOrder = element.index
-                            //    });
-                            //    break;
-                            //case DocumentTypes.VideoComponent.Alias:
-                            //    result.Add(new VideoComponent(element.value, null)
-                            //    {
-                            //        SortOrder = element.index
-                            //    });
-                            //    break;
-                            //case DocumentTypes.RichTextComponent.Alias:
-                            //    result.Add(new RichtextComponent(element.value, null)
-                            //    {
-                            //        SortOrder = element.index
-                            //    });
-                            //    break;
-                            //case DocumentTypes.Flyer.Alias:
-                            //    result.Add(new Flyer(element.value, null)
-                            //    {
-                            //        SortOrder = element.index,
-                            //        Image = element.value.HasValue(DocumentTypes.Flyer.Fields.FlyerImage) ? ImageService
-                            //        .GetImage(element.value.Value<IPublishedContent>(DocumentTypes.Flyer.Fields.FlyerImage),
-                            //        width: 900,
-                            //        imageCropMode: ImageCropMode.Max)
-                            //        : null,
-                            //        TeaserText = element.value.Value<string>(DocumentTypes.Flyer.Fields.FlyerTeaserText),
-                            //        Link = element.value.Value<Link>(DocumentTypes.Flyer.Fields.Link)
+                        //case DocumentTypes.Heading.Alias:
+                        //    result.Add(new Heading(element.value, null)
+                        //    {
+                        //        SortOrder = element.index
+                        //    });
+                        //    break;
+                        //case DocumentTypes.VideoComponent.Alias:
+                        //    result.Add(new VideoComponent(element.value, null)
+                        //    {
+                        //        SortOrder = element.index
+                        //    });
+                        //    break;
+                        //case DocumentTypes.RichTextComponent.Alias:
+                        //    result.Add(new RichtextComponent(element.value, null)
+                        //    {
+                        //        SortOrder = element.index
+                        //    });
+                        //    break;
+                        //case DocumentTypes.Flyer.Alias:
+                        //    result.Add(new Flyer(element.value, null)
+                        //    {
+                        //        SortOrder = element.index,
+                        //        Image = element.value.HasValue(DocumentTypes.Flyer.Fields.FlyerImage) ? ImageService
+                        //        .GetImage(element.value.Value<IPublishedContent>(DocumentTypes.Flyer.Fields.FlyerImage),
+                        //        width: 900,
+                        //        imageCropMode: ImageCropMode.Max)
+                        //        : null,
+                        //        TeaserText = element.value.Value<string>(DocumentTypes.Flyer.Fields.FlyerTeaserText),
+                        //        Link = element.value.Value<Link>(DocumentTypes.Flyer.Fields.Link)
 
-                            //    });
-                            //    break;
+                        //    });
+                        //    break;
 
-                            //case DocumentTypes.Teaser.Alias:
-                            //    result.Add(GetTeaser(element.value, element.index, culture));
-                            //    break;
-                            //case DocumentTypes.SliderComponent.Alias:
-                            //    var sliderModule = new SliderComponent(element.value, null)
-                            //    {
-                            //        SortOrder = element.index
-                            //    };
+                        //case DocumentTypes.Teaser.Alias:
+                        //    result.Add(GetTeaser(element.value, element.index, culture));
+                        //    break;
+                        //case DocumentTypes.SliderComponent.Alias:
+                        //    var sliderModule = new SliderComponent(element.value, null)
+                        //    {
+                        //        SortOrder = element.index
+                        //    };
 
-                            //    var useGoldenRatio = (sliderModule.Height == null && sliderModule.Width == null);
-
-
-                            //sliderModule.Slides = SliderService.GetSlides(element.value,
-                            //    DocumentTypes.SliderComponent.Fields.Slides, sliderModule.Width, sliderModule.Height);
-                            //result.Add(sliderModule);
-                            //break;
+                        //    var useGoldenRatio = (sliderModule.Height == null && sliderModule.Width == null);
 
 
-
-                            //case DocumentTypes.PictureModule.Alias:
-                            //    var picModule = new PictureModule(element.value, null)
-                            //    {
-                            //        SortOrder = element.index
-                            //    };
-                            //    var isGoldenRatio = (picModule.Height == null && picModule.Width == null);
-                            //    picModule.Image = element.value.HasValue(DocumentTypes.Picture.Fields.Image)
-                            //        ? ImageService.GetImage(
-                            //            element.value.Value<IPublishedContent>(DocumentTypes.Picture.Fields.Image),
-                            //            height: 450,
-                            //            width: 800)
-                            //        : null;
-                            //    result.Add(picModule);
-                            //    break;
-
-                            //case DocumentTypes.Newsletter.Alias:
-                            //    result.Add(new Newsletter(element.value)
-                            //    {
-                            //        SortOrder = element.index
-                            //    });
-                            //    break;
-                            //case DocumentTypes.BlogModule.Alias:
-                            //    var model = new BlogModule(element.value, null)
-                            //    {
-                            //        SortOrder = element.index
-                            //    };
-
-                            //    model.BlogEntries = model.ParentPage != null ?
-                            //        model.ParentPage.Children.Select(c => new ArticlePage(c)
-                            //        {
-                            //            EmotionImages = c.HasValue(DocumentTypes.ArticlePage.Fields.EmotionImages) ?
-                            //            ImageService.GetImages(c.Value<IEnumerable<IPublishedContent>>(DocumentTypes.ArticlePage.Fields.EmotionImages)) : null
-                            //        })
-                            //        : CurrentPage.Children.Select(c => new ArticlePage(c)
-                            //        {
-                            //            EmotionImages = c.HasValue(DocumentTypes.ArticlePage.Fields.EmotionImages) ?
-                            //            ImageService.GetImages(c.Value<IEnumerable<IPublishedContent>>(DocumentTypes.ArticlePage.Fields.EmotionImages)) : null
-                            //        });
+                        //sliderModule.Slides = SliderService.GetSlides(element.value,
+                        //    DocumentTypes.SliderComponent.Fields.Slides, sliderModule.Width, sliderModule.Height);
+                        //result.Add(sliderModule);
+                        //break;
 
 
-                            //    result.Add(model);
-                            //    break;
 
-                            //case DocumentTypes.DoubleSliderComponent.Alias:
-                            //    var dblSliderComponent = new DoubleSliderComponent(element.value, null)
-                            //    {
+                        //case DocumentTypes.PictureModule.Alias:
+                        //    var picModule = new PictureModule(element.value, null)
+                        //    {
+                        //        SortOrder = element.index
+                        //    };
+                        //    var isGoldenRatio = (picModule.Height == null && picModule.Width == null);
+                        //    picModule.Image = element.value.HasValue(DocumentTypes.Picture.Fields.Image)
+                        //        ? ImageService.GetImage(
+                        //            element.value.Value<IPublishedContent>(DocumentTypes.Picture.Fields.Image),
+                        //            height: 450,
+                        //            width: 800)
+                        //        : null;
+                        //    result.Add(picModule);
+                        //    break;
 
-                            //        SortOrder = element.index
-                            //    };
-                            //    dblSliderComponent.Slides = SliderService.GetDoubleSlides(element.value, DocumentTypes.DoubleSliderComponent.Fields.Slides, width: dblSliderComponent.Width, height: dblSliderComponent.Height) as IEnumerable<TextImageSlide>;
-                            //    result.Add(dblSliderComponent);
-                            //    break;
-                            //case DocumentTypes.Quote.Alias:
-                            //    result.Add(new Quote(element.value, null)
-                            //    {
-                            //        SortOrder = element.index
-                            //    });
-                            //    break;
-                            //case DocumentTypes.CardContainer.Alias:
-                            //    result.Add(new CardContainer(element.value, null)
-                            //    {
-                            //        Cards = _cardService.GetCards(element.value, Constants.DocumentTypes.CardContainer.Fields.Cards),
-                            //        // set the sort order of the module to ensure the module order
-                            //        SortOrder = element.index
-                            //    });
-                            //    break;
+                        //case DocumentTypes.Newsletter.Alias:
+                        //    result.Add(new Newsletter(element.value)
+                        //    {
+                        //        SortOrder = element.index
+                        //    });
+                        //    break;
+                        //case DocumentTypes.BlogModule.Alias:
+                        //    var model = new BlogModule(element.value, null)
+                        //    {
+                        //        SortOrder = element.index
+                        //    };
+
+                        //    model.BlogEntries = model.ParentPage != null ?
+                        //        model.ParentPage.Children.Select(c => new ArticlePage(c)
+                        //        {
+                        //            EmotionImages = c.HasValue(DocumentTypes.ArticlePage.Fields.EmotionImages) ?
+                        //            ImageService.GetImages(c.Value<IEnumerable<IPublishedContent>>(DocumentTypes.ArticlePage.Fields.EmotionImages)) : null
+                        //        })
+                        //        : CurrentPage.Children.Select(c => new ArticlePage(c)
+                        //        {
+                        //            EmotionImages = c.HasValue(DocumentTypes.ArticlePage.Fields.EmotionImages) ?
+                        //            ImageService.GetImages(c.Value<IEnumerable<IPublishedContent>>(DocumentTypes.ArticlePage.Fields.EmotionImages)) : null
+                        //        });
+
+
+                        //    result.Add(model);
+                        //    break;
+
+                        //case DocumentTypes.DoubleSliderComponent.Alias:
+                        //    var dblSliderComponent = new DoubleSliderComponent(element.value, null)
+                        //    {
+
+                        //        SortOrder = element.index
+                        //    };
+                        //    dblSliderComponent.Slides = SliderService.GetDoubleSlides(element.value, DocumentTypes.DoubleSliderComponent.Fields.Slides, width: dblSliderComponent.Width, height: dblSliderComponent.Height) as IEnumerable<TextImageSlide>;
+                        //    result.Add(dblSliderComponent);
+                        //    break;
+                        //case DocumentTypes.Quote.Alias:
+                        //    result.Add(new Quote(element.value, null)
+                        //    {
+                        //        SortOrder = element.index
+                        //    });
+                        //    break;
+                        case ElementTypes.CardContainer.Alias:
+                            result.Add(new CardContainer(element.value, null)
+                            {
+                                Cards = _cardService.GetCards(element.value, ElementTypes.CardContainer.Fields.Cards),
+                                // set the sort order of the module to ensure the module order
+                                SortOrder = element.index
+                            });
+                            break;
                             //case DocumentTypes.ContactForm.Alias:
                             //    var contactFormModel = new ContactForm(element.value, null);
 
