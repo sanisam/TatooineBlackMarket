@@ -68,6 +68,17 @@ namespace Dit.Umb9.Mutobo.ToolBox.Constants
 
         #region modules
 
+        public static class Accordeon
+        {
+            public const string Alias = "accordeon";
+            public static class Fields
+            {
+                public const string Summary = "summary";
+                public const string Details = "details";
+            }
+        }
+
+
         public static class CallToActionButton
         {
 

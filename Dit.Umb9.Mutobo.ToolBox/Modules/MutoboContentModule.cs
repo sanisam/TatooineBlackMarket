@@ -35,7 +35,7 @@ namespace Dit.Umb9.Mutobo.ToolBox.Modules
         public bool SpaceBeforeModule { get; }
         public string ModuleTitle { get; }
         public bool SpacerAfterModule { get; }
-
- 
+        public int SortOrder { get; set; }
+        public string Anchor { get; set; }
     }
 }
