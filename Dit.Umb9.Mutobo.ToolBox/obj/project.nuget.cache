@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "kX7+tND+5L9x+lo9VQIzl+vz8IamaXFQ4UT2NOGh87byitUYb89Ul8WVKNsPekuUS9fiInUqtwMWM3stt2tGbQ==",
+  "dgSpecHash": "tEv9Sah8KwURygOdINPPfP+/K+ekP9nkaSw7mJMJWmdAlnGr51Jacz4mvI5b4Sq5FUZi1L6/SKgoQwNDg0K69Q==",
   "success": true,
   "projectFilePath": "E:\\_sss\\projects\\MGB2\\Dit.Umb9.Mutobo\\Dit.Umb9.Mutobo.ToolBox\\Dit.Umb9.Mutobo.ToolBox.csproj",
   "expectedPackageFiles": [
@@ -186,7 +186,8 @@
     "C:\\Users\\rolan\\.nuget\\packages\\umbraco.cms.examine.lucene\\9.3.0\\umbraco.cms.examine.lucene.9.3.0.nupkg.sha512",
     "C:\\Users\\rolan\\.nuget\\packages\\umbraco.cms.infrastructure\\9.3.0\\umbraco.cms.infrastructure.9.3.0.nupkg.sha512",
     "C:\\Users\\rolan\\.nuget\\packages\\umbraco.cms.publishedcache.nucache\\9.3.0\\umbraco.cms.publishedcache.nucache.9.3.0.nupkg.sha512",
-    "C:\\Users\\rolan\\.nuget\\packages\\umbraco.cms.web.common\\9.3.0\\umbraco.cms.web.common.9.3.0.nupkg.sha512"
+    "C:\\Users\\rolan\\.nuget\\packages\\umbraco.cms.web.common\\9.3.0\\umbraco.cms.web.common.9.3.0.nupkg.sha512",
+    "C:\\Users\\rolan\\.nuget\\packages\\umbraco.cms.web.website\\9.3.0\\umbraco.cms.web.website.9.3.0.nupkg.sha512"
   ],
   "logs": []
 }

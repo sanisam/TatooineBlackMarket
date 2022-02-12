@@ -36,6 +36,7 @@
           "Microsoft.AspNetCore.Mvc.Abstractions": "2.2.0",
           "Umbraco.Cms.Core": "9.3.0",
           "Umbraco.Cms.Web.Common": "9.3.0",
+          "Umbraco.Cms.Web.Website": "9.3.0",
           "Microsoft.AspNetCore.Antiforgery": "5.0.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "5.0.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "5.0.0.0",
@@ -2297,6 +2298,22 @@
         },
         "compile": {
           "lib/net5.0/Umbraco.Web.Common.dll": {}
+        }
+      },
+      "Umbraco.Cms.Web.Website/9.3.0": {
+        "dependencies": {
+          "Umbraco.Cms.Core": "9.3.0",
+          "Umbraco.Cms.Infrastructure": "9.3.0",
+          "Umbraco.Cms.Web.Common": "9.3.0"
+        },
+        "runtime": {
+          "lib/net5.0/Umbraco.Web.Website.dll": {
+            "assemblyVersion": "9.3.0.0",
+            "fileVersion": "9.3.0.0"
+          }
+        },
+        "compile": {
+          "lib/net5.0/Umbraco.Web.Website.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/5.0.0.0": {
@@ -5231,6 +5248,13 @@
       "sha512": "sha512-SYlSlfd+Roz4dM1epw3bvj+/bpsz5su2KRkJ3ggBmzEnZNncG75Bt9G1CPtLMQaUqO9hz/tzEUoCV2BhEXzgcQ==",
       "path": "umbraco.cms.web.common/9.3.0",
       "hashPath": "umbraco.cms.web.common.9.3.0.nupkg.sha512"
+    },
+    "Umbraco.Cms.Web.Website/9.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-P5/qm+S5lPGQUbpwdsPExXmUoZ/GRCMt55r1cyYS/O06lmjswn8njrCodBTme9pzQzAB5ipUKoBrDth6eyMBNA==",
+      "path": "umbraco.cms.web.website/9.3.0",
+      "hashPath": "umbraco.cms.web.website.9.3.0.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Antiforgery/5.0.0.0": {
       "type": "referenceassembly",

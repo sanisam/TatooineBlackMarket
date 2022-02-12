@@ -15,23 +15,29 @@ using Umbraco.Cms.Core.Web;
 using Umbraco.Cms.Web.Common.Controllers;
 using Umbraco.Extensions;
 
-
 namespace Dit.Umb9.Mutobo.ToolBox.Controllers.PageControllers
 {
-    internal class BasePageController : RenderController
+    public class BasePageController : RenderController
     {
+
+        protected readonly IImageService ImageService;
         protected readonly IPageLayoutService PageLayoutService;
         protected readonly IMutoboContentService ContentService;
 
 
         public BasePageController(
-            ILogger<BasePageController> logger,
+            ILogger<RenderController> logger,
             ICompositeViewEngine compositeViewEngine,
             IUmbracoContextAccessor umbracoContextAccessor,
-            IPageLayoutService pageLayoutService, IMutoboContentService contentService) : base(logger, compositeViewEngine, umbracoContextAccessor)
+            IImageService imageService,
+            IPageLayoutService pageLayoutService,
+            IMutoboContentService contentService)
+            : base(logger, compositeViewEngine, umbracoContextAccessor)
         {
+            ImageService = imageService;
             PageLayoutService = pageLayoutService;
             ContentService = contentService;
+   
         }
 
         public override IActionResult Index() 
@@ -55,7 +61,10 @@ namespace Dit.Umb9.Mutobo.ToolBox.Controllers.PageControllers
 
             model.HeaderConfiguration = PageLayoutService.GetHeaderConfiguration(CurrentPage);
             model.FooterConfiguration = PageLayoutService.GetFooterConfiguration(CurrentPage);
-            model.FooterConfiguration.HomePageLogo = model.HeaderConfiguration.Logo;
+
+            if (model.FooterConfiguration != null)
+                model.FooterConfiguration.HomePageLogo = model.HeaderConfiguration?.Logo;
+
             return CurrentTemplate<BasePage>(model);
 
         }

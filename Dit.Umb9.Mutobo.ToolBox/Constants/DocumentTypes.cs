@@ -16,7 +16,7 @@ namespace Dit.Umb9.Mutobo.ToolBox.Constants
         /// </summary>
         public static class BasePage
         {
-            public static string Alias = "basePage";
+            public const string Alias = "basePage";
 
             public static class Fields
             {
@@ -48,7 +48,7 @@ namespace Dit.Umb9.Mutobo.ToolBox.Constants
         /// </summary>
         public static class HomePage
         {
-            public static string Alias = "homePage";
+            public const string Alias = "homePage";
 
             public static class Fields
             {
@@ -59,6 +59,26 @@ namespace Dit.Umb9.Mutobo.ToolBox.Constants
             }
         }
         #endregion
+
+
+        /// <summary>
+        /// constants for the articlePage document type
+        /// </summary>
+        public static class ArticlePage
+        {
+            public const string Alias = "articlePage";
+
+            public static class Fields
+            {
+                public const string Abstract = "abstract";
+                public const string HideAbstract = "hideAbstract";
+                public const string MainContent = "mainContent";
+                public const string EmotionImages = "emotionImages";
+                public const string TeaserImageHeight = "teaserImageHeight";
+                public const string TeaserImageWidth = "teaserImageWidth";
+            }
+        }
+
 
 
     }

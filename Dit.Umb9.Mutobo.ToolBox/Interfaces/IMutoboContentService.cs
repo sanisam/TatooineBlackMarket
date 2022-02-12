@@ -16,6 +16,5 @@ namespace Dit.Umb9.Mutobo.ToolBox.Interfaces
     {
         BasePage GetPageModel(IPublishedContent content);
         IEnumerable<IModule> GetContent(IPublishedContent content, string fieldName, string culture = null);
-
     }
 }

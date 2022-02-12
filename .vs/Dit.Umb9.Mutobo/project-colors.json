@@ -15,7 +15,17 @@
       "ProjectGuid": "0f40f38c-74e6-471a-a454-bcb7ecb02745",
       "DisplayName": "Dit.Umb9.Mutobo.Web",
       "ColorIndex": 2
+    },
+    "efa1915d-7e42-4caa-a97f-eed06ff234a9": {
+      "ProjectGuid": "efa1915d-7e42-4caa-a97f-eed06ff234a9",
+      "DisplayName": "Dit.Umb9.Mutobo.ToolBox",
+      "ColorIndex": 3
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
     }
   },
-  "NextColorIndex": 3
+  "NextColorIndex": 4
 }

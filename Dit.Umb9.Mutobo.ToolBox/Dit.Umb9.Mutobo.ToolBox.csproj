@@ -6,14 +6,13 @@
 
   <ItemGroup>
     <Folder Include="Components\" />
-    <Folder Include="Modules\" />
-    <Folder Include="Services\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Abstractions" Version="2.2.0" />
     <PackageReference Include="Umbraco.Cms.Core" Version="9.3.0" />
     <PackageReference Include="Umbraco.Cms.Web.Common" Version="9.3.0" />
+    <PackageReference Include="Umbraco.Cms.Web.Website" Version="9.3.0" />
   </ItemGroup>
 
 </Project>

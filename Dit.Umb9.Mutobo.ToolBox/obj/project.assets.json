@@ -2559,6 +2559,23 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "Umbraco.Cms.Web.Website/9.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Umbraco.Cms.Core": "9.3.0",
+          "Umbraco.Cms.Infrastructure": "9.3.0",
+          "Umbraco.Cms.Web.Common": "9.3.0"
+        },
+        "compile": {
+          "lib/net5.0/Umbraco.Web.Website.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Umbraco.Web.Website.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },
@@ -8543,13 +8560,27 @@
         "umbraco.cms.web.common.9.3.0.nupkg.sha512",
         "umbraco.cms.web.common.nuspec"
       ]
+    },
+    "Umbraco.Cms.Web.Website/9.3.0": {
+      "sha512": "P5/qm+S5lPGQUbpwdsPExXmUoZ/GRCMt55r1cyYS/O06lmjswn8njrCodBTme9pzQzAB5ipUKoBrDth6eyMBNA==",
+      "type": "package",
+      "path": "umbraco.cms.web.website/9.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net5.0/Umbraco.Web.Website.dll",
+        "lib/net5.0/Umbraco.Web.Website.xml",
+        "umbraco.cms.web.website.9.3.0.nupkg.sha512",
+        "umbraco.cms.web.website.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
       "Microsoft.AspNetCore.Mvc.Abstractions >= 2.2.0",
       "Umbraco.Cms.Core >= 9.3.0",
-      "Umbraco.Cms.Web.Common >= 9.3.0"
+      "Umbraco.Cms.Web.Common >= 9.3.0",
+      "Umbraco.Cms.Web.Website >= 9.3.0"
     ]
   },
   "packageFolders": {
@@ -8607,6 +8638,10 @@
             "version": "[9.3.0, )"
           },
           "Umbraco.Cms.Web.Common": {
+            "target": "Package",
+            "version": "[9.3.0, )"
+          },
+          "Umbraco.Cms.Web.Website": {
             "target": "Package",
             "version": "[9.3.0, )"
           }

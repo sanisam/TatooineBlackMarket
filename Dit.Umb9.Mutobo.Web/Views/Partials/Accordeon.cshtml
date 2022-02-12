@@ -1,0 +1,15 @@
+﻿
+@using Dit.Umb.Mutobo.Constants
+@using Umbraco.Web.Composing
+@model Dit.Umb.Mutobo.Modules.Accordeon
+<m-details @(Model.Anchor != string.Empty ? $"id={Model.Anchor}" : "")>
+    <details >
+        <summary>
+            @Model.Summary.ToUpper()
+        </summary>
+        <p>
+            @Html.Raw(Model.Details)
+            <a href="#" class="close">"TRANSLATE"</a>
+        </p>
+    </details>
+</m-details>

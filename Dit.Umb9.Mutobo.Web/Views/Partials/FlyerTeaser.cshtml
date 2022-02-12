@@ -1,0 +1,18 @@
+﻿@using Dit.Umb.Mutobo.Common.Extensions
+@using Dit.Umb.Mutobo.Constants
+@using Dit.Umb.Mutobo.PoCo
+@using Image = Dit.Umb.Mutobo.PoCo.Image
+@model Dit.Umb.Mutobo.Modules.Flyer
+@{
+    var img = Model.Image;
+    //new Image();
+    //Model.GetImage(DocumentTypes.Flyer.FlyerImage);
+}
+
+<m-flyer href="@(Model.Link?.Url ?? "#")" @(Model.Anchor != string.Empty ? $"id={Model.Anchor}" : "")>
+    <h1>@Model.Title</h1>
+    <p>
+        @Model.TeaserText
+    </p>
+    @(img?.RenderWcPictureTag() ?? new HtmlString(String.Empty))
+</m-flyer>

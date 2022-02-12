@@ -1,0 +1,49 @@
+﻿
+@using Dit.Umb.Mutobo.Enum
+@using Dit.Umb.Mutobo.Interfaces
+@using Dit.Umb.Mutobo.Modules
+@using Dit.Umb.Mutobo.PoCo
+
+@model Dit.Umb.Mutobo.PageModels.ArticlePage
+
+<div>
+    @if (!string.IsNullOrEmpty(Model.PageTitle))
+    {
+        <h2>@Model.PageTitle.ToUpper()</h2>
+    }
+    @if (Model.EmotionImages != null && Model.EmotionImages.Any())
+    {
+        if (Model.EmotionImages.Count() < 2)
+        {
+            var image = Model.EmotionImages.FirstOrDefault();
+
+            if (image != null)
+            {
+                @image.RenderWcPictureTag()
+            }
+        }
+        else
+        {
+            var configService = (IConfigurationService) DependencyResolver.Current.GetService(typeof(IConfigurationService));
+            @Html.Partial("~/Views/Partials/Slider.cshtml", new EmptySliderComponent()
+            {
+                Slides = Model.EmotionImages,
+                GalleryType = EGalleryType.Boxed,
+                Width = 800,
+                Height = 450,
+            })
+            ;
+        }
+    }
+    @if (!Model.HideAbstract && !string.IsNullOrEmpty(Model.Abstract))
+    {
+        <p>@Model.Abstract</p>
+    }
+    @if (!string.IsNullOrEmpty(Model.MainContent))
+    {
+        <div>
+            @Html.Raw(Model.MainContent)
+        </div>
+    }
+</div>
+
