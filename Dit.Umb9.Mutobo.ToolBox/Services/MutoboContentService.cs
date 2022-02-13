@@ -188,15 +188,15 @@ namespace Dit.Umb9.Mutobo.ToolBox.Services
                         //    result.Add(model);
                         //    break;
 
-                        //case DocumentTypes.DoubleSliderComponent.Alias:
-                        //    var dblSliderComponent = new DoubleSliderComponent(element.value, null)
-                        //    {
+                        case ElementTypes.DoubleSliderComponent.Alias:
+                            var dblSliderComponent = new DoubleSliderComponent(element.value, null)
+                            {
 
-                        //        SortOrder = element.index
-                        //    };
-                        //    dblSliderComponent.Slides = SliderService.GetDoubleSlides(element.value, DocumentTypes.DoubleSliderComponent.Fields.Slides, width: dblSliderComponent.Width, height: dblSliderComponent.Height) as IEnumerable<TextImageSlide>;
-                        //    result.Add(dblSliderComponent);
-                        //    break;
+                                SortOrder = element.index
+                            };
+                            dblSliderComponent.Slides = SliderService.GetDoubleSlides(element.value, ElementTypes.DoubleSliderComponent.Fields.Slides, width: dblSliderComponent.Width, height: dblSliderComponent.Height) as IEnumerable<TextImageSlide>;
+                            result.Add(dblSliderComponent);
+                            break;
                         //case DocumentTypes.Quote.Alias:
                         //    result.Add(new Quote(element.value, null)
                         //    {

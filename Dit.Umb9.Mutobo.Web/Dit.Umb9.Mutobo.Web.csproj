@@ -15,6 +15,9 @@
         <ProjectReference Include="..\Dit.Umb9.Mutobo.ToolBox\Dit.Umb9.Mutobo.ToolBox.csproj" />
         <RuntimeHostConfigurationOption Include="System.Globalization.AppLocalIcu" Value="68.2" />
     </ItemGroup>
+    <ItemGroup>
+      <Folder Include="uSync\" />
+    </ItemGroup>
 
 
 

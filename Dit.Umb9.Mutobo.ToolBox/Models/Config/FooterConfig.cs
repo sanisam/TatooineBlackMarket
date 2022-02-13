@@ -14,7 +14,7 @@ namespace Dit.Umb9.Mutobo.ToolBox.Models.Config
 {
     public class FooterConfig : PublishedElementModel, IFooterConfiguration
     {
-        public IEnumerable<PoCo.FooterNavBlock> FooterNavBlocks { get; set; }
+        public IEnumerable<FooterNavBlock> FooterNavBlocks { get; set; }
 
         public IEnumerable<Link> FooterLinks =>
             this.Value<IEnumerable<Link>>(ElementTypes.FooterConfiguration.Fields.Links);
@@ -35,15 +35,7 @@ namespace Dit.Umb9.Mutobo.ToolBox.Models.Config
 
         public string Theme { get; set; }
 
-        IEnumerable<Link> IFooterConfiguration.FooterLinks => throw new NotImplementedException();
 
-        IEnumerable<FooterContactArea> IFooterConfiguration.FooterContactBlock => throw new NotImplementedException();
-
-        IEnumerable<PictureLink> IFooterConfiguration.PictureLinks => throw new NotImplementedException();
-
-        Image IFooterConfiguration.HomePageLogo { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-
-        IEnumerable<Link> IFooterConfiguration.BlockLinks => throw new NotImplementedException();
 
         public FooterConfig(IPublishedElement content, IPublishedValueFallback publishedValueFallback) : base(content, publishedValueFallback)
         {

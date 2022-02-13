@@ -51,6 +51,7 @@ namespace Dit.Umb9.Mutobo.ToolBox.Composer
             builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             builder.Services.AddSingleton<ICallToActionService, CallToActionService>();
             builder.Services.AddSingleton<IThemeService, ThemeService>();
+            builder.Services.AddSingleton<IDictionaryService, DictionaryService>();
         }
     }
 }

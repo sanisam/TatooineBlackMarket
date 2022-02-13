@@ -1,6 +1,7 @@
 ﻿@using System.Linq
-@using Dit.Umb.Mutobo.Constants
-@model Dit.Umb.Mutobo.Configuration.FooterConfiguration
+@using Dit.Umb9.Mutobo.ToolBox.Constants
+
+@model Dit.Umb9.Mutobo.ToolBox.Models.Config.FooterConfig
 <o-footer namespace="footer-" theme="@Model.Theme">
     @{
         var index = 0;
@@ -63,7 +64,7 @@
         @if (Model.FooterLinks != null && Model.FooterLinks.Any())
         {
             <ul>
-                @if (Model.HasValue(DocumentTypes.FooterConfiguration.Fields.CopyRight))
+                @if (Model.HasValue(ElementTypes.FooterConfiguration.Fields.CopyRight))
                 {
                     <li>
                         <span>

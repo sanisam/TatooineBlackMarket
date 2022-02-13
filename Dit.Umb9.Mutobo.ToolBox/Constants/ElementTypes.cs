@@ -25,9 +25,6 @@ namespace Dit.Umb9.Mutobo.ToolBox.Constants
             }
         }
 
-
-
-
         public static class HeaderConfiguration {
 
             public const string Logo = "logo";
@@ -68,6 +65,51 @@ namespace Dit.Umb9.Mutobo.ToolBox.Constants
 
         #region modules
 
+
+        public static class VideoComponent
+        {
+            public const string Alias = "videoComponent";
+
+            public static class Fields
+            {
+                public const string VideoFile = "videoFile";
+                public const string Embedded = "embedded";
+                public const string Text = "text";
+                public const string Height = "height";
+                public const string Width = "width";
+            }
+        }
+
+        public static class DoubleSliderComponent
+        {
+
+            public const string Alias = "doubleSlider";
+
+            public static class Fields
+            {
+                public const string Slides = "slides";
+                public const string Height = "height";
+                public const string Width = "width";
+                public const string Interval = "interval";
+                public const string DisplayType = "displayType";
+            }
+        }
+
+        public static class TextImageSlide
+        {
+            public const string Alias = "textImageSlide";
+
+            public static class Fields
+            {
+                public const string Link = "link";
+                public const string Image = "image";
+                public const string Text = "text";
+                public const string Title = "title";
+            }
+
+        }
+
+
         public static class Accordeon
         {
             public const string Alias = "accordeon";
@@ -84,7 +126,7 @@ namespace Dit.Umb9.Mutobo.ToolBox.Constants
 
             public static class Fields
             {
-                public const string Cards = "items";
+                public const string Cards = "cards";
             }
         }
 
@@ -155,6 +197,18 @@ namespace Dit.Umb9.Mutobo.ToolBox.Constants
         }
 
         #endregion
+
+
+        public static class Picture
+        {
+            public const string Alias = "pictureModule";
+
+            public static class Fields
+            {
+                public const string Image = "image";
+            }
+        }
+
 
         public static class SearchResults
         {
