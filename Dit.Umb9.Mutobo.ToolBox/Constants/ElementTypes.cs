@@ -66,6 +66,30 @@ namespace Dit.Umb9.Mutobo.ToolBox.Constants
         #region modules
 
 
+        public static class RichTextComponent
+        {
+            public const string Alias = "richTextComponent";
+
+            public static class Fields
+            {
+                public const string RichText = "richText";
+
+            }
+        }
+
+
+        public static class Heading
+        {
+            public const string Alias = "heading";
+
+            public static class Fields
+            {
+                public const string Text = "text";
+                public const string RenderAs = "renderAs";
+                public const string NavigationAnchor = "navigationAnchor";
+            }
+        }
+
         public static class VideoComponent
         {
             public const string Alias = "videoComponent";

@@ -64,7 +64,7 @@ namespace Dit.Umb9.Mutobo.ToolBox.Modules
         public async Task<IHtmlContent> RenderModule(Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper helper)
         {
 
-            return await helper.PartialAsync("~/Views/Modules/VideoComponent.cshtml", this, helper.ViewData);
+            return await helper.PartialAsync("~/Views/Partials/Modules/VideoComponent.cshtml", this, helper.ViewData);
 
         }
     }

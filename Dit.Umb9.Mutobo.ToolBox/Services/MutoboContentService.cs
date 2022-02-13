@@ -93,24 +93,24 @@ namespace Dit.Umb9.Mutobo.ToolBox.Services
                             break;
 
 
-                        //case DocumentTypes.Heading.Alias:
-                        //    result.Add(new Heading(element.value, null)
-                        //    {
-                        //        SortOrder = element.index
-                        //    });
-                        //    break;
-                        //case DocumentTypes.VideoComponent.Alias:
-                        //    result.Add(new VideoComponent(element.value, null)
-                        //    {
-                        //        SortOrder = element.index
-                        //    });
-                        //    break;
-                        //case DocumentTypes.RichTextComponent.Alias:
-                        //    result.Add(new RichtextComponent(element.value, null)
-                        //    {
-                        //        SortOrder = element.index
-                        //    });
-                        //    break;
+                        case ElementTypes.Heading.Alias:
+                            result.Add(new Heading(element.value, null)
+                            {
+                                SortOrder = element.index
+                            });
+                            break;
+                        case ElementTypes.VideoComponent.Alias:
+                            result.Add(new VideoComponent(element.value, null)
+                            {
+                                SortOrder = element.index
+                            });
+                            break;
+                        case ElementTypes.RichTextComponent.Alias:
+                            result.Add(new RichtextComponent(element.value, null)
+                            {
+                                SortOrder = element.index
+                            });
+                            break;
                         //case DocumentTypes.Flyer.Alias:
                         //    result.Add(new Flyer(element.value, null)
                         //    {

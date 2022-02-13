@@ -18,6 +18,8 @@ namespace Dit.Umb9.Mutobo.ToolBox.Modules
         public int? Width { get; set; }
         public int? Height { get; set; }
 
+        public string Anchor => null;
+
         public IHtmlContent RenderIFrame(int? width = null, int? height = null)
         {
             var newWidth = width ?? Width;

@@ -28,6 +28,8 @@ namespace Dit.Umb9.Mutobo.ToolBox.Interfaces
         bool SpaceBeforeModule { get; }
 
 
+ 
+
         /// <summary>
         /// render method with default implementation
         /// </summary>

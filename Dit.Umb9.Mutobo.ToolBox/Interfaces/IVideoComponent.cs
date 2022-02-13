@@ -10,6 +10,7 @@ namespace Dit.Umb9.Mutobo.ToolBox.Interfaces
 {
     public interface IVideoComponent
     {
+        string Anchor { get; }
         Video Video { get; }
         string Embedded { get; }
         string Text { get; }
