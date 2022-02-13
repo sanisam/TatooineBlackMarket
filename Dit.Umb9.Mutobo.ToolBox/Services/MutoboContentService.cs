@@ -239,10 +239,13 @@ namespace Dit.Umb9.Mutobo.ToolBox.Services
                 default:
                     result = new BasePage(content)
                     {
+
                     };
                     break;
 
                 case DocumentTypes.ArticlePage.Alias:
+
+
                     result = new ArticlePage(content)
                     {
                         EmotionImages = content.HasValue(DocumentTypes.ArticlePage.Fields.EmotionImages) ?
@@ -251,6 +254,19 @@ namespace Dit.Umb9.Mutobo.ToolBox.Services
                         height: 450) : null,
                     };
                     break;
+
+
+                case DocumentTypes.ContentPage.Alias:
+                    result = new ContentPage(content)
+                    {
+                        EmotionImages = content.HasValue(DocumentTypes.ArticlePage.Fields.EmotionImages) ?
+                        ImageService.GetImages(content.Value<IEnumerable<IPublishedContent>>(DocumentTypes.ArticlePage.Fields.EmotionImages),
+                        width: 800,
+                        height: 450) : null,
+                        Modules = content.HasValue(DocumentTypes.ContentPage.Fields.Modules) ? GetContent(content, DocumentTypes.ContentPage.Fields.Modules) : null
+                    };
+                    break;
+
 
                 case DocumentTypes.HomePage.Alias:
                     result = new HomePage(content)
@@ -315,6 +331,8 @@ namespace Dit.Umb9.Mutobo.ToolBox.Services
         {
             var result = new List<Image>();
 
+
+            
             if (content.HasValue(DocumentTypes.ArticlePage.Fields.EmotionImages, culture))
                 result.AddRange(ImageService.GetImages(content.Value<IEnumerable<IPublishedContent>>(DocumentTypes.ArticlePage.Fields.EmotionImages), width: 800, height: 450));
 

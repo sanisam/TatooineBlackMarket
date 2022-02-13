@@ -17,12 +17,12 @@
     </m-flyer>*@
 
 
-    <h1>FlyerS</h1>
+ 
 
-<m-flyer href="@(Model.Link?.Url ?? "#")" @(Model.Anchor != string.Empty ? $"id={Model.Anchor}" : "") direction=left>
+<m-flyer href="@(Model.Link?.Url ?? "#")" @(Model.Anchor != string.Empty ? $"id={Model.Anchor}" : "") direction=right   timer=2000>
     <h1>@Model.Title</h1>
     <p>
         @Model.TeaserText
     </p>
-    @(Model.Image.RenderWcPictureTag() ?? new HtmlString(String.Empty))
+    <a-picture defaultsource="@Model.Image.DefaultSource.Src" alt="@Model.Image.Alt" sources="@Model.Image.GetSourcesAsJSON()" />
 </m-flyer>

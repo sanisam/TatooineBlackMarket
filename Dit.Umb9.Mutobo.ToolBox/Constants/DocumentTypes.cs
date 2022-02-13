@@ -83,6 +83,15 @@ namespace Dit.Umb9.Mutobo.ToolBox.Constants
         }
 
 
+        public static class ContentPage
+        {
+            public const string Alias = "contentPage";
+
+            public static class Fields
+            {
+                public const string Modules = "modules";
+            }
+        }
 
     }
 }

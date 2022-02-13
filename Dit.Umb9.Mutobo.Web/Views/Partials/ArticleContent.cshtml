@@ -1,10 +1,10 @@
 ﻿
-@using Dit.Umb.Mutobo.Enum
-@using Dit.Umb.Mutobo.Interfaces
-@using Dit.Umb.Mutobo.Modules
-@using Dit.Umb.Mutobo.PoCo
+@using Dit.Umb9.Mutobo.ToolBox.Enum
+@using Dit.Umb9.Mutobo.ToolBox.Interfaces
+@using Dit.Umb9.Mutobo.ToolBox.Modules
+@using Dit.Umb9.Mutobo.ToolBox.Models.PoCo
 
-@model Dit.Umb.Mutobo.PageModels.ArticlePage
+@model Dit.Umb9.Mutobo.ToolBox.Models.Pages.ArticlePage
 
 <div>
     @if (!string.IsNullOrEmpty(Model.PageTitle))
@@ -22,9 +22,9 @@
                 @image.RenderWcPictureTag()
             }
         }
-        else
+@*        else
         {
-            var configService = (IConfigurationService) DependencyResolver.Current.GetService(typeof(IConfigurationService));
+
             @Html.Partial("~/Views/Partials/Slider.cshtml", new EmptySliderComponent()
             {
                 Slides = Model.EmotionImages,
@@ -33,7 +33,7 @@
                 Height = 450,
             })
             ;
-        }
+        }*@
     }
     @if (!Model.HideAbstract && !string.IsNullOrEmpty(Model.Abstract))
     {
