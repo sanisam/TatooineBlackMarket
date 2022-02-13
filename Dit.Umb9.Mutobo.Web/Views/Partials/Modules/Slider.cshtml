@@ -1,26 +1,24 @@
-﻿@using Dit.Umb.Mutobo.Interfaces
-@using Dit.Umb.Mutobo.PoCo
-@model  Dit.Umb.Mutobo.Interfaces.ISliderComponent
+﻿@using Dit.Umb9.Mutobo.ToolBox.Interfaces
+@using Dit.Umb9.Mutobo.ToolBox.Models.PoCo
+@model  Dit.Umb9.Mutobo.ToolBox.Interfaces.ISliderComponent
 
 <third-party-macro-carousel pagination loop height="@(Model.Height != null ? $"{Model.Height}px" : "auto")"
                             namespace="carousel-" interval="@(Model.Interval ?? 5000)"
                             @(Model.Anchor != string.Empty ? $"id={Model.Anchor}" : "")>
     @foreach (var media in Model.Slides)
     {
-        if (media is Dit.Umb.Mutobo.PoCo.Image image)
+        if (media is Dit.Umb9.Mutobo.ToolBox.Models.PoCo.Image image)
         {
             @image.RenderWcPictureTag(nameSpace: Model.GetPictureNameSpace(), useSources: true)
         }
-        else if (media is Dit.Umb.Mutobo.PoCo.Picture picture)
+        else if (media is Dit.Umb9.Mutobo.ToolBox.Modules.PictureModule picture)
         {
             @picture.Image.RenderWcPictureTag(nameSpace: Model.GetPictureNameSpace(), useSources: true)
         }
         else if (media is IVideoComponent video)
         {
         
-                @Html.Partial("~/Views/Partials/VideoComponent.cshtml", video)
-    
-
+                @await Html.PartialAsync("~/Views/Partials/Modules/VideoComponent.cshtml", video)
         }
  
     }

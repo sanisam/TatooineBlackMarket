@@ -45,18 +45,24 @@ namespace Dit.Umb9.Mutobo.ToolBox.Services
                             Video = vc.Video
                         });
                     }
-                    else if (slideNode.ContentType.Alias == ElementTypes.Picture.Alias)
+                    else if (slideNode.ContentType.Alias == ElementTypes.PictureModule.Alias)
                     {
-                        result.Add(new Picture()
+                        result.Add(new PictureModule(slideNode, null)
                         {
-                            Image = slideNode.HasValue(ElementTypes.Picture.Fields.Image) ? _imageService.GetImage(
+                            Image = slideNode.HasValue(ElementTypes.PictureModule.Fields.Image) ? _imageService.GetImage(
                                 slideNode.Value<IPublishedContent>(ElementTypes.Picture.Fields.Image), width, height, isGoldenRatio: isGoldenRatio) : null
                         });
                     }
-
-
+                    else if (slideNode.ContentType.Alias == ElementTypes.TextImageSlide.Alias)
+                    {
+                        result.Add(new TextImageSlide(slideNode, null) { 
+                        
+                            Image = slideNode.HasValue(ElementTypes.TextImageSlide.Fields.Image) ?
+                             _imageService.GetImage(
+                                slideNode.Value<IPublishedContent>(ElementTypes.TextImageSlide.Fields.Image), width, height, isGoldenRatio: isGoldenRatio) : null
+                        });
+                    }
                 }
-
             }
 
             return result;

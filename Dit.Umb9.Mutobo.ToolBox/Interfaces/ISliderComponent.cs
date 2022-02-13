@@ -13,5 +13,6 @@ namespace Dit.Umb9.Mutobo.ToolBox.Interfaces
         int? Interval { get; }
         int? Width { get; }
         string GetPictureNameSpace();
+        string Anchor { get; set; }
     }
 }

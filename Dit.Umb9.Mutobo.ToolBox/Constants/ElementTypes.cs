@@ -66,6 +66,18 @@ namespace Dit.Umb9.Mutobo.ToolBox.Constants
         #region modules
 
 
+        public static class PictureModule
+        {
+            public const string Alias = "pictureModule";
+
+            public static class Fields
+            {
+                public const string Image = "image";
+                public const string Height = "height";
+                public const string Width = "width";
+            }
+        }
+
         public static class SliderComponent
         {
             public const string Alias = "sliderComponent";

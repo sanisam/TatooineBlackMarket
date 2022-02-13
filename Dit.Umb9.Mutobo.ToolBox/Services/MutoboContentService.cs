@@ -85,7 +85,7 @@ namespace Dit.Umb9.Mutobo.ToolBox.Services
 
                     MutoboContentModule module = null;
                     switch (element.value.ContentType.Alias)
-                    { 
+                    {
                         case ElementTypes.Accordeon.Alias:
                             module = new Accordeon(element.value, null);
                             break;
@@ -117,35 +117,26 @@ namespace Dit.Umb9.Mutobo.ToolBox.Services
                             module = GetTeaser(element.value, element.index, culture);
                             break;
                         case ElementTypes.SliderComponent.Alias:
-                            var sliderModule = new SliderComponent(element.value, null)
-                            {
-                                SortOrder = element.index
-                            };
-
+                            var sliderModule = new SliderComponent(element.value, null);
                             var useGoldenRatio = (sliderModule.Height == null && sliderModule.Width == null);
-
-
                             sliderModule.Slides = SliderService.GetSlides(element.value,
-                                DocumentTypes.SliderComponent.Fields.Slides, sliderModule.Width, sliderModule.Height);
-                            result.Add(sliderModule);
+                                ElementTypes.SliderComponent.Fields.Slides, sliderModule.Width, sliderModule.Height);
+                            module = sliderModule;
                             break;
 
 
 
-                        //case DocumentTypes.PictureModule.Alias:
-                        //    var picModule = new PictureModule(element.value, null)
-                        //    {
-                        //        SortOrder = element.index
-                        //    };
-                        //    var isGoldenRatio = (picModule.Height == null && picModule.Width == null);
-                        //    picModule.Image = element.value.HasValue(DocumentTypes.Picture.Fields.Image)
-                        //        ? ImageService.GetImage(
-                        //            element.value.Value<IPublishedContent>(DocumentTypes.Picture.Fields.Image),
-                        //            height: 450,
-                        //            width: 800)
-                        //        : null;
-                        //    result.Add(picModule);
-                        //    break;
+                        case ElementTypes.PictureModule.Alias:
+                            var picModule = new PictureModule(element.value, null);
+                            var isGoldenRatio = (picModule.Height == null && picModule.Width == null);
+                            picModule.Image = element.value.HasValue(ElementTypes.Picture.Fields.Image)
+                                ? ImageService.GetImage(
+                                    element.value.Value<IPublishedContent>(ElementTypes.Picture.Fields.Image),
+                                    height: 450,
+                                    width: 800)
+                                : null;
+                            module = picModule;
+                            break;
 
                         //case DocumentTypes.Newsletter.Alias:
                         //    result.Add(new Newsletter(element.value)
@@ -232,7 +223,7 @@ namespace Dit.Umb9.Mutobo.ToolBox.Services
                     }
                     module.SortOrder = element.index;
                     result.Add(module);
-                
+
                 }
 
 
@@ -292,7 +283,6 @@ namespace Dit.Umb9.Mutobo.ToolBox.Services
 
             if (teaser.UseArticleData)
             {
-
                 if (teaser.Link?.Udi != null)
                 {
                     IPublishedContent content;
@@ -309,20 +299,11 @@ namespace Dit.Umb9.Mutobo.ToolBox.Services
                         }
                     }
 
-
-
-
-
                     teaser.Images = GetHighlightImages(content, culture);
-
                     teaser.TeaserText = content.HasValue(DocumentTypes.ArticlePage.Fields.Abstract, culture) ? content.Value<string>(DocumentTypes.ArticlePage.Fields.Abstract, culture) : string.Empty;
                     teaser.TeaserTitle = content.HasValue(DocumentTypes.BasePage.Fields.PageTitle, culture) ? content.Value<string>(DocumentTypes.BasePage.Fields.PageTitle, culture) : string.Empty;
 
                 }
-
-
-
-
             }
             else
             {
@@ -336,7 +317,6 @@ namespace Dit.Umb9.Mutobo.ToolBox.Services
                 teaser.TeaserTitle = element.HasValue(ElementTypes.Teaser.Fields.TeaserTitle) ?
                     element.Value<string>(ElementTypes.Teaser.Fields.TeaserTitle) : null;
             }
-
 
             return teaser;
 

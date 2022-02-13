@@ -59,11 +59,15 @@ namespace Dit.Umb9.Mutobo.ToolBox.Models.Pages
         /// <summary>
         /// sets the search engine frequency for the page in the sitemap.xml
         /// </summary>
-        public string SearchEngineFrequency => Content.HasValue(DocumentTypes.BasePage.Fields.SearchEngineFrequency) ? Content.Value<string>(DocumentTypes.BasePage.Fields.SearchEngineFrequency) : string.Empty;
+        public string SearchEngineFrequency => Content.HasValue(DocumentTypes.BasePage.Fields.SearchEngineFrequency) ? 
+            Content.Value<string>(DocumentTypes.BasePage.Fields.SearchEngineFrequency) 
+            : string.Empty;
         /// <summary>
         /// sets the search relavtive property for the page in the sitemap.xml
         /// </summary>
-        public string SearchEngineRelativePriority => Content.HasValue(DocumentTypes.BasePage.Fields.SearchEngineRelativePriority) ? Content.Value<string>(DocumentTypes.BasePage.Fields.SearchEngineRelativePriority) : string.Empty;
+        public string SearchEngineRelativePriority => Content.HasValue(DocumentTypes.BasePage.Fields.SearchEngineRelativePriority) ? 
+            Content.Value<string>(DocumentTypes.BasePage.Fields.SearchEngineRelativePriority) 
+            : string.Empty;
        /// <summary>
        /// holds the key for google analytics
        /// </summary>

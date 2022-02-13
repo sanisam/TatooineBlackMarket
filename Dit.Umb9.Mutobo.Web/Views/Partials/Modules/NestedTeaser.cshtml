@@ -1,7 +1,5 @@
-﻿@using Dit.Umb.Mutobo.Common.Extensions
-@model Dit.Umb.Mutobo.Modules.Teaser
-
-
+﻿@using Dit.Umb9.Mutobo.ToolBox.Common.Extensions
+@model Dit.Umb9.Mutobo.ToolBox.Modules.Teaser
     <o-teaser-wrapper @(Model.Anchor != string.Empty ? $"id={Model.Anchor}" : "")>
         <m-teaser>
             @if (Model.Images.Any())
