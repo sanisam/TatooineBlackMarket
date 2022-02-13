@@ -1,6 +1,7 @@
 ﻿using Dit.Umb9.Mutobo.ToolBox.Constants;
 using Dit.Umb9.Mutobo.ToolBox.Interfaces;
 using Dit.Umb9.Mutobo.ToolBox.Models.Pages;
+using Dit.Umb9.Mutobo.ToolBox.Models.PoCo;
 using Dit.Umb9.Mutobo.ToolBox.Modules;
 using Microsoft.Extensions.Logging;
 using System;
@@ -81,35 +82,21 @@ namespace Dit.Umb9.Mutobo.ToolBox.Services
 
                 foreach (var element in elements.Select((value, index) => new { index, value }))
                 {
+
+                    MutoboContentModule module = null;
                     switch (element.value.ContentType.Alias)
-                    {
-
-
+                    { 
                         case ElementTypes.Accordeon.Alias:
-                            result.Add(new Accordeon(element.value, null)
-                            {
-                                SortOrder = element.index
-                            });
+                            module = new Accordeon(element.value, null);
                             break;
-
-
                         case ElementTypes.Heading.Alias:
-                            result.Add(new Heading(element.value, null)
-                            {
-                                SortOrder = element.index
-                            });
+                            module = new Heading(element.value, null);
                             break;
                         case ElementTypes.VideoComponent.Alias:
-                            result.Add(new VideoComponent(element.value, null)
-                            {
-                                SortOrder = element.index
-                            });
+                            module = new VideoComponent(element.value, null);
                             break;
                         case ElementTypes.RichTextComponent.Alias:
-                            result.Add(new RichtextComponent(element.value, null)
-                            {
-                                SortOrder = element.index
-                            });
+                            module = new RichtextComponent(element.value, null);
                             break;
                         //case DocumentTypes.Flyer.Alias:
                         //    result.Add(new Flyer(element.value, null)
@@ -126,22 +113,22 @@ namespace Dit.Umb9.Mutobo.ToolBox.Services
                         //    });
                         //    break;
 
-                        //case DocumentTypes.Teaser.Alias:
-                        //    result.Add(GetTeaser(element.value, element.index, culture));
-                        //    break;
-                        //case DocumentTypes.SliderComponent.Alias:
-                        //    var sliderModule = new SliderComponent(element.value, null)
-                        //    {
-                        //        SortOrder = element.index
-                        //    };
+                        case ElementTypes.Teaser.Alias:
+                            module = GetTeaser(element.value, element.index, culture);
+                            break;
+                        case ElementTypes.SliderComponent.Alias:
+                            var sliderModule = new SliderComponent(element.value, null)
+                            {
+                                SortOrder = element.index
+                            };
 
-                        //    var useGoldenRatio = (sliderModule.Height == null && sliderModule.Width == null);
+                            var useGoldenRatio = (sliderModule.Height == null && sliderModule.Width == null);
 
 
-                        //sliderModule.Slides = SliderService.GetSlides(element.value,
-                        //    DocumentTypes.SliderComponent.Fields.Slides, sliderModule.Width, sliderModule.Height);
-                        //result.Add(sliderModule);
-                        //break;
+                            sliderModule.Slides = SliderService.GetSlides(element.value,
+                                DocumentTypes.SliderComponent.Fields.Slides, sliderModule.Width, sliderModule.Height);
+                            result.Add(sliderModule);
+                            break;
 
 
 
@@ -189,13 +176,9 @@ namespace Dit.Umb9.Mutobo.ToolBox.Services
                         //    break;
 
                         case ElementTypes.DoubleSliderComponent.Alias:
-                            var dblSliderComponent = new DoubleSliderComponent(element.value, null)
-                            {
-
-                                SortOrder = element.index
-                            };
+                            var dblSliderComponent = new DoubleSliderComponent(element.value, null);
                             dblSliderComponent.Slides = SliderService.GetDoubleSlides(element.value, ElementTypes.DoubleSliderComponent.Fields.Slides, width: dblSliderComponent.Width, height: dblSliderComponent.Height) as IEnumerable<TextImageSlide>;
-                            result.Add(dblSliderComponent);
+                            module = dblSliderComponent;
                             break;
                         //case DocumentTypes.Quote.Alias:
                         //    result.Add(new Quote(element.value, null)
@@ -204,12 +187,10 @@ namespace Dit.Umb9.Mutobo.ToolBox.Services
                         //    });
                         //    break;
                         case ElementTypes.CardContainer.Alias:
-                            result.Add(new CardContainer(element.value, null)
+                            module = new CardContainer(element.value, null)
                             {
                                 Cards = _cardService.GetCards(element.value, ElementTypes.CardContainer.Fields.Cards),
-                                // set the sort order of the module to ensure the module order
-                                SortOrder = element.index
-                            });
+                            };
                             break;
                             //case DocumentTypes.ContactForm.Alias:
                             //    var contactFormModel = new ContactForm(element.value, null);
@@ -249,6 +230,9 @@ namespace Dit.Umb9.Mutobo.ToolBox.Services
                             //    break;
 
                     }
+                    module.SortOrder = element.index;
+                    result.Add(module);
+                
                 }
 
 
@@ -297,6 +281,74 @@ namespace Dit.Umb9.Mutobo.ToolBox.Services
                     break;
 
             }
+
+            return result;
+        }
+
+        private Teaser GetTeaser(IPublishedElement element, int index, string culture)
+        {
+            var teaser = new Teaser(element, null);
+
+
+            if (teaser.UseArticleData)
+            {
+
+                if (teaser.Link?.Udi != null)
+                {
+                    IPublishedContent content;
+
+                    if (Context != null)
+                    {
+                        content = Context.Content.GetById(teaser.Link.Udi);
+                    }
+                    else
+                    {
+                        using (var ctx = _umbracoContextFactory.EnsureUmbracoContext())
+                        {
+                            content = ctx.UmbracoContext.Content.GetById(teaser.Link.Udi);
+                        }
+                    }
+
+
+
+
+
+                    teaser.Images = GetHighlightImages(content, culture);
+
+                    teaser.TeaserText = content.HasValue(DocumentTypes.ArticlePage.Fields.Abstract, culture) ? content.Value<string>(DocumentTypes.ArticlePage.Fields.Abstract, culture) : string.Empty;
+                    teaser.TeaserTitle = content.HasValue(DocumentTypes.BasePage.Fields.PageTitle, culture) ? content.Value<string>(DocumentTypes.BasePage.Fields.PageTitle, culture) : string.Empty;
+
+                }
+
+
+
+
+            }
+            else
+            {
+                teaser.Images = element.HasValue(ElementTypes.Teaser.Fields.Images)
+                    ? ImageService.GetImages(
+                        element.Value<IEnumerable<IPublishedContent>>(ElementTypes.Teaser.Fields.Images), width: 800, height: 450)
+                    : null;
+                teaser.TeaserText = element.HasValue(ElementTypes.Teaser.Fields.TeaserText) ?
+                    element.Value<string>(ElementTypes.Teaser.Fields.TeaserText) : null;
+
+                teaser.TeaserTitle = element.HasValue(ElementTypes.Teaser.Fields.TeaserTitle) ?
+                    element.Value<string>(ElementTypes.Teaser.Fields.TeaserTitle) : null;
+            }
+
+
+            return teaser;
+
+        }
+
+
+        private IEnumerable<Image> GetHighlightImages(IPublishedContent content, string culture)
+        {
+            var result = new List<Image>();
+
+            if (content.HasValue(DocumentTypes.ArticlePage.Fields.EmotionImages, culture))
+                result.AddRange(ImageService.GetImages(content.Value<IEnumerable<IPublishedContent>>(DocumentTypes.ArticlePage.Fields.EmotionImages), width: 800, height: 450));
 
             return result;
         }

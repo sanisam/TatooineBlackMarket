@@ -66,6 +66,37 @@ namespace Dit.Umb9.Mutobo.ToolBox.Constants
         #region modules
 
 
+        public static class SliderComponent
+        {
+            public const string Alias = "sliderComponent";
+
+            public static class Fields
+            {
+                public const string Slides = "slides";
+                public const string Height = "height";
+                public const string Width = "width";
+                public const string Interval = "interval";
+                public const string DisplayType = "displayType";
+            }
+        }
+
+        public static class Teaser
+        {
+            public const string Alias = "teaser";
+
+            public static class Fields
+            {
+                public const string Link = "link";
+                public const string Images = "images";
+                public const string UseArticleData = "useArticleData";
+                public const string TeaserTitle = "teaserTitle";
+                public const string TeaserText = "teaserText";
+                public const string RenderAs = "renderAs";
+
+            }
+
+        }
+
         public static class RichTextComponent
         {
             public const string Alias = "richTextComponent";
