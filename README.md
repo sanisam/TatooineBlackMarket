@@ -27,5 +27,6 @@ Umbraco 9 based Magic Umbraco Toolbox.
 5. open shell 
 6. cd ./Sss.Umb9.Mutobo.Web
 7. dotnet run
-8. go to the url showed in terminal and perform the umbraco installation
-9. perform a uSync-Import (full)
+8. prepare an empty ms-sql database with a dbo user
+9. go to the url showed in terminal and perform the umbraco installation
+10. perform a uSync-Import (full)
