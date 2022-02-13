@@ -3,10 +3,6 @@ using Dit.Umb9.Mutobo.ToolBox.Enum;
 using Dit.Umb9.Mutobo.ToolBox.Interfaces;
 using Dit.Umb9.Mutobo.ToolBox.Models.PoCo;
 using Microsoft.AspNetCore.Html;
-using Microsoft.AspNetCore.Mvc.ViewFeatures;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Umbraco.Cms.Core.Models;
@@ -46,7 +42,7 @@ namespace Dit.Umb9.Mutobo.ToolBox.Modules
         public string TeaserText { get; set; }
         public Link Link { get; set; }
 
-        public Flyer(IPublishedElement content) : base(content, null)
+        public Flyer(IPublishedElement content, IPublishedValueFallback publishedValueFallback) : base(content, publishedValueFallback)
         {
         }
 
@@ -55,37 +51,42 @@ namespace Dit.Umb9.Mutobo.ToolBox.Modules
         {
             var bld = new StringBuilder();
 
-            if (Timer > 0)
-            {
-                switch (Direction)
-                {
-                    case EDirection.Right:
-                        bld.Append(helper.PartialAsync("~/Views/Partials/Flyer_right.cshtml",
-                            this, helper.ViewData));
-                        break;
 
-                    default:
-                    case EDirection.Left:
-                        bld.Append(helper.PartialAsync("~/Views/Partials/Flyer_left.cshtml", this, helper.ViewData));
-                        break;
-                }
-            }
-            else
-            {
-                switch (Direction)
-                {
-                    case EDirection.Right:
-                        bld.Append(helper.PartialAsync("~/Views/Partials/IntersectionFlyer_right.cshtml",
-                            this, helper.ViewData));
-                        break;
+            // mayb e usefull for classics 
+            //if (Timer > 0)
+            //{
+            //    switch (Direction)
+            //    {
+            //        case EDirection.Right:
+            //            bld.Append(await helper.PartialAsync("~/Views/Partials/Flyer_right.cshtml",
+            //                this, helper.ViewData));
+            //            break;
 
-                    default:
-                    case EDirection.Left:
-                        bld.Append(helper.PartialAsync("~/Views/Partials/IntersectionFlyer_left.cshtml", this, helper.ViewData));
-                        break;
-                }
+            //        default:
+            //        case EDirection.Left:
+            //            bld.Append(await helper.PartialAsync("~/Views/Partials/Flyer_left.cshtml", this, helper.ViewData));
+            //            break;
+            //    }
+            //}
+            //else
+            //{
+            //    switch (Direction)
+            //    {
+            //        case EDirection.Right:
+            //            bld.Append(await helper.PartialAsync("~/Views/Partials/IntersectionFlyer_right.cshtml",
+            //                this, helper.ViewData));
+            //            break;
 
-            }
+            //        default:
+            //        case EDirection.Left:
+            //            bld.Append(await helper.PartialAsync("~/Views/Partials/IntersectionFlyer_left.cshtml", this, helper.ViewData));
+            //            break;
+            //    }
+
+            //}
+
+
+            bld.Append(await helper.PartialAsync("~/Views/Partials/Modules/FlyerTeaser.cshtml", this, helper.ViewData));
 
             return new HtmlString(bld.ToString());
         }

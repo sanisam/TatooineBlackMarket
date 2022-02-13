@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Umbraco.Cms.Core.Models;
 using Umbraco.Cms.Core.Models.PublishedContent;
 using Umbraco.Cms.Core.Web;
 using Umbraco.Extensions;
@@ -98,21 +99,18 @@ namespace Dit.Umb9.Mutobo.ToolBox.Services
                         case ElementTypes.RichTextComponent.Alias:
                             module = new RichtextComponent(element.value, null);
                             break;
-                        //case DocumentTypes.Flyer.Alias:
-                        //    result.Add(new Flyer(element.value, null)
-                        //    {
-                        //        SortOrder = element.index,
-                        //        Image = element.value.HasValue(DocumentTypes.Flyer.Fields.FlyerImage) ? ImageService
-                        //        .GetImage(element.value.Value<IPublishedContent>(DocumentTypes.Flyer.Fields.FlyerImage),
-                        //        width: 900,
-                        //        imageCropMode: ImageCropMode.Max)
-                        //        : null,
-                        //        TeaserText = element.value.Value<string>(DocumentTypes.Flyer.Fields.FlyerTeaserText),
-                        //        Link = element.value.Value<Link>(DocumentTypes.Flyer.Fields.Link)
-
-                        //    });
-                        //    break;
-
+                        case ElementTypes.Flyer.Alias:
+                            module = new Flyer(element.value, null)
+                            {
+                                Image = element.value.HasValue(ElementTypes.Flyer.Fields.FlyerImage) ? ImageService
+                                .GetImage(element.value.Value<IPublishedContent>(ElementTypes.Flyer.Fields.FlyerImage),
+                                width: 900,
+                                imageCropMode: ImageCropMode.Max)
+                                : null,
+                                TeaserText = element.value.Value<string>(ElementTypes.Flyer.Fields.FlyerTeaserText),
+                                Link = element.value.Value<Link>(ElementTypes.Flyer.Fields.Link)
+                            };
+                            break;
                         case ElementTypes.Teaser.Alias:
                             module = GetTeaser(element.value, element.index, culture);
                             break;
@@ -123,9 +121,6 @@ namespace Dit.Umb9.Mutobo.ToolBox.Services
                                 ElementTypes.SliderComponent.Fields.Slides, sliderModule.Width, sliderModule.Height);
                             module = sliderModule;
                             break;
-
-
-
                         case ElementTypes.PictureModule.Alias:
                             var picModule = new PictureModule(element.value, null);
                             var isGoldenRatio = (picModule.Height == null && picModule.Width == null);
@@ -137,13 +132,6 @@ namespace Dit.Umb9.Mutobo.ToolBox.Services
                                 : null;
                             module = picModule;
                             break;
-
-                        //case DocumentTypes.Newsletter.Alias:
-                        //    result.Add(new Newsletter(element.value)
-                        //    {
-                        //        SortOrder = element.index
-                        //    });
-                        //    break;
                         //case DocumentTypes.BlogModule.Alias:
                         //    var model = new BlogModule(element.value, null)
                         //    {
@@ -171,12 +159,12 @@ namespace Dit.Umb9.Mutobo.ToolBox.Services
                             dblSliderComponent.Slides = SliderService.GetDoubleSlides(element.value, ElementTypes.DoubleSliderComponent.Fields.Slides, width: dblSliderComponent.Width, height: dblSliderComponent.Height) as IEnumerable<TextImageSlide>;
                             module = dblSliderComponent;
                             break;
-                        //case DocumentTypes.Quote.Alias:
-                        //    result.Add(new Quote(element.value, null)
-                        //    {
-                        //        SortOrder = element.index
-                        //    });
-                        //    break;
+                        case ElementTypes.Quote.Alias:
+                            result.Add(new Quote(element.value, null)
+                            {
+                                SortOrder = element.index
+                            });
+                            break;
                         case ElementTypes.CardContainer.Alias:
                             module = new CardContainer(element.value, null)
                             {

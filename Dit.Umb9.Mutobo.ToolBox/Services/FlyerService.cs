@@ -38,7 +38,7 @@ namespace Dit.Umb9.Mutobo.ToolBox.Services
 
             foreach (IPublishedElement element in elements)
             {
-                Flyer fly = new Flyer(element)
+                Flyer fly = new Flyer(element, null)
                 {
 
                 };

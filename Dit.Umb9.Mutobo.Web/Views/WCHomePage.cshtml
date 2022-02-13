@@ -11,6 +11,10 @@
     {
         foreach (var module in Model.Modules)
         {
+            if (module.SpaceBeforeModule)
+            {
+                <div class="spacer"></div>
+            }
             @await module.RenderModule(this.Html)
             if (module.SpacerAfterModule)
             {

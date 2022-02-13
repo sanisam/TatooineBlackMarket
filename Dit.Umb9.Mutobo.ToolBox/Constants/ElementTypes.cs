@@ -66,6 +66,18 @@ namespace Dit.Umb9.Mutobo.ToolBox.Constants
         #region modules
 
 
+        public static class Quote
+        {
+            public const string Alias = "quote";
+
+            public static class Fields
+            {
+                public const string QuoteText = "quoteText";
+                public const string SpellerName = "spellerName";
+                public const string SpellerFunction = "spellerFunction";
+            }
+        }
+
         public static class PictureModule
         {
             public const string Alias = "pictureModule";
