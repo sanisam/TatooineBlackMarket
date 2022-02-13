@@ -11,7 +11,7 @@ Umbraco 9 based Magic Umbraco Toolbox.
     - Windows Enviroment
       https://dotnet.microsoft.com/download/dotnet/5.0
 2. Clone the Repo
-3. Remove existing connectionString form ./Sss.Umb9.Mutobo.Web/appSettings.json
+3. Remove existing connectionString form appSettings.json
    Before:
 
     "ConnectionStrings": {
@@ -27,5 +27,5 @@ Umbraco 9 based Magic Umbraco Toolbox.
 5. open shell 
 6. cd ./Sss.Umb9.Mutobo.Web
 7. dotnet run
-8. go to the url showed in terminal and perform the umbraco installtion
+8. go to the url showed in terminal and perform the umbraco installation
 9. perform a uSync-Import (full)
