@@ -160,10 +160,7 @@ namespace Dit.Umb9.Mutobo.ToolBox.Services
                             module = dblSliderComponent;
                             break;
                         case ElementTypes.Quote.Alias:
-                            result.Add(new Quote(element.value, null)
-                            {
-                                SortOrder = element.index
-                            });
+                            module = new Quote(element.value, null);
                             break;
                         case ElementTypes.CardContainer.Alias:
                             module = new CardContainer(element.value, null)
