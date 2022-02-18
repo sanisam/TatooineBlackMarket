@@ -330,10 +330,7 @@ namespace Dit.Umb9.Mutobo.ToolBox.Services
         private IEnumerable<Image> GetHighlightImages(IPublishedContent content, string culture)
         {
             var result = new List<Image>();
-
-
-            
-            if (content.HasValue(DocumentTypes.ArticlePage.Fields.EmotionImages, culture))
+            if (content.HasValue(DocumentTypes.ArticlePage.Fields.EmotionImages))
                 result.AddRange(ImageService.GetImages(content.Value<IEnumerable<IPublishedContent>>(DocumentTypes.ArticlePage.Fields.EmotionImages), width: 800, height: 450));
 
             return result;

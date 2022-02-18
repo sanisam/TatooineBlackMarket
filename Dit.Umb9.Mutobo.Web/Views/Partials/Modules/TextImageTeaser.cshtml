@@ -1,12 +1,17 @@
-@using Dit.Umb.Mutobo.Constants
-@using Umbraco.Web.Composing
-@model Dit.Umb.MKulturProzent.Classics.Models.Poco.TextImageSlide
+@using Dit.Umb9.Mutobo.ToolBox.Constants
+@model Dit.Umb9.Mutobo.ToolBox.Modules.TextImageSlide
 
+@{
+    var tst = "";
+
+}
+
+@inject Dit.Umb9.Mutobo.ToolBox.Interfaces.IDictionaryService DictionaryService
 
 <div style="display:flex;flex-direction: column;" @(Model.Anchor != string.Empty ? $"id={Model.Anchor}" : "")>
     @if (Model.Image != null)
     {
-        @Model.Image.RenderWcPictureTag()
+      @Model.Image.RenderWcPictureTag(useSources: true)
     }
     @if (!string.IsNullOrEmpty(Model.Title))
     {
@@ -18,6 +23,6 @@
     }
     @if (Model.Link != null && !string.IsNullOrEmpty(Model.Link.Url))
     {
-        <a href="@Model.Link.Url" target="@Model.Link.Target">@Current.UmbracoHelper.GetDictionaryValue(DictionaryKeys.Global.ReadMore)</a>
+        <a href="@Model.Link.Url" target="@Model.Link.Target">@DictionaryService.GetDictionaryValue(DictionaryKeys.Global.ReadMore)</a>
     }
 </div>

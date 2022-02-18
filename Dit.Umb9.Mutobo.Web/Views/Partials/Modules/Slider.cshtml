@@ -18,8 +18,14 @@
         else if (media is IVideoComponent video)
         {
         
-                @await Html.PartialAsync("~/Views/Partials/Modules/VideoComponent.cshtml", video)
+            @await Html.PartialAsync("~/Views/Partials/Modules/VideoComponent.cshtml", video)
         }
+        else if (media is Dit.Umb9.Mutobo.ToolBox.Modules.TextImageSlide textImageSlide)
+        {
+           @await Html.PartialAsync("~/Views/Partials/Modules/TextImageTeaser.cshtml", textImageSlide)
+        }
+
+        
  
     }
 </third-party-macro-carousel>
