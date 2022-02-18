@@ -4,21 +4,8 @@
 @model Dit.Umb9.Mutobo.ToolBox.Modules.Flyer
 @{
     var img = Model.Image;
-    //new Image();
-    //Model.GetImage(DocumentTypes.Flyer.FlyerImage);
+    
 }
-
-@*<m-flyer href="@(Model.Link?.Url ?? "#")" @(Model.Anchor != string.Empty ? $"id={Model.Anchor}" : "")>
-    <h1>@Model.Title</h1>
-    <p>
-    @Model.TeaserText
-    </p>
-    @(Model.Image.RenderWcPictureTag() ?? new HtmlString(String.Empty))
-    </m-flyer>*@
-
-
- 
-
 <m-flyer href="@(Model.Link?.Url ?? "#")" @(Model.Anchor != string.Empty ? $"id={Model.Anchor}" : "") direction=right   timer=2000>
     <h1>@Model.Title</h1>
     <p>

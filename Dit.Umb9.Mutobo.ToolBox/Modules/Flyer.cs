@@ -3,6 +3,7 @@ using Dit.Umb9.Mutobo.ToolBox.Enum;
 using Dit.Umb9.Mutobo.ToolBox.Interfaces;
 using Dit.Umb9.Mutobo.ToolBox.Models.PoCo;
 using Microsoft.AspNetCore.Html;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Text;
 using System.Threading.Tasks;
 using Umbraco.Cms.Core.Models;
@@ -47,11 +48,9 @@ namespace Dit.Umb9.Mutobo.ToolBox.Modules
         }
 
 
-        public async Task<IHtmlContent> RenderModule(Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper helper)
+        public async Task<IHtmlContent> RenderModule(IHtmlHelper helper)
         {
-            var bld = new StringBuilder();
-
-
+           
             // mayb e usefull for classics 
             //if (Timer > 0)
             //{
@@ -86,9 +85,7 @@ namespace Dit.Umb9.Mutobo.ToolBox.Modules
             //}
 
 
-            bld.Append(await helper.PartialAsync("~/Views/Partials/Modules/FlyerTeaser.cshtml", this, helper.ViewData));
-
-            return new HtmlString(bld.ToString());
+            return await helper.PartialAsync("~/Views/Partials/Modules/FlyerTeaser.cshtml", this, helper.ViewData);
         }
     }
 

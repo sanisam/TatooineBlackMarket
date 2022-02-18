@@ -4,7 +4,7 @@
 @{
     Layout = "WCBasePage.cshtml";
 }
-<base-o-body>
+<o-body>
     @await Html.PartialAsync("~/Views/Partials/ArticleContent.cshtml", Model)
     <div class="spacer"></div>
     @if (Model.Modules != null && Model.Modules.Any())
@@ -24,4 +24,4 @@
             }
         }
     }
-</base-o-body>
+</o-body>

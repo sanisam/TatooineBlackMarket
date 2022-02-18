@@ -22,18 +22,16 @@
                 @image.RenderWcPictureTag()
             }
         }
-@*        else
+        else
         {
-
-            @Html.Partial("~/Views/Partials/Slider.cshtml", new EmptySliderComponent()
+            @await Html.PartialAsync("~/Views/Partials/Modules/Slider.cshtml", new EmptySliderComponent()
             {
                 Slides = Model.EmotionImages,
                 GalleryType = EGalleryType.Boxed,
                 Width = 800,
                 Height = 450,
-            })
-            ;
-        }*@
+            });
+        }
     }
     @if (!Model.HideAbstract && !string.IsNullOrEmpty(Model.Abstract))
     {
