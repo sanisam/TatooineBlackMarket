@@ -1,23 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\_sss\\mutobo9\\Dit.Umb9.Mutobo\\Dit.Umb9.Mutobo.ToolBox\\Dit.Umb9.Mutobo.ToolBox.csproj": {}
+    "E:\\_sss\\projects\\MGB2\\Dit.Umb9.Mutobo\\Dit.Umb9.Mutobo.ToolBox\\Dit.Umb9.Mutobo.ToolBox.csproj": {}
   },
   "projects": {
-    "D:\\_sss\\mutobo9\\Dit.Umb9.Mutobo\\Dit.Umb9.Mutobo.ToolBox\\Dit.Umb9.Mutobo.ToolBox.csproj": {
+    "E:\\_sss\\projects\\MGB2\\Dit.Umb9.Mutobo\\Dit.Umb9.Mutobo.ToolBox\\Dit.Umb9.Mutobo.ToolBox.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\_sss\\mutobo9\\Dit.Umb9.Mutobo\\Dit.Umb9.Mutobo.ToolBox\\Dit.Umb9.Mutobo.ToolBox.csproj",
+        "projectUniqueName": "E:\\_sss\\projects\\MGB2\\Dit.Umb9.Mutobo\\Dit.Umb9.Mutobo.ToolBox\\Dit.Umb9.Mutobo.ToolBox.csproj",
         "projectName": "Dit.Umb9.Mutobo.ToolBox",
-        "projectPath": "D:\\_sss\\mutobo9\\Dit.Umb9.Mutobo\\Dit.Umb9.Mutobo.ToolBox\\Dit.Umb9.Mutobo.ToolBox.csproj",
-        "packagesPath": "C:\\Users\\rschenk\\.nuget\\packages\\",
-        "outputPath": "D:\\_sss\\mutobo9\\Dit.Umb9.Mutobo\\Dit.Umb9.Mutobo.ToolBox\\obj\\",
+        "projectPath": "E:\\_sss\\projects\\MGB2\\Dit.Umb9.Mutobo\\Dit.Umb9.Mutobo.ToolBox\\Dit.Umb9.Mutobo.ToolBox.csproj",
+        "packagesPath": "C:\\Users\\rolan\\.nuget\\packages\\",
+        "outputPath": "E:\\_sss\\projects\\MGB2\\Dit.Umb9.Mutobo\\Dit.Umb9.Mutobo.ToolBox\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\rschenk\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\rolan\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,9 +27,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://nuget.pkg.github.com/steinemanndpe/index.json": {},
-          "https://trumpf.jfrog.io/artifactory/api/nuget/v3/trumpf-nuget-virtual": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
@@ -52,15 +51,15 @@
             },
             "Umbraco.Cms.Core": {
               "target": "Package",
-              "version": "[9.3.0, )"
+              "version": "[9.3.1, )"
             },
             "Umbraco.Cms.Web.Common": {
               "target": "Package",
-              "version": "[9.3.0, )"
+              "version": "[9.3.1, )"
             },
             "Umbraco.Cms.Web.Website": {
               "target": "Package",
-              "version": "[9.3.0, )"
+              "version": "[9.3.1, )"
             }
           },
           "imports": [
@@ -78,7 +77,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }

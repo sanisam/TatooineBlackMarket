@@ -2435,7 +2435,7 @@
           }
         }
       },
-      "Umbraco.Cms.Core/9.3.0": {
+      "Umbraco.Cms.Core/9.3.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration.Abstractions": "5.0.0",
@@ -2457,12 +2457,12 @@
           "lib/netstandard2.0/Umbraco.Core.dll": {}
         }
       },
-      "Umbraco.Cms.Examine.Lucene/9.3.0": {
+      "Umbraco.Cms.Examine.Lucene/9.3.1": {
         "type": "package",
         "dependencies": {
           "Examine": "2.0.1",
-          "Umbraco.Cms.Core": "9.3.0",
-          "Umbraco.Cms.Infrastructure": "9.3.0"
+          "Umbraco.Cms.Core": "9.3.1",
+          "Umbraco.Cms.Infrastructure": "9.3.1"
         },
         "compile": {
           "lib/netstandard2.0/Umbraco.Examine.Lucene.dll": {}
@@ -2471,7 +2471,7 @@
           "lib/netstandard2.0/Umbraco.Examine.Lucene.dll": {}
         }
       },
-      "Umbraco.Cms.Infrastructure/9.3.0": {
+      "Umbraco.Cms.Infrastructure/9.3.1": {
         "type": "package",
         "dependencies": {
           "Examine.Core": "2.0.1",
@@ -2506,7 +2506,7 @@
           "System.IO.FileSystem.AccessControl": "5.0.0",
           "System.Text.Encodings.Web": "5.0.1",
           "System.Threading.Tasks.Dataflow": "5.0.0",
-          "Umbraco.Cms.Core": "9.3.0",
+          "Umbraco.Cms.Core": "9.3.1",
           "ncrontab": "3.3.1"
         },
         "compile": {
@@ -2516,15 +2516,15 @@
           "lib/netstandard2.0/Umbraco.Infrastructure.dll": {}
         }
       },
-      "Umbraco.Cms.PublishedCache.NuCache/9.3.0": {
+      "Umbraco.Cms.PublishedCache.NuCache/9.3.1": {
         "type": "package",
         "dependencies": {
           "CSharpTest.Net.Collections-NetStd2": "14.906.1403.1084",
           "K4os.Compression.LZ4": "1.2.15",
           "MessagePack": "2.3.85",
           "Newtonsoft.Json": "13.0.1",
-          "Umbraco.Cms.Core": "9.3.0",
-          "Umbraco.Cms.Infrastructure": "9.3.0"
+          "Umbraco.Cms.Core": "9.3.1",
+          "Umbraco.Cms.Infrastructure": "9.3.1"
         },
         "compile": {
           "lib/netstandard2.0/Umbraco.PublishedCache.NuCache.dll": {}
@@ -2533,7 +2533,7 @@
           "lib/netstandard2.0/Umbraco.PublishedCache.NuCache.dll": {}
         }
       },
-      "Umbraco.Cms.Web.Common/9.3.0": {
+      "Umbraco.Cms.Web.Common/9.3.1": {
         "type": "package",
         "dependencies": {
           "Dazinator.Extensions.FileProviders": "2.0.0",
@@ -2545,10 +2545,10 @@
           "SixLabors.ImageSharp.Web": "1.0.5",
           "Smidge.InMemory": "4.0.3",
           "Smidge.Nuglify": "4.0.3",
-          "Umbraco.Cms.Core": "9.3.0",
-          "Umbraco.Cms.Examine.Lucene": "9.3.0",
-          "Umbraco.Cms.Infrastructure": "9.3.0",
-          "Umbraco.Cms.PublishedCache.NuCache": "9.3.0"
+          "Umbraco.Cms.Core": "9.3.1",
+          "Umbraco.Cms.Examine.Lucene": "9.3.1",
+          "Umbraco.Cms.Infrastructure": "9.3.1",
+          "Umbraco.Cms.PublishedCache.NuCache": "9.3.1"
         },
         "compile": {
           "lib/net5.0/Umbraco.Web.Common.dll": {}
@@ -2560,12 +2560,12 @@
           "Microsoft.AspNetCore.App"
         ]
       },
-      "Umbraco.Cms.Web.Website/9.3.0": {
+      "Umbraco.Cms.Web.Website/9.3.1": {
         "type": "package",
         "dependencies": {
-          "Umbraco.Cms.Core": "9.3.0",
-          "Umbraco.Cms.Infrastructure": "9.3.0",
-          "Umbraco.Cms.Web.Common": "9.3.0"
+          "Umbraco.Cms.Core": "9.3.1",
+          "Umbraco.Cms.Infrastructure": "9.3.1",
+          "Umbraco.Cms.Web.Common": "9.3.1"
         },
         "compile": {
           "lib/net5.0/Umbraco.Web.Website.dll": {}
@@ -8496,81 +8496,81 @@
         "version.txt"
       ]
     },
-    "Umbraco.Cms.Core/9.3.0": {
-      "sha512": "uO0iy1YlFn8PIx5ZwhE1Tzy/UkV7J2I+pkrLJqjquJj3esl2bf7IC+PmlLb96BIYEjlS8f4SAMT7y3vRhjG5tg==",
+    "Umbraco.Cms.Core/9.3.1": {
+      "sha512": "YRC31sQdcH9Gd0sZYwJfLzS3P8iI+dxawE4jDnl7Uih41tCwfAM/Befpd2vNtUEe31JS/Ak/SSLRhHXurtjOqg==",
       "type": "package",
-      "path": "umbraco.cms.core/9.3.0",
+      "path": "umbraco.cms.core/9.3.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.0/Umbraco.Core.dll",
         "lib/netstandard2.0/Umbraco.Core.xml",
-        "umbraco.cms.core.9.3.0.nupkg.sha512",
+        "umbraco.cms.core.9.3.1.nupkg.sha512",
         "umbraco.cms.core.nuspec"
       ]
     },
-    "Umbraco.Cms.Examine.Lucene/9.3.0": {
-      "sha512": "oCf8bmAZw5KjTGnIxEGPTGxTRvTO/o97ogy5FdLTOB/uwWlNepAQy/hXl7hSIooqhap7WpsUAaYkIQP/4nSwmw==",
+    "Umbraco.Cms.Examine.Lucene/9.3.1": {
+      "sha512": "FsC0DdQtoXetTjyCjvffOXKRAkH3xGRWBM7jRNLdOUJUNIXm3Bs/nmGXfHxteP1DOE6xsGt+Ebqn+IY/zGj6lQ==",
       "type": "package",
-      "path": "umbraco.cms.examine.lucene/9.3.0",
+      "path": "umbraco.cms.examine.lucene/9.3.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.0/Umbraco.Examine.Lucene.dll",
         "lib/netstandard2.0/Umbraco.Examine.Lucene.xml",
-        "umbraco.cms.examine.lucene.9.3.0.nupkg.sha512",
+        "umbraco.cms.examine.lucene.9.3.1.nupkg.sha512",
         "umbraco.cms.examine.lucene.nuspec"
       ]
     },
-    "Umbraco.Cms.Infrastructure/9.3.0": {
-      "sha512": "R+8ld2tkZWjgW4LGjnvt8F3jGNNUtbRRHxO4n77UNboU9kASf6XzRLJkBSU0X8sxwsnxVmyu6DQxK5wPLSENjQ==",
+    "Umbraco.Cms.Infrastructure/9.3.1": {
+      "sha512": "kFvl79ootI8IdQ045FZ8GhY383wFN7wTRCJa5OA0cNm4vn1ttqbFFMVjaWxysQXd9fHgOa3HW/wkZF7BByDAEw==",
       "type": "package",
-      "path": "umbraco.cms.infrastructure/9.3.0",
+      "path": "umbraco.cms.infrastructure/9.3.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.0/Umbraco.Infrastructure.dll",
         "lib/netstandard2.0/Umbraco.Infrastructure.xml",
-        "umbraco.cms.infrastructure.9.3.0.nupkg.sha512",
+        "umbraco.cms.infrastructure.9.3.1.nupkg.sha512",
         "umbraco.cms.infrastructure.nuspec"
       ]
     },
-    "Umbraco.Cms.PublishedCache.NuCache/9.3.0": {
-      "sha512": "dGuSfmPS3s1/PlVZxI2jne9qjYpfvCW0cfcjREcY7SwmKx3OKqA/p/l40/esP9lE4JujrqbiBiVb1DG8sq2sbg==",
+    "Umbraco.Cms.PublishedCache.NuCache/9.3.1": {
+      "sha512": "IrAtUBM6OOOh0BK1sd8gQKuhPUymrjBmugbQKrFZ5KWnqbZ6l/itqybz9A/GmZtXfPih16J0F3k54OEWftjv2w==",
       "type": "package",
-      "path": "umbraco.cms.publishedcache.nucache/9.3.0",
+      "path": "umbraco.cms.publishedcache.nucache/9.3.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.0/Umbraco.PublishedCache.NuCache.dll",
         "lib/netstandard2.0/Umbraco.PublishedCache.NuCache.xml",
-        "umbraco.cms.publishedcache.nucache.9.3.0.nupkg.sha512",
+        "umbraco.cms.publishedcache.nucache.9.3.1.nupkg.sha512",
         "umbraco.cms.publishedcache.nucache.nuspec"
       ]
     },
-    "Umbraco.Cms.Web.Common/9.3.0": {
-      "sha512": "SYlSlfd+Roz4dM1epw3bvj+/bpsz5su2KRkJ3ggBmzEnZNncG75Bt9G1CPtLMQaUqO9hz/tzEUoCV2BhEXzgcQ==",
+    "Umbraco.Cms.Web.Common/9.3.1": {
+      "sha512": "tlVtVWXfwzqArMW2jnVnh18B9Nt6SYi3PIPMzyqkQ3edWq4axDYPLuiVHBbfz8XWsH44FG4elRYaDcGpOlg2Aw==",
       "type": "package",
-      "path": "umbraco.cms.web.common/9.3.0",
+      "path": "umbraco.cms.web.common/9.3.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/net5.0/Umbraco.Web.Common.dll",
         "lib/net5.0/Umbraco.Web.Common.xml",
-        "umbraco.cms.web.common.9.3.0.nupkg.sha512",
+        "umbraco.cms.web.common.9.3.1.nupkg.sha512",
         "umbraco.cms.web.common.nuspec"
       ]
     },
-    "Umbraco.Cms.Web.Website/9.3.0": {
-      "sha512": "P5/qm+S5lPGQUbpwdsPExXmUoZ/GRCMt55r1cyYS/O06lmjswn8njrCodBTme9pzQzAB5ipUKoBrDth6eyMBNA==",
+    "Umbraco.Cms.Web.Website/9.3.1": {
+      "sha512": "BmE7YN4gu0QhCA33LTaxuq+yKKQ1Bsd21i9YfonmcQ2FW3QnLTvJBOJy5/VVWNhmxIJV0XD2aEYDY/buNaGaew==",
       "type": "package",
-      "path": "umbraco.cms.web.website/9.3.0",
+      "path": "umbraco.cms.web.website/9.3.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/net5.0/Umbraco.Web.Website.dll",
         "lib/net5.0/Umbraco.Web.Website.xml",
-        "umbraco.cms.web.website.9.3.0.nupkg.sha512",
+        "umbraco.cms.web.website.9.3.1.nupkg.sha512",
         "umbraco.cms.web.website.nuspec"
       ]
     }
@@ -8578,29 +8578,31 @@
   "projectFileDependencyGroups": {
     "net5.0": [
       "Microsoft.AspNetCore.Mvc.Abstractions >= 2.2.0",
-      "Umbraco.Cms.Core >= 9.3.0",
-      "Umbraco.Cms.Web.Common >= 9.3.0",
-      "Umbraco.Cms.Web.Website >= 9.3.0"
+      "Umbraco.Cms.Core >= 9.3.1",
+      "Umbraco.Cms.Web.Common >= 9.3.1",
+      "Umbraco.Cms.Web.Website >= 9.3.1"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\rschenk\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\rolan\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\_sss\\mutobo9\\Dit.Umb9.Mutobo\\Dit.Umb9.Mutobo.ToolBox\\Dit.Umb9.Mutobo.ToolBox.csproj",
+      "projectUniqueName": "E:\\_sss\\projects\\MGB2\\Dit.Umb9.Mutobo\\Dit.Umb9.Mutobo.ToolBox\\Dit.Umb9.Mutobo.ToolBox.csproj",
       "projectName": "Dit.Umb9.Mutobo.ToolBox",
-      "projectPath": "D:\\_sss\\mutobo9\\Dit.Umb9.Mutobo\\Dit.Umb9.Mutobo.ToolBox\\Dit.Umb9.Mutobo.ToolBox.csproj",
-      "packagesPath": "C:\\Users\\rschenk\\.nuget\\packages\\",
-      "outputPath": "D:\\_sss\\mutobo9\\Dit.Umb9.Mutobo\\Dit.Umb9.Mutobo.ToolBox\\obj\\",
+      "projectPath": "E:\\_sss\\projects\\MGB2\\Dit.Umb9.Mutobo\\Dit.Umb9.Mutobo.ToolBox\\Dit.Umb9.Mutobo.ToolBox.csproj",
+      "packagesPath": "C:\\Users\\rolan\\.nuget\\packages\\",
+      "outputPath": "E:\\_sss\\projects\\MGB2\\Dit.Umb9.Mutobo\\Dit.Umb9.Mutobo.ToolBox\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\rschenk\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\rolan\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -8609,9 +8611,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://nuget.pkg.github.com/steinemanndpe/index.json": {},
-        "https://trumpf.jfrog.io/artifactory/api/nuget/v3/trumpf-nuget-virtual": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net5.0": {
@@ -8635,15 +8635,15 @@
           },
           "Umbraco.Cms.Core": {
             "target": "Package",
-            "version": "[9.3.0, )"
+            "version": "[9.3.1, )"
           },
           "Umbraco.Cms.Web.Common": {
             "target": "Package",
-            "version": "[9.3.0, )"
+            "version": "[9.3.1, )"
           },
           "Umbraco.Cms.Web.Website": {
             "target": "Package",
-            "version": "[9.3.0, )"
+            "version": "[9.3.1, )"
           }
         },
         "imports": [
@@ -8661,7 +8661,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
       }
     }
   }
