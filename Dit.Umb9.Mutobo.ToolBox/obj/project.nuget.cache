@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "VMo8BuUSAPu31lNvWQSGio7z22Hd2slimp5cNQ4WJzn5qQzgbgcgcBCvQVs+LhyFDRh+qY72gVrQ+ywxYWpkDA==",
+  "dgSpecHash": "BbRuuFVPcJhdfsoI88geWUDvXnaG7GH+IEtGA23buyK8nkaHieVFW04EvCS/SeA4GJLoGyfR6PEMYEaPbGxxjw==",
   "success": true,
   "projectFilePath": "E:\\_sss\\projects\\MGB2\\Dit.Umb9.Mutobo\\Dit.Umb9.Mutobo.ToolBox\\Dit.Umb9.Mutobo.ToolBox.csproj",
   "expectedPackageFiles": [
@@ -90,6 +90,8 @@
     "C:\\Users\\rolan\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512",
     "C:\\Users\\rolan\\.nuget\\packages\\npoco\\4.0.2\\npoco.4.0.2.nupkg.sha512",
     "C:\\Users\\rolan\\.nuget\\packages\\nuglify\\1.13.12\\nuglify.1.13.12.nupkg.sha512",
+    "C:\\Users\\rolan\\.nuget\\packages\\pdfpig\\0.1.4\\pdfpig.0.1.4.nupkg.sha512",
+    "C:\\Users\\rolan\\.nuget\\packages\\pdfsharpnetstandard2\\1.51.4845\\pdfsharpnetstandard2.1.51.4845.nupkg.sha512",
     "C:\\Users\\rolan\\.nuget\\packages\\portable.bouncycastle\\1.8.10\\portable.bouncycastle.1.8.10.nupkg.sha512",
     "C:\\Users\\rolan\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Users\\rolan\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
@@ -186,8 +188,10 @@
     "C:\\Users\\rolan\\.nuget\\packages\\umbraco.cms.examine.lucene\\9.3.1\\umbraco.cms.examine.lucene.9.3.1.nupkg.sha512",
     "C:\\Users\\rolan\\.nuget\\packages\\umbraco.cms.infrastructure\\9.3.1\\umbraco.cms.infrastructure.9.3.1.nupkg.sha512",
     "C:\\Users\\rolan\\.nuget\\packages\\umbraco.cms.publishedcache.nucache\\9.3.1\\umbraco.cms.publishedcache.nucache.9.3.1.nupkg.sha512",
+    "C:\\Users\\rolan\\.nuget\\packages\\umbraco.cms.web.backoffice\\9.0.0\\umbraco.cms.web.backoffice.9.0.0.nupkg.sha512",
     "C:\\Users\\rolan\\.nuget\\packages\\umbraco.cms.web.common\\9.3.1\\umbraco.cms.web.common.9.3.1.nupkg.sha512",
-    "C:\\Users\\rolan\\.nuget\\packages\\umbraco.cms.web.website\\9.3.1\\umbraco.cms.web.website.9.3.1.nupkg.sha512"
+    "C:\\Users\\rolan\\.nuget\\packages\\umbraco.cms.web.website\\9.3.1\\umbraco.cms.web.website.9.3.1.nupkg.sha512",
+    "C:\\Users\\rolan\\.nuget\\packages\\umbraco.examinepdf\\9.0.0\\umbraco.examinepdf.9.0.0.nupkg.sha512"
   ],
   "logs": []
 }

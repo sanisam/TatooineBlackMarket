@@ -93,5 +93,21 @@ namespace Dit.Umb9.Mutobo.ToolBox.Constants
             }
         }
 
+
+
+        public static class SearchResultsPage
+        {
+            public const string Alias = "searchResults";
+
+
+            public static class Fields
+            {
+                // BasePage
+                public const string PageTitle = "pageTitle";
+
+
+
+            }
+        }
     }
 }

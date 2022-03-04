@@ -5,7 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Components\" />
     <Folder Include="Models\Slides\" />
   </ItemGroup>
 
@@ -14,6 +13,7 @@
     <PackageReference Include="Umbraco.Cms.Core" Version="9.3.1" />
     <PackageReference Include="Umbraco.Cms.Web.Common" Version="9.3.1" />
     <PackageReference Include="Umbraco.Cms.Web.Website" Version="9.3.1" />
+    <PackageReference Include="Umbraco.ExaminePDF" Version="9.0.0" />
   </ItemGroup>
 
 </Project>

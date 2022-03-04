@@ -60,6 +60,10 @@
             "Umbraco.Cms.Web.Website": {
               "target": "Package",
               "version": "[9.3.1, )"
+            },
+            "Umbraco.ExaminePDF": {
+              "target": "Package",
+              "version": "[9.0.0, )"
             }
           },
           "imports": [

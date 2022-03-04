@@ -272,6 +272,14 @@ namespace Dit.Umb9.Mutobo.ToolBox.Services
                     };
                     break;
 
+                case DocumentTypes.SearchResultsPage.Alias:
+                    result = new SearchResultsPage(content)
+                    {
+
+
+                    };
+                    break;
+
             }
 
             return result;

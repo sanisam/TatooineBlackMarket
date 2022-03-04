@@ -1,15 +1,36 @@
-﻿
-@using Umbraco.Web.Composing
-@model Dit.Umb.Mutobo.PoCo.SearchFormModel
-<m-form type="search" namespace="search-">
-    @using (Html.BeginUmbracoForm("PostData", "SearchForm", FormMethod.Post))
+﻿@model Dit.Umb9.Mutobo.ToolBox.Models.PoCo.SearchFormModel
+@using Dit.Umb9.Mutobo.ToolBox.Controllers.SurfaceControllers
+
+
+<m-form type="search" namespace="search-" use-html-submit >
+
+
+
+    @using (Html.BeginUmbracoForm<SearchFormController>(nameof(SearchFormController.PostData), FormMethod.Post))
     {
-        <a-input type="text" namespace="search-field-">
-            @Html.Label("TRANSLATE")"")
-            @Html.TextBoxFor(m => m.SearchTerm, new { placeholder = "TRANSLATE"})
-        </a-input>
+    <a-input type="text" namespace="search-field-">
+        <style>
+            :host > input:-webkit-autofill,
+            :host > input:-webkit-autofill:hover {
+                -webkit-text-fill-color: var(--background-color) !important;
+            }
+        </style>
+        @Html.Label("Suche")
+        @Html.TextBoxFor(m => m.SearchTerm, new { placeholder = "Suchbegriff" })
+    </a-input>
         <a-button src="~/assets/img/yellow/LUPE.svg" namespace="search-button-">
-            <button type="submit" aria-label="TRANSLATE">
+            <style>
+                :host {
+                    display: block;
+                    text-align: center;
+                    width: 100%;
+                }
+
+
+
+            </style>
+            <button type="submit"  aria-label="Suchen">
+                Suchen
             </button>
         </a-button>
     }

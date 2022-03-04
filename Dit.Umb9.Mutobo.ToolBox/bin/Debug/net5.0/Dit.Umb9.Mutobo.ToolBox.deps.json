@@ -34,9 +34,10 @@
       "Dit.Umb9.Mutobo.ToolBox/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Mvc.Abstractions": "2.2.0",
-          "Umbraco.Cms.Core": "9.3.0",
-          "Umbraco.Cms.Web.Common": "9.3.0",
-          "Umbraco.Cms.Web.Website": "9.3.0",
+          "Umbraco.Cms.Core": "9.3.1",
+          "Umbraco.Cms.Web.Common": "9.3.1",
+          "Umbraco.Cms.Web.Website": "9.3.1",
+          "Umbraco.ExaminePDF": "9.0.0",
           "Microsoft.AspNetCore.Antiforgery": "5.0.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "5.0.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "5.0.0.0",
@@ -1300,6 +1301,61 @@
           "lib/netstandard2.0/NUglify.dll": {}
         }
       },
+      "PdfPig/0.1.4": {
+        "runtime": {
+          "lib/netstandard2.0/UglyToad.PdfPig.Core.dll": {
+            "assemblyVersion": "0.1.4.0",
+            "fileVersion": "0.1.4.0"
+          },
+          "lib/netstandard2.0/UglyToad.PdfPig.DocumentLayoutAnalysis.dll": {
+            "assemblyVersion": "0.1.4.0",
+            "fileVersion": "0.1.4.0"
+          },
+          "lib/netstandard2.0/UglyToad.PdfPig.Fonts.dll": {
+            "assemblyVersion": "0.1.4.0",
+            "fileVersion": "0.1.4.0"
+          },
+          "lib/netstandard2.0/UglyToad.PdfPig.Package.dll": {
+            "assemblyVersion": "0.1.1.0",
+            "fileVersion": "0.1.1.0"
+          },
+          "lib/netstandard2.0/UglyToad.PdfPig.Tokenization.dll": {
+            "assemblyVersion": "0.1.4.0",
+            "fileVersion": "0.1.4.0"
+          },
+          "lib/netstandard2.0/UglyToad.PdfPig.Tokens.dll": {
+            "assemblyVersion": "0.1.4.0",
+            "fileVersion": "0.1.4.0"
+          },
+          "lib/netstandard2.0/UglyToad.PdfPig.dll": {
+            "assemblyVersion": "0.1.4.0",
+            "fileVersion": "0.1.4.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/UglyToad.PdfPig.Core.dll": {},
+          "lib/netstandard2.0/UglyToad.PdfPig.DocumentLayoutAnalysis.dll": {},
+          "lib/netstandard2.0/UglyToad.PdfPig.Fonts.dll": {},
+          "lib/netstandard2.0/UglyToad.PdfPig.Package.dll": {},
+          "lib/netstandard2.0/UglyToad.PdfPig.Tokenization.dll": {},
+          "lib/netstandard2.0/UglyToad.PdfPig.Tokens.dll": {},
+          "lib/netstandard2.0/UglyToad.PdfPig.dll": {}
+        }
+      },
+      "PDFsharpNetStandard2/1.51.4845": {
+        "dependencies": {
+          "System.Drawing.Common": "5.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/PDFsharp.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/PDFsharp.dll": {}
+        }
+      },
       "Portable.BouncyCastle/1.8.10": {
         "runtime": {
           "lib/netstandard2.0/BouncyCastle.Crypto.dll": {
@@ -2168,7 +2224,7 @@
           "System.Drawing.Common": "5.0.0"
         }
       },
-      "Umbraco.Cms.Core/9.3.0": {
+      "Umbraco.Cms.Core/9.3.1": {
         "dependencies": {
           "Microsoft.Extensions.Configuration.Abstractions": "5.0.0",
           "Microsoft.Extensions.FileProviders.Embedded": "5.0.11",
@@ -2184,31 +2240,31 @@
         },
         "runtime": {
           "lib/netstandard2.0/Umbraco.Core.dll": {
-            "assemblyVersion": "9.3.0.0",
-            "fileVersion": "9.3.0.0"
+            "assemblyVersion": "9.3.1.0",
+            "fileVersion": "9.3.1.0"
           }
         },
         "compile": {
           "lib/netstandard2.0/Umbraco.Core.dll": {}
         }
       },
-      "Umbraco.Cms.Examine.Lucene/9.3.0": {
+      "Umbraco.Cms.Examine.Lucene/9.3.1": {
         "dependencies": {
           "Examine": "2.0.1",
-          "Umbraco.Cms.Core": "9.3.0",
-          "Umbraco.Cms.Infrastructure": "9.3.0"
+          "Umbraco.Cms.Core": "9.3.1",
+          "Umbraco.Cms.Infrastructure": "9.3.1"
         },
         "runtime": {
           "lib/netstandard2.0/Umbraco.Examine.Lucene.dll": {
-            "assemblyVersion": "9.3.0.0",
-            "fileVersion": "9.3.0.0"
+            "assemblyVersion": "9.3.1.0",
+            "fileVersion": "9.3.1.0"
           }
         },
         "compile": {
           "lib/netstandard2.0/Umbraco.Examine.Lucene.dll": {}
         }
       },
-      "Umbraco.Cms.Infrastructure/9.3.0": {
+      "Umbraco.Cms.Infrastructure/9.3.1": {
         "dependencies": {
           "Examine.Core": "2.0.1",
           "HtmlAgilityPack": "1.11.37",
@@ -2242,39 +2298,58 @@
           "System.IO.FileSystem.AccessControl": "5.0.0",
           "System.Text.Encodings.Web": "5.0.1",
           "System.Threading.Tasks.Dataflow": "5.0.0",
-          "Umbraco.Cms.Core": "9.3.0",
+          "Umbraco.Cms.Core": "9.3.1",
           "NCrontab": "3.3.1"
         },
         "runtime": {
           "lib/netstandard2.0/Umbraco.Infrastructure.dll": {
-            "assemblyVersion": "9.3.0.0",
-            "fileVersion": "9.3.0.0"
+            "assemblyVersion": "9.3.1.0",
+            "fileVersion": "9.3.1.0"
           }
         },
         "compile": {
           "lib/netstandard2.0/Umbraco.Infrastructure.dll": {}
         }
       },
-      "Umbraco.Cms.PublishedCache.NuCache/9.3.0": {
+      "Umbraco.Cms.PublishedCache.NuCache/9.3.1": {
         "dependencies": {
           "CSharpTest.Net.Collections-NetStd2": "14.906.1403.1084",
           "K4os.Compression.LZ4": "1.2.15",
           "MessagePack": "2.3.85",
           "Newtonsoft.Json": "13.0.1",
-          "Umbraco.Cms.Core": "9.3.0",
-          "Umbraco.Cms.Infrastructure": "9.3.0"
+          "Umbraco.Cms.Core": "9.3.1",
+          "Umbraco.Cms.Infrastructure": "9.3.1"
         },
         "runtime": {
           "lib/netstandard2.0/Umbraco.PublishedCache.NuCache.dll": {
-            "assemblyVersion": "9.3.0.0",
-            "fileVersion": "9.3.0.0"
+            "assemblyVersion": "9.3.1.0",
+            "fileVersion": "9.3.1.0"
           }
         },
         "compile": {
           "lib/netstandard2.0/Umbraco.PublishedCache.NuCache.dll": {}
         }
       },
-      "Umbraco.Cms.Web.Common/9.3.0": {
+      "Umbraco.Cms.Web.BackOffice/9.0.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.1",
+          "Serilog.AspNetCore": "4.1.0",
+          "Umbraco.Cms.Core": "9.3.1",
+          "Umbraco.Cms.Examine.Lucene": "9.3.1",
+          "Umbraco.Cms.Infrastructure": "9.3.1",
+          "Umbraco.Cms.Web.Common": "9.3.1"
+        },
+        "runtime": {
+          "lib/net5.0/Umbraco.Web.BackOffice.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/net5.0/Umbraco.Web.BackOffice.dll": {}
+        }
+      },
+      "Umbraco.Cms.Web.Common/9.3.1": {
         "dependencies": {
           "Dazinator.Extensions.FileProviders": "2.0.0",
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "5.0.11",
@@ -2285,35 +2360,51 @@
           "SixLabors.ImageSharp.Web": "1.0.5",
           "Smidge.InMemory": "4.0.3",
           "Smidge.Nuglify": "4.0.3",
-          "Umbraco.Cms.Core": "9.3.0",
-          "Umbraco.Cms.Examine.Lucene": "9.3.0",
-          "Umbraco.Cms.Infrastructure": "9.3.0",
-          "Umbraco.Cms.PublishedCache.NuCache": "9.3.0"
+          "Umbraco.Cms.Core": "9.3.1",
+          "Umbraco.Cms.Examine.Lucene": "9.3.1",
+          "Umbraco.Cms.Infrastructure": "9.3.1",
+          "Umbraco.Cms.PublishedCache.NuCache": "9.3.1"
         },
         "runtime": {
           "lib/net5.0/Umbraco.Web.Common.dll": {
-            "assemblyVersion": "9.3.0.0",
-            "fileVersion": "9.3.0.0"
+            "assemblyVersion": "9.3.1.0",
+            "fileVersion": "9.3.1.0"
           }
         },
         "compile": {
           "lib/net5.0/Umbraco.Web.Common.dll": {}
         }
       },
-      "Umbraco.Cms.Web.Website/9.3.0": {
+      "Umbraco.Cms.Web.Website/9.3.1": {
         "dependencies": {
-          "Umbraco.Cms.Core": "9.3.0",
-          "Umbraco.Cms.Infrastructure": "9.3.0",
-          "Umbraco.Cms.Web.Common": "9.3.0"
+          "Umbraco.Cms.Core": "9.3.1",
+          "Umbraco.Cms.Infrastructure": "9.3.1",
+          "Umbraco.Cms.Web.Common": "9.3.1"
         },
         "runtime": {
           "lib/net5.0/Umbraco.Web.Website.dll": {
-            "assemblyVersion": "9.3.0.0",
-            "fileVersion": "9.3.0.0"
+            "assemblyVersion": "9.3.1.0",
+            "fileVersion": "9.3.1.0"
           }
         },
         "compile": {
           "lib/net5.0/Umbraco.Web.Website.dll": {}
+        }
+      },
+      "Umbraco.ExaminePDF/9.0.0": {
+        "dependencies": {
+          "PDFsharpNetStandard2": "1.51.4845",
+          "PdfPig": "0.1.4",
+          "Umbraco.Cms.Web.BackOffice": "9.0.0"
+        },
+        "runtime": {
+          "lib/net5.0/UmbracoExamine.PDF.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/net5.0/UmbracoExamine.PDF.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/5.0.0.0": {
@@ -4570,6 +4661,20 @@
       "path": "nuglify/1.13.12",
       "hashPath": "nuglify.1.13.12.nupkg.sha512"
     },
+    "PdfPig/0.1.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-iqFmvlXBd8gz3NZEwzLJSMF2lss2/yUtYZBOEttGdBSfTmaz+pvzhA2hbit1up6QPFrZbZR8MTxIh98WF+l2uw==",
+      "path": "pdfpig/0.1.4",
+      "hashPath": "pdfpig.0.1.4.nupkg.sha512"
+    },
+    "PDFsharpNetStandard2/1.51.4845": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-M3eJmLeFxNY+2dZdsC0SjLyQISCLRWUJT960AzyzqjHxuFulToeNEkV5A56N0u+Y0vu3kx3B3i8dbBh6MgZxjA==",
+      "path": "pdfsharpnetstandard2/1.51.4845",
+      "hashPath": "pdfsharpnetstandard2.1.51.4845.nupkg.sha512"
+    },
     "Portable.BouncyCastle/1.8.10": {
       "type": "package",
       "serviceable": true,
@@ -5214,47 +5319,61 @@
       "path": "system.windows.extensions/5.0.0",
       "hashPath": "system.windows.extensions.5.0.0.nupkg.sha512"
     },
-    "Umbraco.Cms.Core/9.3.0": {
+    "Umbraco.Cms.Core/9.3.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-uO0iy1YlFn8PIx5ZwhE1Tzy/UkV7J2I+pkrLJqjquJj3esl2bf7IC+PmlLb96BIYEjlS8f4SAMT7y3vRhjG5tg==",
-      "path": "umbraco.cms.core/9.3.0",
-      "hashPath": "umbraco.cms.core.9.3.0.nupkg.sha512"
+      "sha512": "sha512-YRC31sQdcH9Gd0sZYwJfLzS3P8iI+dxawE4jDnl7Uih41tCwfAM/Befpd2vNtUEe31JS/Ak/SSLRhHXurtjOqg==",
+      "path": "umbraco.cms.core/9.3.1",
+      "hashPath": "umbraco.cms.core.9.3.1.nupkg.sha512"
     },
-    "Umbraco.Cms.Examine.Lucene/9.3.0": {
+    "Umbraco.Cms.Examine.Lucene/9.3.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-oCf8bmAZw5KjTGnIxEGPTGxTRvTO/o97ogy5FdLTOB/uwWlNepAQy/hXl7hSIooqhap7WpsUAaYkIQP/4nSwmw==",
-      "path": "umbraco.cms.examine.lucene/9.3.0",
-      "hashPath": "umbraco.cms.examine.lucene.9.3.0.nupkg.sha512"
+      "sha512": "sha512-FsC0DdQtoXetTjyCjvffOXKRAkH3xGRWBM7jRNLdOUJUNIXm3Bs/nmGXfHxteP1DOE6xsGt+Ebqn+IY/zGj6lQ==",
+      "path": "umbraco.cms.examine.lucene/9.3.1",
+      "hashPath": "umbraco.cms.examine.lucene.9.3.1.nupkg.sha512"
     },
-    "Umbraco.Cms.Infrastructure/9.3.0": {
+    "Umbraco.Cms.Infrastructure/9.3.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-R+8ld2tkZWjgW4LGjnvt8F3jGNNUtbRRHxO4n77UNboU9kASf6XzRLJkBSU0X8sxwsnxVmyu6DQxK5wPLSENjQ==",
-      "path": "umbraco.cms.infrastructure/9.3.0",
-      "hashPath": "umbraco.cms.infrastructure.9.3.0.nupkg.sha512"
+      "sha512": "sha512-kFvl79ootI8IdQ045FZ8GhY383wFN7wTRCJa5OA0cNm4vn1ttqbFFMVjaWxysQXd9fHgOa3HW/wkZF7BByDAEw==",
+      "path": "umbraco.cms.infrastructure/9.3.1",
+      "hashPath": "umbraco.cms.infrastructure.9.3.1.nupkg.sha512"
     },
-    "Umbraco.Cms.PublishedCache.NuCache/9.3.0": {
+    "Umbraco.Cms.PublishedCache.NuCache/9.3.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-dGuSfmPS3s1/PlVZxI2jne9qjYpfvCW0cfcjREcY7SwmKx3OKqA/p/l40/esP9lE4JujrqbiBiVb1DG8sq2sbg==",
-      "path": "umbraco.cms.publishedcache.nucache/9.3.0",
-      "hashPath": "umbraco.cms.publishedcache.nucache.9.3.0.nupkg.sha512"
+      "sha512": "sha512-IrAtUBM6OOOh0BK1sd8gQKuhPUymrjBmugbQKrFZ5KWnqbZ6l/itqybz9A/GmZtXfPih16J0F3k54OEWftjv2w==",
+      "path": "umbraco.cms.publishedcache.nucache/9.3.1",
+      "hashPath": "umbraco.cms.publishedcache.nucache.9.3.1.nupkg.sha512"
     },
-    "Umbraco.Cms.Web.Common/9.3.0": {
+    "Umbraco.Cms.Web.BackOffice/9.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-SYlSlfd+Roz4dM1epw3bvj+/bpsz5su2KRkJ3ggBmzEnZNncG75Bt9G1CPtLMQaUqO9hz/tzEUoCV2BhEXzgcQ==",
-      "path": "umbraco.cms.web.common/9.3.0",
-      "hashPath": "umbraco.cms.web.common.9.3.0.nupkg.sha512"
+      "sha512": "sha512-WOMMS4+bR5UsPMW1cgHzkBd/3x1oCoquah1DRhyx8C4Cnare2LixQr/uK0r1SYcUZYPgyvVlpS/sSCT8B3Rlew==",
+      "path": "umbraco.cms.web.backoffice/9.0.0",
+      "hashPath": "umbraco.cms.web.backoffice.9.0.0.nupkg.sha512"
     },
-    "Umbraco.Cms.Web.Website/9.3.0": {
+    "Umbraco.Cms.Web.Common/9.3.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-P5/qm+S5lPGQUbpwdsPExXmUoZ/GRCMt55r1cyYS/O06lmjswn8njrCodBTme9pzQzAB5ipUKoBrDth6eyMBNA==",
-      "path": "umbraco.cms.web.website/9.3.0",
-      "hashPath": "umbraco.cms.web.website.9.3.0.nupkg.sha512"
+      "sha512": "sha512-tlVtVWXfwzqArMW2jnVnh18B9Nt6SYi3PIPMzyqkQ3edWq4axDYPLuiVHBbfz8XWsH44FG4elRYaDcGpOlg2Aw==",
+      "path": "umbraco.cms.web.common/9.3.1",
+      "hashPath": "umbraco.cms.web.common.9.3.1.nupkg.sha512"
+    },
+    "Umbraco.Cms.Web.Website/9.3.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-BmE7YN4gu0QhCA33LTaxuq+yKKQ1Bsd21i9YfonmcQ2FW3QnLTvJBOJy5/VVWNhmxIJV0XD2aEYDY/buNaGaew==",
+      "path": "umbraco.cms.web.website/9.3.1",
+      "hashPath": "umbraco.cms.web.website.9.3.1.nupkg.sha512"
+    },
+    "Umbraco.ExaminePDF/9.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-etyB9KRAH0unCB9FlaaSDHpP2by3hAVl0zhhAV34lYvV8S1yoU0/+81AIqZOqDLE04moETgJeMHXgjYNY14upw==",
+      "path": "umbraco.examinepdf/9.0.0",
+      "hashPath": "umbraco.examinepdf.9.0.0.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Antiforgery/5.0.0.0": {
       "type": "referenceassembly",

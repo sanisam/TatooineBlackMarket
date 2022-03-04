@@ -1,4 +1,5 @@
-﻿using Dit.Umb9.Mutobo.ToolBox.Interfaces;
+﻿using Dit.Umb9.Mutobo.ToolBox.Components;
+using Dit.Umb9.Mutobo.ToolBox.Interfaces;
 using Dit.Umb9.Mutobo.ToolBox.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
@@ -25,11 +26,9 @@ namespace Dit.Umb9.Mutobo.ToolBox.Composer
 
         private void AddComponents(IUmbracoBuilder builder)
         {
-            //builder.Components().Append<MinifierComponent>();
-            //builder.Components().Append<SearchConfigurationComponent>();
-            //composition.Components().Append<HtmlMinifierComponent>();
-            //composition.Components().Append<CustomDropDownPopulateComponent>();
-            //composition.Components().Append<CustomIndexComponent>();
+            builder.Components().Append<MinifierComponent>();
+            builder.Components().Append<SearchConfigurationComponent>();
+
         }
 
         private void RegisterServices(IUmbracoBuilder builder)
