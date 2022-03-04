@@ -29,6 +29,7 @@ namespace Dit.Umb9.Mutobo.ToolBox.Composer
             builder.Components().Append<MinifierComponent>();
             builder.Components().Append<SearchConfigurationComponent>();
 
+
         }
 
         private void RegisterServices(IUmbracoBuilder builder)
