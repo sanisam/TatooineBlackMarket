@@ -49,7 +49,9 @@ namespace Dit.Umb9.Mutobo.ToolBox.Components
                 && _examineManager.TryGetIndex(PdfIndexConstants.PdfIndexName, out pdfIndex))
             {
                 // FieldDefinitionCollection contains all indexed fields 
-                externalIndex.FieldDefinitions.Append(new FieldDefinition("contents", FieldDefinitionTypes.FullText));
+                externalIndex.FieldDefinitions.Append(new FieldDefinition(DocumentTypes.ArticlePage.Fields.MainContent, FieldDefinitionTypes.FullText));
+                externalIndex.FieldDefinitions.Append(new FieldDefinition(DocumentTypes.ArticlePage.Fields.Abstract, FieldDefinitionTypes.FullText));
+                externalIndex.FieldDefinitions.Append(new FieldDefinition(DocumentTypes.BasePage.Fields.PageTitle, FieldDefinitionTypes.FullText));
                 ((BaseIndexProvider)externalIndex).TransformingIndexValues += OnTransformingIndexValues;
 
                 ////register multisearcher
@@ -67,8 +69,6 @@ namespace Dit.Umb9.Mutobo.ToolBox.Components
         {
             if (int.TryParse(e.ValueSet.Id, out var nodeId))
 
-
-
                 using (var umbracoContext = _contextFactory.EnsureUmbracoContext())
                 {
                     IPublishedContent contentNode = umbracoContext.UmbracoContext.Content.GetById(nodeId);
@@ -77,13 +77,9 @@ namespace Dit.Umb9.Mutobo.ToolBox.Components
                     {
                         foreach (var culture in contentNode.Cultures)
                         {
-
-
                             if (contentNode != null)
                             {
-
                                 string moduleContent;
-
 
                                 switch (contentNode.ContentType.Alias)
                                 {
@@ -95,9 +91,8 @@ namespace Dit.Umb9.Mutobo.ToolBox.Components
                                         }
                                         break;
 
+                                
                                     case DocumentTypes.ContentPage.Alias:
-
-
                                         if (contentNode.HasValue(DocumentTypes.ContentPage.Fields.Modules, culture.Key))
                                         {
                                             moduleContent = IndexModules(_mutoboContentService.GetContent(contentNode, DocumentTypes.ContentPage.Fields.Modules, culture.Key) as IEnumerable<MutoboContentModule>);
@@ -105,23 +100,11 @@ namespace Dit.Umb9.Mutobo.ToolBox.Components
                                         }
                                         break;
 
-
                                 }
-
-
-
                             }
-
-
                         }
-
                     }
-
-
                 }
-
-
-
         }
 
 
