@@ -68,11 +68,14 @@ namespace Dit.Umb9.Mutobo.ToolBox.Services
                     "nodeName",
                     "__NodeTypeAlias",
                     "fileTextContent",
-                    "abstract_" + currentCulture,
+                    $"abstract_{currentCulture}",
                     "abstract",
                     "mainContent",
+                    $"mainContent_{currentCulture}",
                     "pageTitle",
-                    "modules"
+                    $"pageTitle_{currentCulture}",
+                    "modules",
+                    $"modules_{currentCulture}"
                 };
 
                 if (!string.IsNullOrEmpty(term))
