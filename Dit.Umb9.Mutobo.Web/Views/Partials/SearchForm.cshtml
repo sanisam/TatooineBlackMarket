@@ -2,10 +2,7 @@
 @using Dit.Umb9.Mutobo.ToolBox.Controllers.SurfaceControllers
 
 
-<m-form type="search" namespace="search-" use-html-submit >
-
-
-
+@*<m-form type="search" namespace="search-" use-html-submit >
     @using (Html.BeginUmbracoForm<SearchFormController>(nameof(SearchFormController.PostData), FormMethod.Post))
     {
     <a-input type="text" namespace="search-field-">
@@ -18,20 +15,10 @@
         @Html.Label("Suche")
         @Html.TextBoxFor(m => m.SearchTerm, new { placeholder = "Suchbegriff" })
     </a-input>
-        <a-button src="~/assets/img/yellow/LUPE.svg" namespace="search-button-">
-            <style>
-                :host {
-                    display: block;
-                    text-align: center;
-                    width: 100%;
-                }
-
-
-
-            </style>
-            <button type="submit"  aria-label="Suchen">
+        <a-button type="submit" src="~/assets/img/yellow/LUPE.svg" namespace="search-button-">
                 Suchen
-            </button>
         </a-button>
     }
-</m-form>
+</m-form>*@
+
+<a-input inputid="inputSearch" placeholder="Suchen..." search=?q= type=search></a-input>

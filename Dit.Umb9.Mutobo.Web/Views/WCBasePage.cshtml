@@ -10,21 +10,19 @@
 
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Dit.Umb9.Mutobo.ToolBox.Models.Pages.BasePage>
 @* the fun starts here *@
-
-
-
 <!DOCTYPE html>
 <html lang="@Thread.CurrentThread.CurrentUICulture.Name">
 <head>
     <meta charset=UTF-8>
     @*<meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' https://www.google.com https://cdn.jsdelivr.net/ https://www.googletagmanager.com/ https://www.gstatic.com/; font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com; img-src 'self' 'unsafe-inline'">*@
-
-
     <meta name=viewport content="width=device-width, initial-scale=1.0">
-   <link href="~/web-components-cms-template/src/css/variablesWeb4MIndustry.css" rel="stylesheet" />
-        <link href="~/web-components-cms-template/src/css/misc.css" rel="stylesheet" />
-        <link href="~/web-components-cms-template/src/css/fonts.css" rel="stylesheet" />
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link href="~/web-components-toolbox/src/css/initial.css" rel="stylesheet" type="text/css">
+    <link href="~/web-components-toolbox/src/css/reset.css" rel="stylesheet" type="text/css">
+    <link href="~/web-components-toolbox/src/css/colors.css" rel="stylesheet" type="text/css">        
+    <link href="~/web-components-toolbox/src/css/fonts.css" rel="stylesheet" type="text/css">
+    <link href="~/web-components-toolbox/src/css/variables.css" rel="stylesheet" type="text/css">
+
     <title>@Model.PageTitle</title>
     @await Html.PartialAsync("~/Views/Partials/SEOConfiguration.cshtml", seoServive.GetSeoConfiguration())
     @if (!string.IsNullOrEmpty(Model.GoogleAnalyticsKey))
@@ -49,7 +47,7 @@
              @await Html.PartialAsync("~/Views/Partials/Footer.cshtml", Model.FooterConfiguration as FooterConfig)
         }
     </p-general>
-    <script src="/web-components-cms-template/wc-config.js?baseUrl=/web-components-cms-template/src/es/components/" type="text/javascript"></script>
+    <script src="/web-components-toolbox/wc-config.js?baseUrl=/web-components-toolbox/src/es/components/" type="text/javascript"></script>
     <script src="https://www.google.com/recaptcha/api.js"></script>
     <m-cookie-banner storage="localStorage" namespace="cookie-banner-">
         <style>
@@ -75,6 +73,5 @@
     mobileBreakpoint: '1250px'
     }</script>
 </body>
-
 </html>
 

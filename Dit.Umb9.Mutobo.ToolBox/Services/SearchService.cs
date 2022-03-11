@@ -116,6 +116,67 @@ namespace Dit.Umb9.Mutobo.ToolBox.Services
 
         }
 
+        public IEnumerable<Models.PoCo.SearchResult> Search(string term)
+        {
+
+
+
+
+            if (_examineManager.TryGetIndex("ExternalIndex", out var index))
+            {
+                var currentCulture = System.Threading.Thread.CurrentThread.CurrentCulture.Name.ToString().ToLower();
+                var searchTerm = HtmlHelperExtensions.SearchFriendlyString(term);
+                var diffFields = new string[] {
+                    "nodeName",
+                    "__NodeTypeAlias",
+                    "fileTextContent",
+                    $"abstract_{currentCulture}",
+                    "abstract",
+                    "mainContent",
+                    $"mainContent_{currentCulture}",
+                    "pageTitle",
+                    $"pageTitle_{currentCulture}",
+                    "modules",
+                    $"modules_{currentCulture}"
+                };
+
+                if (!string.IsNullOrEmpty(term))
+                {
+                    var query = index.Searcher.CreateQuery(null, BooleanOperation.And)
+                                    .GroupedOr(diffFields, searchTerm);
+                    var results = query.Execute();
+
+                    return results
+                        .Select(r => Context.Content.GetById(false, int.Parse(r.Id)))
+                        .Select(node => new Models.PoCo.SearchResult
+                        {
+                            Url = node.Url(),
+                            Abstract = node.HasProperty(DocumentTypes.ArticlePage.Fields.Abstract) ? node.Value<string>(DocumentTypes.ArticlePage.Fields.Abstract) : string.Empty,
+                            Title = node.HasProperty(DocumentTypes.BasePage.Fields.PageTitle) &&
+                                                 node.HasValue(DocumentTypes.BasePage.Fields.PageTitle) &&
+                                                 !string.IsNullOrEmpty(node.Value<string>(DocumentTypes.BasePage.Fields.PageTitle).Trim()) ?
+                                             node.Value<string>(DocumentTypes.BasePage.Fields.PageTitle) :
+                                             node.Name,
+                            UrlTitle = "Mehr erfahren"
+
+                        });
+                }
+                else
+                {
+                    return new List<Models.PoCo.SearchResult>();
+                }
+
+            }
+            else
+            {
+                throw new SearchException("ExternalIndex is not present");
+            }
+
+
+
+
+        }
+
 
 
 

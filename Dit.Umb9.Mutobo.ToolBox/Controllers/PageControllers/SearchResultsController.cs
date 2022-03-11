@@ -1,4 +1,5 @@
 ﻿using Dit.Umb9.Mutobo.ToolBox.Interfaces;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ViewEngines;
 using Microsoft.Extensions.Logging;
 
@@ -20,14 +21,18 @@ namespace Dit.Umb9.Mutobo.ToolBox.Controllers.PageControllers
             IUmbracoContextAccessor umbracoContextAccessor,
             IImageService imageService,
             IPageLayoutService pageLayoutService,
-            IMutoboContentService contentService) : base(
+            IMutoboContentService contentService,
+            ISearchService searchService) : base(
                 logger,
                 compositeViewEngine,
                 umbracoContextAccessor,
                 imageService,
                 pageLayoutService,
-                contentService)
+                contentService,
+                searchService)
         {
         }
+
+
     }
 }

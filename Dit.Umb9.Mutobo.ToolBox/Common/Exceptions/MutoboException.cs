@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace Dit.Umb9.Mutobo.ToolBox.Common.Exceptions
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class MutoboException : Exception
     {
-
         public MutoboException(string message)
             : base(message)
         {

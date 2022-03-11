@@ -22,14 +22,16 @@ namespace Dit.Umb9.Mutobo.ToolBox.Controllers.PageControllers
             IUmbracoContextAccessor umbracoContextAccessor,
             IPageLayoutService pageLayoutService,
             IMutoboContentService contentService,
-            IImageService imageService)
+            IImageService imageService,
+            ISearchService searchService)
             : base(
                   logger,
                   compositeViewEngine,
                   umbracoContextAccessor,
                   imageService,
                   pageLayoutService,
-                  contentService
+                  contentService,
+                  searchService
                 )
         {
         }

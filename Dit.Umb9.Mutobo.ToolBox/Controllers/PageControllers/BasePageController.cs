@@ -1,6 +1,7 @@
 ﻿using Dit.Umb9.Mutobo.ToolBox.Constants;
 using Dit.Umb9.Mutobo.ToolBox.Interfaces;
 using Dit.Umb9.Mutobo.ToolBox.Models.Pages;
+using Dit.Umb9.Mutobo.ToolBox.Models.PoCo;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ViewEngines;
 using Microsoft.Extensions.Configuration;
@@ -23,6 +24,8 @@ namespace Dit.Umb9.Mutobo.ToolBox.Controllers.PageControllers
         protected readonly IImageService ImageService;
         protected readonly IPageLayoutService PageLayoutService;
         protected readonly IMutoboContentService ContentService;
+        protected readonly ISearchService SearchService;
+
 
 
         public BasePageController(
@@ -31,17 +34,27 @@ namespace Dit.Umb9.Mutobo.ToolBox.Controllers.PageControllers
             IUmbracoContextAccessor umbracoContextAccessor,
             IImageService imageService,
             IPageLayoutService pageLayoutService,
-            IMutoboContentService contentService)
+            IMutoboContentService contentService, ISearchService searchService)
             : base(logger, compositeViewEngine, umbracoContextAccessor)
         {
             ImageService = imageService;
             PageLayoutService = pageLayoutService;
             ContentService = contentService;
-   
+            SearchService = searchService;
         }
 
         public override IActionResult Index() 
         {
+            var searchString = this.HttpContext.Request.Query["q"].ToString();
+
+            if (!string.IsNullOrEmpty(searchString) && !string.IsNullOrWhiteSpace(searchString))
+            {
+
+                return View("~/Views/WCSearchResults.cshtml", SearchService.PerformSearch(searchString) as SearchResultsPage);
+            }
+
+     
+
             var redirectLink = CurrentPage.Value<Link>(DocumentTypes.BasePage.Fields.RedirectLink);
 
             if (!string.IsNullOrEmpty(redirectLink?.Url))
