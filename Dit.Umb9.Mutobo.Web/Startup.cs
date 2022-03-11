@@ -14,6 +14,7 @@ namespace Dit.Umb9.Mutobo.Web
     {
         private readonly IWebHostEnvironment _env;
         private readonly IConfiguration _config;
+        
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Startup" /> class.
@@ -44,6 +45,7 @@ namespace Dit.Umb9.Mutobo.Web
                 .AddBackOffice()
                 .AddWebsite()
                 .AddComposers()
+                .AddAzureBlobMediaFileSystem()
                 .Build();
 #pragma warning restore IDE0022 // Use expression body for methods
             services.AddWebMarkupMin(
@@ -80,6 +82,11 @@ namespace Dit.Umb9.Mutobo.Web
                 {
                     u.UseBackOffice();
                     u.UseWebsite();
+                    if (_config.GetValue<bool>("Dit.UseAzureBlobStorage"))
+                    {
+                        u.UseAzureBlobMediaFileSystem();
+                    }
+                
                 })
                 .WithEndpoints(u =>
                 {
