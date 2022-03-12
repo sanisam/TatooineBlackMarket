@@ -42,8 +42,6 @@
       <Folder Include="uSync\" />
     </ItemGroup>
 
-
-
     <PropertyGroup>
         <CopyRazorGenerateFilesToPublishDirectory>true</CopyRazorGenerateFilesToPublishDirectory>
     </PropertyGroup>
