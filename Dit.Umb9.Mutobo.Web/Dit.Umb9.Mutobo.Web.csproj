@@ -9,6 +9,17 @@
     </ItemGroup>
 
     <ItemGroup>
+      <Content Include="wwwroot\media\1c1oscwt\20211127_081034.jpg" />
+      <Content Include="wwwroot\media\21slkarj\20-11-_2021_09-56-06.mp4" />
+      <Content Include="wwwroot\media\iptnmjge\download-1.jpg" />
+      <Content Include="wwwroot\media\mfqnw12i\images.jpg" />
+      <Content Include="wwwroot\media\ovymaatd\img_0758.jpg" />
+      <Content Include="wwwroot\media\pi3pnp5y\muto-logo.png" />
+      <Content Include="wwwroot\media\slsdrbbi\211026_berset_kritik.jpg" />
+      <Content Include="wwwroot\media\yqqjwypc\download-1.jpg" />
+    </ItemGroup>
+
+    <ItemGroup>
         <PackageReference Include="Umbraco.Cms" Version="9.3.1" />
     </ItemGroup>
 
@@ -26,21 +37,7 @@
         <PackageReference Include="WebMarkupMin.AspNetCore5" Version="2.11.0" />
         <ProjectReference Include="..\Dit.Umb9.Mutobo.ToolBox\Dit.Umb9.Mutobo.ToolBox.csproj" />
     </ItemGroup>
-        <ItemGroup>
-        <Content Include="App_Plugins/**" CopyToOutputDirectory="Always" />
-        <Content Include="umbraco/**" CopyToOutputDirectory="Always" />
-        <Compile Remove="wwwroot\media\**" />
-        <Content Remove="umbraco/Data/**" />
-        <Content Remove="umbraco/Logs/**" />
-        <Content Remove="umbraco/mediacache/**" />
-        <Content Remove="umbraco/models/**" />
-        <Content Remove="wwwroot\media\**" />
-        <Compile Include="umbraco/models/**" Exclude="**/*.flag" />
-    </ItemGroup>
-        <ItemGroup>
-        <EmbeddedResource Remove="wwwroot\media\**" />
-        <None Remove="wwwroot\media\**" />
-    </ItemGroup>
+
     <ItemGroup>
       <Folder Include="uSync\" />
     </ItemGroup>
