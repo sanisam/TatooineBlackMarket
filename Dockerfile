@@ -3,7 +3,7 @@ WORKDIR /sources
 
 # Copy everything else and build website
 COPY Dit.Umb9.Mutobo.Web/. ./Dit.Umb9.Mutobo.Web/
-WORKDIR /sources/Dit.Umb9.Mutobo
+WORKDIR /sources/Dit.Umb9.Mutobo.Web
 
 RUN dotnet nuget add source "https://www.myget.org/F/umbracoprereleases/api/v3/index.json" -n "Umbraco Prereleases"
 RUN dotnet restore
