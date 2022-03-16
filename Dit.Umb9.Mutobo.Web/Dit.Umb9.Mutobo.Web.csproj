@@ -74,6 +74,13 @@
       $(CopyAllFilesToSingleFolderForMSDeployDependsOn);
     </CopyAllFilesToSingleFolderForMSDeployDependsOn>
   </PropertyGroup>
+	<PropertyGroup>
+		<CopyAllFilesToSingleFolderForMSDeployDependsOn>
+			DemoMedia;
+			$(CopyAllFilesToSingleFolderForMSDeployDependsOn);
+		</CopyAllFilesToSingleFolderForMSDeployDependsOn>
+	</PropertyGroup>
+
   <Target Name="CustomCollectFiles">
     <ItemGroup>
       <_CustomFiles Include=".\wwwwroot\web-components-toolbox\**\*" />
@@ -82,4 +89,12 @@
       </FilesForPackagingFromProject>
     </ItemGroup>
   </Target>
+	<Target Name="DemoMedia">
+		<ItemGroup>
+			<_CustomFiles Include=".\demo-media\**\*" />
+			<FilesForPackagingFromProject Include="%(_CustomFiles.Identity)">
+				<DestinationRelativePath>wwwroot\media\%(RecursiveDir)%(Filename)%(Extension)</DestinationRelativePath>
+			</FilesForPackagingFromProject>
+		</ItemGroup>
+	</Target>
 </Project>

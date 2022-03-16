@@ -366,3 +366,5 @@ FodyWeavers.xsd
 
 
 /.vs
+
+*.Development.json
