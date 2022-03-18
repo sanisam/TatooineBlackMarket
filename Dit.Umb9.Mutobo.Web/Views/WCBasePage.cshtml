@@ -45,7 +45,7 @@
              @await Html.PartialAsync("~/Views/Partials/Footer.cshtml", Model.FooterConfiguration as FooterConfig)
         }
     </p-general>
-       
+    <script async rel=preload as="script" type="text/javascript" src="/web-components-toolbox/src/es/helpers/Environment.js"></script>       
     <script src="/web-components-toolbox/wc-config.js?baseUrl=/web-components-toolbox/src/es/components/" type="text/javascript"></script>
     <script src="https://www.google.com/recaptcha/api.js"></script>
     <m-cookie-banner storage="localStorage" namespace="cookie-banner-">
@@ -68,9 +68,6 @@
         }
     </script>
     
-    <script rel="preload" type="module">self.Environment = {
-    mobileBreakpoint: '1250px'
-    }</script>
 </body>
 </html>
 
