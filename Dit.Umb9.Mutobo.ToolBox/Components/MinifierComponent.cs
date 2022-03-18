@@ -15,6 +15,7 @@ namespace Dit.Umb9.Mutobo.ToolBox.Components
         public MinifierComponent(IRuntimeMinifier runtimeMinifier) => _runtimeMinifier = runtimeMinifier;
         public void Initialize()
         {
+            
             _runtimeMinifier.CreateCssBundle("inline-css-bundle",
                 BundlingOptions.OptimizedNotComposite,
                 new[] { "~/web-components-toolbox/src/css/initial.css", 
