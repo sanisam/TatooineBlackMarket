@@ -14,7 +14,7 @@ RUN dotnet restore
 
 
 COPY Dit.Umb9.Mutobo.Web/. ./Dit.Umb9.Mutobo.Web/
-COPY Dit.Umb9.Mutobo.Web/demo-media ./Dit.Umb9.Mutobo.Web/wwwroot/media
+
 COPY Dit.Umb9.Mutobo.ToolBox/. ./Dit.Umb9.Mutobo.ToolBox/
 
 WORKDIR /sources/Dit.Umb9.Mutobo.Web
@@ -31,8 +31,8 @@ COPY --from=build /output/Dit.Umb9.Mutobo.Web ./
 
 ENTRYPOINT ["dotnet", "Dit.Umb9.Mutobo.Web.dll"]
 
-
-#RUN cp /output/Dit.Umb9.Mutobo.Web/demo-media/* output/Dit.Umb9.Mutobo.Web/wwwroot/media
+RUN mkdir /output/Dit.Umb9.Mutobo.Web/wwwroot/media
+RUN cp -r /output/Dit.Umb9.Mutobo.Web/demo-media/** /output/Dit.Umb9.Mutobo.Web/wwwroot/media
 
 
 RUN rm /output/Dit.Umb9.Mutobo.Web/appsettings.json

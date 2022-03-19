@@ -26,7 +26,7 @@ services:
 
 volumes:
   umbraco.db:
-    external: true
+    external: false
   umbraco-netcore:
-    external: true
+    external: false
       
