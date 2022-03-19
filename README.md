@@ -52,7 +52,7 @@ For Running with Docker:
 
 - Ensure Docker an Docker Compose is up and running on your system
 - open a terminal
-- go to the project folter Dit.Umb9.Mutobo
+- go to the project folder Dit.Umb9.Mutobo
 - run the command: docker compose up
 - open a browser and go to http://localhost:8080
 - perform the Umbraco Installation and use the following db_settings:
