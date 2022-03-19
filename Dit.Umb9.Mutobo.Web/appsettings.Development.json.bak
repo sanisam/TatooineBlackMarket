@@ -19,14 +19,14 @@
   },
   "Dit.UseAzureBlobStorage": false,
   "ConnectionStrings": {
-    "umbracoDbDSN": ""
+    "umbracoDbDSN": "Data Source=(localdb)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\Umbraco.mdf;Integrated Security=True"
   },
   "Umbraco": {
     "Storage": {
       "AzureBlob": {
         "Media": {
-          "ConnectionString": "DefaultEndpointsProtocol=https;AccountName=sssmgb;AccountKey=5gTqeZHQGwbWs0uphrrPDEHM47kUvi6IVEQOpYuXuA4B6JMIegiM78wRsg1DZb81KWoBzTUze7wfyLg7KCbu7w==;EndpointSuffix=core.windows.net",
-          "ContainerName": "umbmutobov9"
+          "ConnectionString": "DefaultEndpointsProtocol=https;AccountName=umb9test;AccountKey=oJvF5uA9H2B/yA8Ze4AEhZVTnhynqi6tydjLILs71htuRNuUsUwlS40W2kUSRmB3FGXs/uuVrULb3joCGnK2zg==;EndpointSuffix=core.windows.net",
+          "ContainerName": "mutobo9"
         }
       }
     },

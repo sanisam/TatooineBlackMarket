@@ -14,7 +14,7 @@ namespace Dit.Umb9.Mutobo.Web
     {
         private readonly IWebHostEnvironment _env;
         private readonly IConfiguration _config;
-        
+
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Startup" /> class.
@@ -40,30 +40,28 @@ namespace Dit.Umb9.Mutobo.Web
         /// </remarks>
         public void ConfigureServices(IServiceCollection services)
         {
-
-
-            if (_config.GetValue<bool>("Dit.UseAzureBlobStorage")) {
 #pragma warning disable IDE0022 // Use expression body for methods
+
+            if (_config.GetValue<bool>("Dit.UseAzureBlobStorage"))
+            {
                 services.AddUmbraco(_env, _config)
-                    .AddBackOffice()
-                    .AddWebsite()
-                    .AddComposers()
-                    .AddAzureBlobMediaFileSystem()
-                    .Build();
-#pragma warning restore IDE0022 // Use expression body for methods
+                .AddBackOffice()
+                .AddWebsite()
+                .AddComposers()
+                .AddAzureBlobMediaFileSystem()
+                .Build();
             }
-            else {
-#pragma warning disable IDE0022 // Use expression body for methods
+            else
+            {
                 services.AddUmbraco(_env, _config)
-                    .AddBackOffice()
-                    .AddWebsite()
-                    .AddComposers()
-                    .Build();
-#pragma warning restore IDE0022 // Use expression body for methods
-
+                .AddBackOffice()
+                .AddWebsite()
+                .AddComposers()
+                .Build();
             }
 
 
+#pragma warning restore IDE0022 // Use expression body for methods
             services.AddWebMarkupMin(
     options =>
     {
@@ -102,7 +100,7 @@ namespace Dit.Umb9.Mutobo.Web
                     {
                         u.UseAzureBlobMediaFileSystem();
                     }
-                
+
                 })
                 .WithEndpoints(u =>
                 {

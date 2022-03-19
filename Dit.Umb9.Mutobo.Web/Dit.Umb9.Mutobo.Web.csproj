@@ -23,17 +23,39 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Content Include="demo-media\cllp5wje\natur-6.jpg" />
-      <Content Include="demo-media\d1rjqurr\winter-hoermoos-08-5.jpg" />
-      <Content Include="demo-media\j5ndww3i\mutobo.png" />
-      <Content Include="demo-media\kjthompe\natur-33.jpg" />
-      <Content Include="demo-media\lqzhuwpd\head-3.png" />
-      <Content Include="demo-media\mb2jt0j1\img_0787.jpg" />
-      <Content Include="demo-media\pgpfb03n\sample-mp4-file-small.mp4" />
-      <Content Include="demo-media\r5xgl4us\head-1.png" />
-      <Content Include="demo-media\rwhiynnm\head-2.png" />
-      <Content Include="demo-media\tqwlzgx3\natur-12.jpg" />
-      <Content Include="demo-media\w4sn4gcw\natur-32.jpg" />
+      <Content Include="demo-media\cllp5wje\natur-6.jpg">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <Content Include="demo-media\d1rjqurr\winter-hoermoos-08-5.jpg">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <Content Include="demo-media\j5ndww3i\mutobo.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <Content Include="demo-media\kjthompe\natur-33.jpg">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <Content Include="demo-media\lqzhuwpd\head-3.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <Content Include="demo-media\mb2jt0j1\img_0787.jpg">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <Content Include="demo-media\pgpfb03n\sample-mp4-file-small.mp4">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <Content Include="demo-media\r5xgl4us\head-1.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <Content Include="demo-media\rwhiynnm\head-2.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <Content Include="demo-media\tqwlzgx3\natur-12.jpg">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <Content Include="demo-media\w4sn4gcw\natur-32.jpg">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
       <Content Include="wwwroot\media\cllp5wje\natur-6.jpg" />
       <Content Include="wwwroot\media\d1rjqurr\winter-hoermoos-08-5.jpg" />
       <Content Include="wwwroot\media\j5ndww3i\mutobo.png" />
