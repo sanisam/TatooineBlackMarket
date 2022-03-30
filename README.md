@@ -50,7 +50,7 @@ For Hosting on Linux Apache / Ubuntu 20.04 LTS:
 
 For Running with Docker:
 
-- Ensure Docker an Docker Compose is up and running on your system
+- Ensure Docker and Docker Compose is up and running on your system
 - open a terminal
 - go to the project folder Dit.Umb9.Mutobo
 - run the command: docker compose up
