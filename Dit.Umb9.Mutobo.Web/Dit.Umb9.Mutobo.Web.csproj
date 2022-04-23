@@ -70,7 +70,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Umbraco.Cms" Version="9.4.1" />
+        <PackageReference Include="Umbraco.Cms" Version="9.4.3" />
     </ItemGroup>
 
 
@@ -83,7 +83,7 @@
     <!-- Force windows to use ICU. Otherwise Windows 10 2019H1+ will do it, but older windows 10 and most if not all winodws servers will run NLS -->
     <ItemGroup>
         <PackageReference Include="Umbraco.StorageProviders.AzureBlob" Version="1.1.0" />
-        <PackageReference Include="uSync" Version="9.2.0" />
+        <PackageReference Include="uSync" Version="9.3.2" />
         <PackageReference Include="WebMarkupMin.AspNetCore5" Version="2.11.0" />
         <ProjectReference Include="..\Dit.Umb9.Mutobo.ToolBox\Dit.Umb9.Mutobo.ToolBox.csproj" />
     </ItemGroup>
