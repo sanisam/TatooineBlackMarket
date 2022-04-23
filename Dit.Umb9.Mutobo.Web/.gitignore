@@ -488,4 +488,10 @@ $RECYCLE.BIN/
 # Nuget package Umbraco.Cms.StaticAssets will copy them in during dotnet build
 **/wwwroot/umbraco/
 
+**/wwwroot/uSync/v9/Content/
+**/wwwroot/uSync/v9/Dictionary/
+**/wwwroot/uSync/v9/Domains/
+**/wwwroot/uSync/v9/Languages/
+**/wwwroot/uSync/v9/Media/
+
 
