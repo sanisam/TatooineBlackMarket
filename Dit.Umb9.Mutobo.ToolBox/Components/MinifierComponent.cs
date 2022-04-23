@@ -18,7 +18,7 @@ namespace Dit.Umb9.Mutobo.ToolBox.Components
 
 
             _runtimeMinifier.CreateCssBundle("inline-css-bundle",
-                BundlingOptions.OptimizedAndComposite,
+                BundlingOptions.NotOptimizedAndComposite,
                 new[] { "~/web-components-cms-template-base/src/css/variables.css", "~/web-components-cms-template-base/src/css/misc.css", "~/web-components-cms-template-base/src/css/fonts.css" });
 
         }
