@@ -15,14 +15,11 @@ namespace Dit.Umb9.Mutobo.ToolBox.Components
         public MinifierComponent(IRuntimeMinifier runtimeMinifier) => _runtimeMinifier = runtimeMinifier;
         public void Initialize()
         {
-            
+
+
             _runtimeMinifier.CreateCssBundle("inline-css-bundle",
-                BundlingOptions.OptimizedNotComposite,
-                new[] { "~/web-components-toolbox/src/css/initial.css", 
-                    "~/web-components-toolbox/src/css/reset.css", 
-                    "~/web-components-toolbox/src/css/colors.css", 
-                    "~/web-components-toolbox/src/css/fonts.css", 
-                    "~/web-components-toolbox/src/css/variables.css" });
+                BundlingOptions.NotOptimizedAndComposite,
+                new[] { "~/web-components-cms-template-base/src/css/variables.css", "~/web-components-cms-template-base/src/css/misc.css", "~/web-components-cms-template-base/src/css/fonts.css" });
 
         }
 

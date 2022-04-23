@@ -47,8 +47,8 @@
              @await Html.PartialAsync("~/Views/Partials/Footer.cshtml", Model.FooterConfiguration as FooterConfig)
         }
     </p-general>
-     <script async rel=preload as="script" type="text/javascript" src="/web-components-toolbox/src/es/helpers/Environment.js"></script>   
-    <script src="/web-components-toolbox/wc-config.js?baseUrl=/web-components-toolbox/src/es/components/" type="text/javascript"></script>
+    
+    <script src="/web-components-cms-template-base/wc-config.js?baseUrl=/web-components-cms-template-base/src/es/components/" type="text/javascript"></script>
     <script src="https://www.google.com/recaptcha/api.js"></script>
     <m-cookie-banner storage="localStorage" namespace="cookie-banner-">
         <style>
@@ -63,12 +63,16 @@
             <button>Ja, ich habe verstanden.</button>
         </section>
     </m-cookie-banner>
- 
+
     <script>
         function onSubmit(token) {
             document.getElementById("demo-form").submit();
         }
     </script>
+
+        <script rel="preload" type="module">self.Environment = {
+    mobileBreakpoint: '1250px'
+    }</script>
     
 
 </body>
