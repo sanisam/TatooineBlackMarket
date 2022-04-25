@@ -1,5 +1,5 @@
 ﻿@model Dit.Umb9.Mutobo.ToolBox.Interfaces.IHeaderConfiguration
-<o-header mobile-breakpoint="100vw" no-scroll="nav-open" menu-icon="true" namespace="header-">
+<o-header  menu-icon="true" role="header" namespace="header-" class="show top">
     @*    @if (Model.GlobalSlogan != null)
         {
         // TODO only show on home-page
@@ -26,7 +26,7 @@
 
     @if (Model.NavigationItems != null && Model.NavigationItems.Any())
     {
-        <m-navigation hover="true" namespace="navigation-" hit-area="false">
+         <m-navigation hover="false" namespace="navigation-" hit-area="false">
             <ul>
                 @foreach (var navItem in Model.NavigationItems)
                 {
