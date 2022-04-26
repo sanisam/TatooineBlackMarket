@@ -5,7 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Models\Slides\" />
+    <Compile Remove="Models\Slides\**" />
+    <EmbeddedResource Remove="Models\Slides\**" />
+    <None Remove="Models\Slides\**" />
   </ItemGroup>
 
   <ItemGroup>
