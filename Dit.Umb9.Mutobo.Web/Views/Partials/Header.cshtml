@@ -26,7 +26,7 @@
 
     @if (Model.NavigationItems != null && Model.NavigationItems.Any())
     {
-         <m-navigation hover="false" namespace="navigation-" hit-area="false">
+         <m-navigation hover="true" namespace="navigation-" hit-area="false">
             <ul>
                 @foreach (var navItem in Model.NavigationItems)
                 {
