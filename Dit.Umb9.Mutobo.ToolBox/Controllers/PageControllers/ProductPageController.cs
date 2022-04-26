@@ -10,9 +10,9 @@ using Umbraco.Cms.Core.Web;
 
 namespace Dit.Umb9.Mutobo.ToolBox.Controllers.PageControllers
 {
-    internal class ProductPageController : ArticlePageController
+    public class ProductPageController : ContentPageController
     {
-        public ProductPageController(ILogger<ProductPageController> logger, ICompositeViewEngine compositeViewEngine, IUmbracoContextAccessor umbracoContextAccessor, IImageService imageService, IPageLayoutService pageLayoutService, IMutoboContentService contentService, ISearchService searchService) : base(logger, compositeViewEngine, umbracoContextAccessor, imageService, pageLayoutService, contentService, searchService)
+        public ProductPageController(ILogger<ContentPageController> logger, ICompositeViewEngine compositeViewEngine, IUmbracoContextAccessor umbracoContextAccessor, IImageService imageService, IMutoboContentService contentService, IPageLayoutService pageLayoutService, ISearchService searchService) : base(logger, compositeViewEngine, umbracoContextAccessor, imageService, contentService, pageLayoutService, searchService)
         {
         }
     }
