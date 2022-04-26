@@ -94,6 +94,16 @@ namespace Dit.Umb9.Mutobo.ToolBox.Constants
         }
 
 
+        public static class ProductPage
+        {
+            public const string Alias = "productPage";
+
+            public static class Fields
+            {
+                public const string Price = "price";
+            }
+        }
+
 
         public static class SearchResultsPage
         {

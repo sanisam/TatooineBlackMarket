@@ -5,10 +5,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Content Remove="appsettings.Development.json" />
-    </ItemGroup>
-
-    <ItemGroup>
       <None Remove="demo-media\cllp5wje\natur-6.jpg" />
       <None Remove="demo-media\d1rjqurr\winter-hoermoos-08-5.jpg" />
       <None Remove="demo-media\j5ndww3i\mutobo.png" />
