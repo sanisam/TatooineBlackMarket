@@ -12,7 +12,7 @@ namespace Dit.Umb9.Mutobo.ToolBox.Controllers.PageControllers
 {
     internal class ProductPageController : ArticlePageController
     {
-        public ProductPageController(ILogger<ArticlePageController> logger, ICompositeViewEngine compositeViewEngine, IUmbracoContextAccessor umbracoContextAccessor, IImageService imageService, IPageLayoutService pageLayoutService, IMutoboContentService contentService, ISearchService searchService) : base(logger, compositeViewEngine, umbracoContextAccessor, imageService, pageLayoutService, contentService, searchService)
+        public ProductPageController(ILogger<ProductPageController> logger, ICompositeViewEngine compositeViewEngine, IUmbracoContextAccessor umbracoContextAccessor, IImageService imageService, IPageLayoutService pageLayoutService, IMutoboContentService contentService, ISearchService searchService) : base(logger, compositeViewEngine, umbracoContextAccessor, imageService, pageLayoutService, contentService, searchService)
         {
         }
     }
