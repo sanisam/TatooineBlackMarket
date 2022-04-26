@@ -9,7 +9,7 @@ using Umbraco.Extensions;
 
 namespace Dit.Umb9.Mutobo.ToolBox.Models.Pages
 {
-    public class ProductPage : ArticlePage {
+    public class ProductPage : ContentPage {
 
         public decimal Price => this.Content.HasValue(DocumentTypes.ProductPage.Fields.Price) ? this.Content.Value<decimal>(DocumentTypes.ProductPage.Fields.Price) : 0;
 

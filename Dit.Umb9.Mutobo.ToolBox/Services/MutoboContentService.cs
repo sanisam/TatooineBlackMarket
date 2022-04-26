@@ -252,7 +252,18 @@ namespace Dit.Umb9.Mutobo.ToolBox.Services
                     };
                     break;
 
+                case DocumentTypes.ProductPage.Alias:
 
+
+                    result = new ProductPage(content)
+                    {
+                        EmotionImages = content.HasValue(DocumentTypes.ArticlePage.Fields.EmotionImages) ?
+                        ImageService.GetImages(content.Value<IEnumerable<IPublishedContent>>(DocumentTypes.ArticlePage.Fields.EmotionImages),
+                        width: 800,
+                        height: 450) : null,
+                        Modules = content.HasValue(DocumentTypes.ContentPage.Fields.Modules) ? GetContent(content, DocumentTypes.ContentPage.Fields.Modules) : null
+                    };
+                    break;
                 case DocumentTypes.ContentPage.Alias:
                     result = new ContentPage(content)
                     {
