@@ -290,6 +290,43 @@ namespace Dit.Umb9.Mutobo.ToolBox.Services
 
                     };
                     break;
+                case DocumentTypes.ShopOverviewPage.Alias:
+                    var shopOverviewPage = new ShopOverViewPage(content);
+
+                    if (shopOverviewPage.ShopParentPage != null)
+                    {
+                        shopOverviewPage.Products = shopOverviewPage.ShopParentPage.Children?.Select(c => new ProductPage(c)
+                        {
+
+                            EmotionImages = c.HasValue(DocumentTypes.ArticlePage.Fields.EmotionImages) ?
+                            ImageService.GetImages(c.Value<IEnumerable<IPublishedContent>>(DocumentTypes.ArticlePage.Fields.EmotionImages),
+                        width: 800,
+                        height: 450) : null
+                        });
+                    }
+                    else
+                    {
+                        shopOverviewPage.Products = shopOverviewPage.Content.Children?.Select(c => new ProductPage(c)
+                        {
+
+                            EmotionImages = c.HasValue(DocumentTypes.ArticlePage.Fields.EmotionImages) ?
+                        ImageService.GetImages(c.Value<IEnumerable<IPublishedContent>>(DocumentTypes.ArticlePage.Fields.EmotionImages),
+                        width: 800,
+                        height: 450) : null
+                        });
+                    }
+                    var filteredProducts = new List<ProductPage>();
+                    foreach (var product in shopOverviewPage.Products) {
+                        foreach (var cat in shopOverviewPage.TeaserCategories) { 
+                            if (product.Categories.Contains(cat))
+                                filteredProducts.Add(product);
+                        }
+                    
+                    }
+
+                    shopOverviewPage.Products = filteredProducts;
+                    result = shopOverviewPage;
+                    break;
 
             }
 

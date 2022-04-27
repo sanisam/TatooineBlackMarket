@@ -13,6 +13,10 @@ namespace Dit.Umb9.Mutobo.ToolBox.Models.Pages
 
         public decimal Price => this.Content.HasValue(DocumentTypes.ProductPage.Fields.Price) ? this.Content.Value<decimal>(DocumentTypes.ProductPage.Fields.Price) : 0;
 
+        public IEnumerable<string> Categories => this.Content.HasValue(DocumentTypes.ProductPage.Fields.Categories) ?
+            this.Content.Value<IEnumerable<string>>(DocumentTypes.ProductPage.Fields.Categories) : null;
+
+
         public ProductPage(IPublishedContent content) : base(content)
         {
 
