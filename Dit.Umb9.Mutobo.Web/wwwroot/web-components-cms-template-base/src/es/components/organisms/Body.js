@@ -24,6 +24,11 @@ export default class Body extends BaseBody {
   constructor (...args) {
     super(...args);
 
+
+    this.addToBasketListener = event => {
+      event.stopPropagation();
+  };
+
     this.scrollButtonEventListener = event => {
         const targetPosition = this.root.getElementById(event.target.getAttribute('target-id')).getBoundingClientRect().bottom * 0.9;
         window.scrollTo({
@@ -35,11 +40,13 @@ export default class Body extends BaseBody {
 
   connectedCallback () {
     this.root.addEventListener('scroll-to', this.scrollButtonEventListener);
+    this.shadowRoot.addEventListener('addToBasket', this.addToBasketListener);
     super.connectedCallback();
   }
 
   disconnectedCallback () {
     this.root.removeEventListener('scroll-to', this.scrollButtonEventListener);
+    this.shadowRoot.removeEventListener('addToBasket', this.addToBasketListener);
     super.disconnectedCallback();
   }
 

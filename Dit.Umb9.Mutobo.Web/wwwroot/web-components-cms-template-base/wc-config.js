@@ -139,6 +139,10 @@
     {
       selector: 'base-o-',
       url: 'organisms/'
+    },
+    {
+      selector: 'base-c-',
+      url: 'controllers/'
     }
   ] // directories
   // ↑↑↑ adjustable ↑↑↑

@@ -39,8 +39,11 @@
         @if (Model.HeaderConfiguration != null)
         {
             @await Html.PartialAsync("~/Views/Partials/Header.cshtml", Model.HeaderConfiguration)
-        }   
+        }
+        
+
         @RenderBody()
+ 
 
         @if (Model.FooterConfiguration != null)
         {

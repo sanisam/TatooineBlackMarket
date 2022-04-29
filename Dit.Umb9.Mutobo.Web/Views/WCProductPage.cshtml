@@ -4,31 +4,30 @@
 @{
     Layout = "WCBasePage.cshtml";
 }
-<o-body>
-    @await Html.PartialAsync("~/Views/Partials/ArticleContent.cshtml", Model)
-  
-
-    <p>
-        @Model.Price
-    </p>
-        
-    <div class="spacer"></div>
-    @if (Model.Modules != null && Model.Modules.Any())
-    {
-        foreach (var module in Model.Modules)
+<base-o-body>
+    <base-c-basket>
+        @await Html.PartialAsync("~/Views/Partials/ArticleContent.cshtml", Model)
+        <p>
+            @Model.Price
+        </p>
+        <div class="spacer"></div>
+        @if (Model.Modules != null && Model.Modules.Any())
         {
-            if (module.SpaceBeforeModule)
+            foreach (var module in Model.Modules)
             {
-                <div class="spacer"></div>
-            }
-            
-            @await module.RenderModule(this.Html)
+                if (module.SpaceBeforeModule)
+                {
+                    <div class="spacer"></div>
+                }
 
-            if (module.SpacerAfterModule)
-            { 
-                <div class="spacer"></div>
+                @await module.RenderModule(this.Html)
+
+                if (module.SpacerAfterModule)
+                {
+                    <div class="spacer"></div>
+                }
             }
-        
         }
-    }
-</o-body>
+        <base-o-order-button product-id="@Model.Content.AsGuid()"></base-o-order-button>
+    </base-c-basket>
+</base-o-body>

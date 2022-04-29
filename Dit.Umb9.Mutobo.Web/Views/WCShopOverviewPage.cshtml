@@ -4,41 +4,41 @@
 @{
     Layout = "WCBasePage.cshtml";
 }
-<o-body>
-    @await Html.PartialAsync("~/Views/Partials/ArticleContent.cshtml", Model)
-    <div class="spacer"></div>
-    @if (Model.Modules != null && Model.Modules.Any())
-    {
-        foreach (var module in Model.Modules)
+<base-o-body>
+    <base-c-basket>
+        @await Html.PartialAsync("~/Views/Partials/ArticleContent.cshtml", Model)
+        <div class="spacer"></div>
+        @if (Model.Modules != null && Model.Modules.Any())
         {
-            if (module.SpaceBeforeModule)
+            foreach (var module in Model.Modules)
             {
-                <div class="spacer"></div>
-            }
-            
-            @await module.RenderModule(this.Html)
+                if (module.SpaceBeforeModule)
+                {
+                    <div class="spacer"></div>
+                }
 
-            if (module.SpacerAfterModule)
-            { 
-                <div class="spacer"></div>
+                @await module.RenderModule(this.Html)
+
+                if (module.SpacerAfterModule)
+                {
+                    <div class="spacer"></div>
+                }
             }
         }
-    }
 
 
-    <third-party-macro-carousel pagination loop height="auto" namespace="carousel-" interval="5000">
-    @foreach (var product in Model.Products)
-    {
-        <div style="display:flex;flex-direction: column;">
-            <h5>@product.PageTitle</h5>
-            @product.EmotionImages?.FirstOrDefault()?.RenderWcPictureTag()
-            <article>
-                @product.Abstract
-            </article>
-            <a href="@product.Content.Url()">Mehr erfahren</a>
-        </div>
-    }
-</third-party-macro-carousel>
+            @foreach (var product in Model.Products)
+            {
+                <div>
+                    <h5>@product.PageTitle</h5>
+                    @product.EmotionImages?.FirstOrDefault()?.RenderWcPictureTag()
+                    <article>
+                        @product.Abstract
+                    </article>
+                    <a href="@product.Content.Url()">Mehr erfahren</a>
+                    <base-o-order-button product-id="@product.Content.AsGuid()"></base-o-order-button>
+                </div>
+            }
 
-
-</o-body>
+    </base-c-basket>
+</base-o-body>
