@@ -15,7 +15,7 @@ html {
 	--a-text-underline-offset: 0.2em; /* should be 6px but not visible */
 	--animation: none;
 	--any-a-display: inline;
-	--background-color: #F3B817; /*Hintergrund*/
+	--background-color: #F0CD6C; /*Hintergrund*/
 	--blog-color-secondary: var(--color);
 	--blog-color: #ffffff;
 	--button-background-color: var(--color);
@@ -47,7 +47,7 @@ html {
 	--carousel-transition-duration: 1.6s;
 	--color-hover-secondary: var(--color);
 	--color-hover: #ffffff;
-	--color-secondary: rgb(192,192,192); /*--color-secondary: rgb(128,0,0);*/
+	--color-secondary: rgb(255, 0, 0); /*--color-secondary: rgb(128,0,0);*/
 	--color: rgb(0,0,0); /*--color: rgb(200,200,200);*/
 	--contactform-balloon-color: var(--color-secondary);
 	--contactform-button-background-color-hover: var(--color-secondary);
@@ -104,7 +104,7 @@ html {
 	--flyer-timing-mobile: cubic-bezier(0.43, 1.77, 0, 0.43);
 	--flyer-timing: cubic-bezier(0.88, 1.96, 0, 0.15);
 	--font-family-secondary: var(--font-family);
-	--font-family: 'Source Sans Pro', sans-serif;
+	--font-family: 'Noto Serif', serif;
 	--font-size-mobile: min(18px, 5vw);
 	--font-size: max(18px, 0.9vw);
 	--font-weight: 700;
@@ -115,7 +115,7 @@ html {
 	--footer-a-link-font-size: 0.8rem;
 	--footer-a-text-underline-offset: var(--a-text-underline-offset);
 	--footer-align-content: flex-start;
-	--footer-background-color: rgba(192,192,192); /*--footer-background-color: rgba(128, 0, 0);*/
+	--footer-background-color: rgb(255, 106, 0); /*--footer-background-color: rgba(128, 0, 0);*/
 	--footer-box-sizing: border-box;
 	--footer-color-hover: var(--color-hover);
 	--footer-color: var(--color);
