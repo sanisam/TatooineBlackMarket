@@ -39,10 +39,10 @@ namespace Dit.Umb9.Mutobo.ToolBox.Constants
                 public const string GoogleAnalyticsKey = "googleAnalyticsKey";
                 public const string Thumbnail = "thumbnail";
                 public const string ExcludeFromSearch = "excludeFromSearch";
-
                 public const string CallToActionButton = "callToActionButton";
                 public const string ShowCtaButton = "showCtaButton";
-
+                public const string BackgroundImage = "backgroundImage";
+                public const string BackgroundOpacity = "backgroundOpacity";
             }
         }
 

@@ -4,7 +4,7 @@
 @{
     Layout = "WCBasePage.cshtml";
 }
-<o-body>
+<base-o-body page-background-img="@Model.PageBackground?.BackgroundImage?.DefaultSource?.Src" page-bg-opacity="@Model.PageBackground?.BackgroundOpacity">
     @await Html.PartialAsync("~/Views/Partials/ArticleContent.cshtml", Model)
     <div class="spacer"></div>
     @if (Model.Modules != null && Model.Modules.Any())
@@ -24,4 +24,4 @@
             }
         }
     }
-</o-body>
+</base-o-body>

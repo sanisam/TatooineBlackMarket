@@ -74,6 +74,7 @@ namespace Dit.Umb9.Mutobo.ToolBox.Controllers.PageControllers
 
             model.HeaderConfiguration = PageLayoutService.GetHeaderConfiguration(CurrentPage);
             model.FooterConfiguration = PageLayoutService.GetFooterConfiguration(CurrentPage);
+            model.PageBackground = PageLayoutService.GetPageBackground(CurrentPage);
 
             if (model.FooterConfiguration != null)
                 model.FooterConfiguration.HomePageLogo = model.HeaderConfiguration?.Logo;

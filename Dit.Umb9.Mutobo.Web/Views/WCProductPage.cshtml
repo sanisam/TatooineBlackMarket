@@ -4,7 +4,7 @@
 @{
     Layout = "WCBasePage.cshtml";
 }
-<base-o-body>
+<base-o-body page-background-img="@Model.PageBackground?.BackgroundImage?.DefaultSource?.Src" page-bg-opacity="@Model.PageBackground?.BackgroundOpacity">
     <base-c-basket>
         @await Html.PartialAsync("~/Views/Partials/ArticleContent.cshtml", Model)
         <p>

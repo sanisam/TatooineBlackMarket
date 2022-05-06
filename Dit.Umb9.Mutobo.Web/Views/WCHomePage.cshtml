@@ -5,7 +5,7 @@
 @{
 	Layout = "WCBasePage.cshtml";
 }
-<o-body>
+<base-o-body  page-background-img="@Model.PageBackground?.BackgroundImage?.DefaultSource?.Src" page-bg-opacity="@Model.PageBackground?.BackgroundOpacity">
     <h1>@Model.PageTitle</h1>
     @if (Model.Modules != null && Model.Modules.Any())
     {
@@ -22,4 +22,4 @@
             }
         }
     }
-</o-body>
+</base-o-body>

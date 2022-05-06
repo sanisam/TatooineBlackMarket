@@ -65,20 +65,20 @@ namespace Dit.Umb9.Mutobo.Web
             }
 
 
-            services.AddWebMarkupMin(
-    options =>
-    {
-        options.AllowMinificationInDevelopmentEnvironment = true;
-        options.AllowCompressionInDevelopmentEnvironment = true;
-    })
-    .AddHtmlMinification(
-        options =>
-        {
-            options.MinificationSettings.RemoveRedundantAttributes = true;
-            options.MinificationSettings.RemoveHttpProtocolFromAttributes = true;
-            options.MinificationSettings.RemoveHttpsProtocolFromAttributes = true;
-        })
-    .AddHttpCompression();
+    //        services.AddWebMarkupMin(
+    //options =>
+    //{
+    //    options.AllowMinificationInDevelopmentEnvironment = true;
+    //    options.AllowCompressionInDevelopmentEnvironment = true;
+    //})
+    //.AddHtmlMinification(
+    //    options =>
+    //    {
+    //        options.MinificationSettings.RemoveRedundantAttributes = true;
+    //        options.MinificationSettings.RemoveHttpProtocolFromAttributes = true;
+    //        options.MinificationSettings.RemoveHttpsProtocolFromAttributes = true;
+    //    })
+    //.AddHttpCompression();
 
         }
 
@@ -99,7 +99,7 @@ namespace Dit.Umb9.Mutobo.Web
             {
                 app.UseDeveloperExceptionPage();
             }
-            app.UseWebMarkupMin();
+            //app.UseWebMarkupMin();
             app.UseUmbraco()
                 .WithMiddleware(u =>
                 {

@@ -4,7 +4,7 @@
 @{
     Layout = "WCBasePage.cshtml";
 }
-<base-o-body>
+<base-o-body page-background-img="@Model.PageBackground?.BackgroundImage?.DefaultSource?.Src" page-bg-opacity="@Model.PageBackground?.BackgroundOpacity">
     <base-c-basket>
         @await Html.PartialAsync("~/Views/Partials/ArticleContent.cshtml", Model)
         <div class="spacer"></div>
@@ -26,9 +26,13 @@
             }
         }
 
+        <third-party-macro-carousel pagination loop
+                                    namespace="carousel-" interval="5000">
 
             @foreach (var product in Model.Products)
             {
+
+
                 <div>
                     <h5>@product.PageTitle</h5>
                     @product.EmotionImages?.FirstOrDefault()?.RenderWcPictureTag()
@@ -38,7 +42,13 @@
                     <a href="@product.Content.Url()">Mehr erfahren</a>
                     <base-o-order-button product-id="@product.Content.AsGuid()"></base-o-order-button>
                 </div>
-            }
 
+
+
+
+
+
+            }
+        </third-party-macro-carousel>
     </base-c-basket>
 </base-o-body>

@@ -77,6 +77,11 @@ export default class MacroCarousel extends Shadow() {
       this.macroCarousel.setAttribute('slides-per-view', this.getAttribute(`slides-per-view${this.getMedia()}`) || '1')
     }
 
+    this.test = event => {
+
+      debugger;
+    }
+
     this.macroCarouselSelectedChangedListener = event => {
       this.dispatchEvent(new CustomEvent((this.getAttribute('macro-carousel-selected-changed') || 'macro-carousel-selected-changed') + this.getAttribute('sync-id'), {
         detail: {
@@ -113,6 +118,9 @@ export default class MacroCarousel extends Shadow() {
     if (this.shouldComponentRenderCSS()) this.renderCSS()
     if (this.shouldComponentRenderHTML()) this.renderHTML()
     self.addEventListener('resize', this.resizeListener)
+
+    self.addEventListener('addToBasket', this.test)
+
     if (this.hasAttribute('sync-id')) {
       if (this.getAttribute('interval')) {
         this.macroCarousel.addEventListener('macro-carousel-selected-changed', this.macroCarouselSelectedChangedListener)
@@ -129,6 +137,7 @@ export default class MacroCarousel extends Shadow() {
   }
 
   disconnectedCallback () {
+    self.removeEventListener('addToBasket', this.test)
     self.removeEventListener('resize', this.resizeListener)
     if (this.hasAttribute('sync-id')) {
       if (this.getAttribute('interval')) {

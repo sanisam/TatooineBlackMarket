@@ -278,6 +278,8 @@ namespace Dit.Umb9.Mutobo.ToolBox.Constants
         #endregion
 
 
+
+
         public static class Picture
         {
             public const string Alias = "pictureModule";

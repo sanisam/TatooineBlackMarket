@@ -78,6 +78,11 @@ namespace Dit.Umb9.Mutobo.ToolBox.Models.Pages
         /// the theme for the page
         /// </summary>
         public ITheme Theme { get; set; }
+
+
+
+        public PageBackground PageBackground { get; set; }
+
         /// <summary>
         /// flag to exclude the page from the website search
         /// </summary>

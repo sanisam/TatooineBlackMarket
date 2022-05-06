@@ -156,7 +156,33 @@ namespace Dit.Umb9.Mutobo.ToolBox.Services
             return null;
         }
 
+        public PageBackground GetPageBackground(IPublishedContent content = null) {
 
+            PageBackground pageBackground = null;
+            var branch = content?.AncestorsOrSelf().ToList();
+            var index = 0;
+
+            if (branch != null)
+            {
+                do
+                {
+                    pageBackground = branch[index].HasValue(DocumentTypes.BasePage.Fields.BackgroundImage)
+                        ? new PageBackground() { 
+                        
+                            BackgroundImage = _imageService.GetImage(branch[index].Value<IPublishedContent>(DocumentTypes.BasePage.Fields.BackgroundImage), 1600, 900),
+                            BackgroundOpacity = branch[index].Value<double>(DocumentTypes.BasePage.Fields.BackgroundOpacity),
+                        
+                        } : null;
+                    index++;
+
+                } while (index < branch.Count() && pageBackground == null);
+            }
+
+
+            return pageBackground;
+
+
+        }
 
         private FooterNavBlock GetFooterLinkBlock(IPublishedContent parentNode)
         {
