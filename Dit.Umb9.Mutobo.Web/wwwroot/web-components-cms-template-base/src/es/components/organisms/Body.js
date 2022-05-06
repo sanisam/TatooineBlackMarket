@@ -76,7 +76,7 @@ export default class Body extends BaseBody {
           height: 100%;
           opacity: ${this.getAttribute('page-bg-opacity')};
           background: url('${this.getAttribute('page-background-img')}');
-          background-color: rgba(255,255, 255, 0.3);
+
           background-repeat: no-repeat;
           background-position: 50% 0;
           background-size: cover;

@@ -237,7 +237,16 @@ export default class Wrapper extends Style {
   renderHTML () {
     const section = document.createElement('section')
     Array.from(this.root.children).forEach(node => {
-      if (node.tagName !== 'STYLE') section.appendChild(node)
+        if (node.tagName !== 'STYLE') {
+
+            if (node.tagName === 'A') {
+                debugger;
+
+            }
+
+            section.appendChild(node);
+
+        }
     })
     this.html = section
   }
