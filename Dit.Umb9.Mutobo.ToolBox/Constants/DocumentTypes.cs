@@ -102,6 +102,7 @@ namespace Dit.Umb9.Mutobo.ToolBox.Constants
             {
                 public const string Price = "price";
                 public const string Categories = "categories";
+                public const string ShowInTeaser = "showInTeaser";
             }
         }
 

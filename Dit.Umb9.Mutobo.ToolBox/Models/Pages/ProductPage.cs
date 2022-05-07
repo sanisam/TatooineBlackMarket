@@ -11,7 +11,12 @@ namespace Dit.Umb9.Mutobo.ToolBox.Models.Pages
 {
     public class ProductPage : ContentPage {
 
-        public decimal Price => this.Content.HasValue(DocumentTypes.ProductPage.Fields.Price) ? this.Content.Value<decimal>(DocumentTypes.ProductPage.Fields.Price) : 0;
+        public decimal Price => this.Content.HasValue(DocumentTypes.ProductPage.Fields.Price) ? 
+            this.Content.Value<decimal>(DocumentTypes.ProductPage.Fields.Price) : 0;
+
+        public bool ShowInTeaser => this.Content.HasValue(DocumentTypes.ProductPage.Fields.ShowInTeaser) ? 
+            this.Content.Value<bool>(DocumentTypes.ProductPage.Fields.ShowInTeaser) : false;
+
 
         public IEnumerable<string> Categories => this.Content.HasValue(DocumentTypes.ProductPage.Fields.Categories) ?
             this.Content.Value<IEnumerable<string>>(DocumentTypes.ProductPage.Fields.Categories) : null;

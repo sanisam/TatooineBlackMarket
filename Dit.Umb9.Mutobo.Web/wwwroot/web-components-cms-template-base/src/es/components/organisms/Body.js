@@ -21,42 +21,42 @@ import BaseBody from '../web-components-cms-template/src/es/components/organisms
  */
 export default class Body extends BaseBody {
 
-  constructor(...args) {
-    super(...args);
+    constructor(...args) {
+        super(...args);
 
 
-    this.addToBasketListener = event => {
-      event.stopPropagation();
-    };
+        this.addToBasketListener = event => {
+            event.stopPropagation();
+        };
 
-    this.scrollButtonEventListener = event => {
-      const targetPosition = this.root.getElementById(event.target.getAttribute('target-id')).getBoundingClientRect().bottom * 0.9;
-      window.scrollTo({
-        top: targetPosition - targetPosition * 0.2,
-        behavior: 'smooth'
-      })
-    };
-  }
+        this.scrollButtonEventListener = event => {
+            const targetPosition = this.root.getElementById(event.target.getAttribute('target-id')).getBoundingClientRect().bottom * 0.9;
+            window.scrollTo({
+                top: targetPosition - targetPosition * 0.2,
+                behavior: 'smooth'
+            })
+        };
+    }
 
-  connectedCallback() {
-    this.root.addEventListener('scroll-to', this.scrollButtonEventListener);
-    this.shadowRoot.addEventListener('addToBasket', this.addToBasketListener);
-    super.connectedCallback();
-  }
+    connectedCallback() {
+        this.root.addEventListener('scroll-to', this.scrollButtonEventListener);
+        this.shadowRoot.addEventListener('addToBasket', this.addToBasketListener);
+        super.connectedCallback();
+    }
 
-  disconnectedCallback() {
-    this.root.removeEventListener('scroll-to', this.scrollButtonEventListener);
-    this.shadowRoot.removeEventListener('addToBasket', this.addToBasketListener);
-    super.disconnectedCallback();
-  }
-
-
-
-  renderCSS() {
+    disconnectedCallback() {
+        this.root.removeEventListener('scroll-to', this.scrollButtonEventListener);
+        this.shadowRoot.removeEventListener('addToBasket', this.addToBasketListener);
+        super.disconnectedCallback();
+    }
 
 
-    super.renderCSS()
-    this.css = /* css */`
+
+    renderCSS() {
+
+
+        super.renderCSS()
+        this.css = /* css */`
 
 
         :host > main {
@@ -156,5 +156,5 @@ export default class Body extends BaseBody {
         }
       }
     `
-  }
+    }
 }

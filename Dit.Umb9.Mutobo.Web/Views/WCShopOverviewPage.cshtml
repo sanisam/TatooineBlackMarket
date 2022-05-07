@@ -37,7 +37,7 @@
                     margin: 0;
                 }
             </style>
-            @foreach (var product in Model.Products)
+            @foreach (var product in Model.Products.Where(p => p.ShowInTeaser))
             {
                 <div class="product-teaser">
                     <h5>@product.PageTitle</h5>
@@ -52,38 +52,24 @@
         </third-party-macro-carousel>
 
         <div class="spacer"></div>
+        <base-o-grid col="3" col-mobile="2">
+        @foreach (var product in Model.Products)
+        {
+            <div class="product-card">
+                <h5>@product.PageTitle</h5>
+                <a-picture defaultSource="@product.EmotionImages?.FirstOrDefault()?.DefaultSource.Src" namespace="product-img-">
 
-        <base-o-wrapper three>
-            <style>
-                :host, host * {
-                    background-color: transparent !important;
-                }
+                </a-picture>
 
-                .product-card {
-                    height: 30vw;
-                    background: rgba(0,0,0,0.3);
-                    margin-bottom: 2em;
-                    align-items: center;
-                 
-                }
+                <article>
+                    @product.Abstract
+                </article>
+                <a href="@product.Content.Url()">Produktedetails</a>
+            </div>
+        }
+    </base-o-grid>
 
-            </style>
-
-            @foreach (var product in Model.Products)
-            {
-
-                    <div class="product-card">
-                        <h5>@product.PageTitle</h5>
-                        @product.EmotionImages?.FirstOrDefault()?.RenderWcPictureTag(height: "auto")
-                        <article>
-                            @product.Abstract
-                        </article>
-                        <a href="@product.Content.Url()">Mehr erfahren</a>
-                        <base-o-order-button product-id="@product.Content.AsGuid()"></base-o-order-button>
-                    </div>
-
-            }
-
-        </base-o-wrapper>
     </base-c-basket>
+
+    
 </base-o-body>

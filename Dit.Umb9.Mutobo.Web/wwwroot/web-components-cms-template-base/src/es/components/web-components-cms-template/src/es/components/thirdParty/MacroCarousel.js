@@ -78,8 +78,6 @@ export default class MacroCarousel extends Shadow() {
     }
 
     this.test = event => {
-
-      debugger;
     }
 
     this.macroCarouselSelectedChangedListener = event => {
