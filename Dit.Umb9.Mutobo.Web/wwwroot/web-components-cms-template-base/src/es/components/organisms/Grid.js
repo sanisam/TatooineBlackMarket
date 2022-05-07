@@ -7,6 +7,7 @@ export default class Grid extends Shadow() {
 
     constructor(...args) {
         super(...args);
+
     }
 
 
@@ -28,9 +29,7 @@ export default class Grid extends Shadow() {
         this.gridContainer = document.createElement('div');
         this.gridContainer.className = 'grid-container';
 
-     
-
-
+       
         for (let i = 0; i < this.elements.length; i++) {
             this.gridContainer.appendChild(this.elements[i]);
         }

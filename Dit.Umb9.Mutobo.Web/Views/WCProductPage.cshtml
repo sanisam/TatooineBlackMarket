@@ -5,7 +5,6 @@
     Layout = "WCBasePage.cshtml";
 }
 <base-o-body page-background-img="@Model.PageBackground?.BackgroundImage?.DefaultSource?.Src" page-bg-opacity="@Model.PageBackground?.BackgroundOpacity">
-    <base-c-basket>
         @await Html.PartialAsync("~/Views/Partials/ArticleContent.cshtml", Model)
         <p>
             @Model.Price
@@ -28,6 +27,8 @@
                 }
             }
         }
+
+
         <base-o-order-button product-id="@Model.Content.AsGuid()"></base-o-order-button>
     </base-c-basket>
 </base-o-body>

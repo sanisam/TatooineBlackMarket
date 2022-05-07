@@ -36,14 +36,16 @@ export default class OrderButton extends Shadow() {
 
     fireEvent(event) {
 
+       
         const customEvent = new CustomEvent('addToBasket',
             {
                 detail: {
-                    
+                    productId: event.target.getAttribute('data-id')             
                 },
                 bubbles: true,
-                cancelable: true,
-                component: true,
+                cancelable: false,
+                composed: true
+               
             });
 
         
@@ -55,7 +57,9 @@ export default class OrderButton extends Shadow() {
 
         this.container = document.createElement('DIV');
         this.button = document.createElement('BUTTON');
+        
         this.button.setAttribute('data-id', this.getAttribute('product-id'));
+        
         this.button.addEventListener('click', event => this.fireEvent(event));
         this.button.textContent = 'Klick mich';
         this.container.appendChild(this.button);

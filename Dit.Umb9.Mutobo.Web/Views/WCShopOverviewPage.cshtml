@@ -5,26 +5,29 @@
     Layout = "WCBasePage.cshtml";
 }
 <base-o-body page-background-img="@Model.PageBackground?.BackgroundImage?.DefaultSource?.Src" page-bg-opacity="@Model.PageBackground?.BackgroundOpacity">
-    <base-c-basket>
-        @await Html.PartialAsync("~/Views/Partials/ArticleContent.cshtml", Model)
-        <div class="spacer"></div>
-        @if (Model.Modules != null && Model.Modules.Any())
+
+    @await Html.PartialAsync("~/Views/Partials/ArticleContent.cshtml", Model)
+    <div class="spacer"></div>
+    @if (Model.Modules != null && Model.Modules.Any())
+    {
+        foreach (var module in Model.Modules)
         {
-            foreach (var module in Model.Modules)
+            if (module.SpaceBeforeModule)
             {
-                if (module.SpaceBeforeModule)
-                {
-                    <div class="spacer"></div>
-                }
+                <div class="spacer"></div>
+            }
 
-                @await module.RenderModule(this.Html)
+            @await module.RenderModule(this.Html)
 
-                if (module.SpacerAfterModule)
-                {
-                    <div class="spacer"></div>
-                }
+            if (module.SpacerAfterModule)
+            {
+                <div class="spacer"></div>
             }
         }
+    }
+
+    <base-c-basket>
+
 
         <third-party-macro-carousel loop namespace="carousel-" interval="5000">
             <style>
@@ -46,30 +49,31 @@
                         @product.Abstract
                     </article>
                     <a href="@product.Content.Url()">Mehr erfahren</a>
-                    <base-o-order-button product-id="@product.Content.AsGuid()"></base-o-order-button>
+                    <base-o-order-button product-id="@product.Content.Key"></base-o-order-button>
                 </div>
             }
         </third-party-macro-carousel>
 
         <div class="spacer"></div>
         <base-o-grid col="3" col-mobile="2">
-        @foreach (var product in Model.Products)
-        {
-            <div class="product-card">
-                <h5>@product.PageTitle</h5>
-                <a-picture defaultSource="@product.EmotionImages?.FirstOrDefault()?.DefaultSource.Src" namespace="product-img-">
+            @foreach (var product in Model.Products)
+            {
+                <div class="product-card">
+                    <h5>@product.PageTitle</h5>
+                    <a-picture defaultSource="@product.EmotionImages?.FirstOrDefault()?.DefaultSource.Src" namespace="product-img-">
 
-                </a-picture>
+                    </a-picture>
 
-                <article>
-                    @product.Abstract
-                </article>
-                <a href="@product.Content.Url()">Produktedetails</a>
-            </div>
-        }
-    </base-o-grid>
+                    <article>
+                        @product.Abstract
+                    </article>
+                    <base-o-order-button product-id="@product.Content.Key"></base-o-order-button>
+                    <a href="@product.Content.Url()">Produktedetails</a>
+                </div>
+            }
+        </base-o-grid>
 
     </base-c-basket>
 
-    
+
 </base-o-body>
