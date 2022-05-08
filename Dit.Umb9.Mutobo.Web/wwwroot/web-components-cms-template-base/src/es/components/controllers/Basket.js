@@ -8,10 +8,6 @@ export default class Basket extends Shadow() {
 
     constructor(...args) {
         super(...args);
-   
-        
-        
-        
         this.setOrderListener = event => {
 
             let product = window.basket.find(p => p.id === event.detail.productId);
@@ -23,15 +19,29 @@ export default class Basket extends Shadow() {
             }
                
             localStorage.setItem('basket', JSON.stringify(window.basket));
+
+            const customEvent = new CustomEvent('basket-update',
+            {
+                detail: {
+                    basket: window.basket /* TODO: change to getter zto avoid global scope */           
+                },
+                bubbles: true,
+                cancelable: false,
+                composed: true
+               
+            });
+
+            this.dispatchEvent(customEvent);
+            
         }
     }
 
 
+
+
+
     connectedCallback() {
-
-
         this.addEventListener('addToBasket', this.setOrderListener);
-
     }
 
 

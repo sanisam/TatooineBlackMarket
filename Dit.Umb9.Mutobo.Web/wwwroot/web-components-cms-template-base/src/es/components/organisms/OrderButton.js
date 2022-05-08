@@ -38,6 +38,7 @@ export default class OrderButton extends Shadow() {
                 color: white;
                 background-color: rgba(0,0,0,0.7);
                 margin: 1em;
+                cursor: pointer;
                
             
 

@@ -7,6 +7,10 @@ export default class ShowBasket extends Shadow () {
     constructor(...args) {
         super(...args);
         this.isOpen = false;
+
+        this.basketUpdateListener = event => {
+            this.renderHTML();
+        };
     }
 
 
@@ -21,41 +25,15 @@ export default class ShowBasket extends Shadow () {
         window.basket = basketItems;
     }
 
-
-
-
-
-    static get observedAttributes() {
-        return ['basketItems'];
-      }
-    
-      attributeChangedCallback(attrName, oldVal, newVal) {
-          debugger;
-        if (oldVal !== newVal) {
-          if (newVal === null) {
-            // Attribute was removed
-            this.basketItems = null;
-            this.renderHTML();
-          }
-          else {
-            this.basketItems = JSON.parse(newVal);
-            this.renderHTML();
-          }
-        }
-      }  
-
-
-
-   
-
     connectedCallback () {
-        debugger;
+
+        document.body.addEventListener('basket-update', this.basketUpdateListener);
         if (this.shouldComponentRenderCSS()) this.renderCSS();
         if (this.shouldComponentRenderHTML()) this.renderHTML();
     }
 
     disconnectedCallback () {
-
+        document.body.removeEventListener('basket-update', this.basketUpdateListener);
     }
 
     renderCSS() {
@@ -108,8 +86,6 @@ export default class ShowBasket extends Shadow () {
     }
 
     async fetchBasket(data) {
-
-        
         const response = await fetch('/Umbraco/Api/Basket/GetBasket',{
             method: 'POST',
             mode: 'cors',
@@ -123,11 +99,9 @@ export default class ShowBasket extends Shadow () {
             body: JSON.stringify(data)
         });
 
-    
         return response.json();
     }
-
-
+    
     
     shouldComponentRenderHTML() {
 
@@ -141,6 +115,18 @@ export default class ShowBasket extends Shadow () {
     openBasket(event){
         this.isOpen = true;    
         this.renderHTML();
+
+        const customEvent = new CustomEvent('openBasket',
+        {
+            detail: {
+                
+            },
+            bubbles: true,
+            cancelable: false,
+            composed: true
+        });
+
+        this.dispatchEvent(customEvent);
         // this.html = ``;
     }
 
@@ -173,7 +159,8 @@ export default class ShowBasket extends Shadow () {
                 this.basketContent.innerHTML = `
                 <div class="basket-item-container">
                 ${data.products?.map(d => `<div>
-                <span class="basket-item item-count">${d.count}</span> x <span class="basket-item item-name">${d.name}</span> <div class="basket-item item-price">à ${d.price} SFr. / Stk. <i class="bi bi-plus-circle-fill"></i> / <i class="bi bi-dash-circle-fill"></i></div>
+                <span class="basket-item item-count">${d.count}</span> x <span class="basket-item item-name">${d.name}</span> 
+                <div class="basket-item item-price">à ${d.price} SFr. / Stk. <i class="bi bi-plus-circle-fill"></i> / <i class="bi bi-dash-circle-fill"></i></div>
                 </div>`).join('')}</div>
                 <hr />
                 <div class="basket-total"><span>Total:</span> <span>${data.totalPrice} SFr.</span></div>`;

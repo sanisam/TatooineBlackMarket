@@ -80,9 +80,13 @@
     window.basket = localStorage.getItem('basket') ? JSON.parse(localStorage.getItem('basket')) : []
     
     
+    function getItems() {
+        return JSON.stringify(window.basket);
+    }
+
     </script>
     
-     <base-o-show-basket id="basket"></base-o-show-basket>       
+
 </body>
 </html>
 
