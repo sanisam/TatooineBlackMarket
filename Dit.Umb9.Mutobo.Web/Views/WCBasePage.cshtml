@@ -76,10 +76,13 @@
 
         <script rel="preload" type="module">self.Environment = {
     mobileBreakpoint: '1250px'
-    }</script>
+    };
+    window.basket = localStorage.getItem('basket') ? JSON.parse(localStorage.getItem('basket')) : []
     
-     <base-o-show-basket></base-o-show-basket>       
-<base-c-basket>
+    
+    </script>
+    
+     <base-o-show-basket id="basket"></base-o-show-basket>       
 </body>
 </html>
 
