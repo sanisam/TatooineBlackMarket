@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="inline-css-bundle"/>
     <title>@Model.PageTitle</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/web-components-cms-template-base/src/css/fonts.css" />
     @await Html.PartialAsync("~/Views/Partials/SEOConfiguration.cshtml", seoServive.GetSeoConfiguration())
     @if (!string.IsNullOrEmpty(Model.GoogleAnalyticsKey))
     {

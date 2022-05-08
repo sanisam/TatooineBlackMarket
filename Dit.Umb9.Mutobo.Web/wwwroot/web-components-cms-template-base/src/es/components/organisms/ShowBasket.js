@@ -9,6 +9,7 @@ export default class ShowBasket extends Shadow () {
         this.isOpen = false;
 
         this.basketUpdateListener = event => {
+            this.html = '';
             this.renderHTML();
         };
     }
@@ -42,7 +43,7 @@ export default class ShowBasket extends Shadow () {
 
             :host {
                 position: fixed;
-                top: 10vh;
+                top: 20vh;
                 right: 0;
                 width: auto !important;
                 background-color: rgba(0,0,0,0.7);

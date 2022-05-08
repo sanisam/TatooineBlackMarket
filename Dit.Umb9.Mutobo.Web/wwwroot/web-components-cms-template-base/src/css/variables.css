@@ -103,8 +103,9 @@ html {
 	--flyer-duration: 1.2s;
 	--flyer-timing-mobile: cubic-bezier(0.43, 1.77, 0, 0.43);
 	--flyer-timing: cubic-bezier(0.88, 1.96, 0, 0.15);
-	--font-family-secondary: var(--font-family);
-	--font-family: 'Noto Serif', serif;
+	--font-family-secondary: 'Bungee', cursive;
+	--contactform-label-font-family-bold: (var(--font-family-secondary));
+	--font-family: 'Roboto', sans-serif;
 	--font-size-mobile: min(18px, 5vw);
 	--font-size: max(18px, 0.9vw);
 	--font-weight: 700;
@@ -156,6 +157,12 @@ html {
 	--h1-font-size-mobile: var(--h1-font-size);
 	--h1-font-size-mobile: var(--h1-font-size);
 	--h1-font-size: min(1.8em, 9vw);
+	--h1-font-family: var(--font-family-secondary);
+	--h2-font-family: var(--font-family-secondary);
+	--h3-font-family: var(--font-family-secondary);
+	--h4-font-family: var(--font-family-secondary);
+	--h5-font-family: var(--font-family-secondary);
+	--h6-font-family: var(--font-family-secondary);
 	--h1-line-height-mobile: var(--h1-line-height);
 	--h1-line-height: 1.1em;
 	--h1-margin-mobile: 0;
@@ -227,7 +234,7 @@ html {
 	--header-a-transition: none;
 	--header-align-items: start;
 	--header-background-animation: 1s ease;
-	--header-background-color-open: rgba(128,128,128); /*--header-background-color-open: rgba(128, 0, 0);*/
+	--header-background-color-open: rgba(0,0,0,0.3); /*--header-background-color-open: rgba(128, 0, 0);*/
 	--header-background-color: var(--header-background-color-open);
 	--header-color: var(--color);
 	--header-content-spacing-mobile: var(--header-content-spacing);
@@ -300,12 +307,14 @@ html {
 	--navigation-a-link-font-size-mobile: 1em;
 	--navigation-a-link-font-size-no-scroll-mobile: 1em;
 	--navigation-align-items: center;
-	--navigation-background-color-mobile: rgba(128,128,128); /*--navigation-background-color-mobile: rgba(128, 0, 0);*/
-	--navigation-background-color: rgba(128,128,128); /*--navigation-background-color: rgba(128, 0, 0);*/
-	--navigation-color-hover: var(--color-hover);
-	--navigation-color: var(--color);
+	--navigation-background-color-mobile: rgba(0,0,0); /*--navigation-background-color-mobile: rgba(128, 0, 0);*/
+	--navigation-background-color: transparent;
+	--navigation-color-hover: rgb(255, 106, 0);
+	--navigation-color: rgb(255,255,255);
 	--navigation-content-spacing: 1em;
 	--navigation-font-size: 1em;
+	--navigation-font-family: var(--font-family-secondary);
+	--navigation-font-family-hover: var(--font-family-secondary);
 	--navigation-justify-content: flex-end;
 	--navigation-padding: 2em 2em 0 0;
 	--p-date-text-transform: uppercase;
@@ -344,5 +353,6 @@ html {
 	--ul-text-align: left;
 	--video-margin: 70px auto 0 auto;
 	--video-width: var(--picture-width);
-
+	--logo-height: 4.5em;
+	--logo-img-margin: 1em;
 }
