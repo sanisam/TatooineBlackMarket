@@ -10,32 +10,46 @@ export default class Basket extends Shadow() {
         super(...args);
         this.setOrderListener = event => {
 
-            let product = window.basket.find(p => p.id === event.detail.productId);
-
+           
+            let basketItems = this.basket;
+            let product = basketItems.find(p => p.id === event.detail.productId);
             if (!product){
-                window.basket.push({id: event.detail.productId, count: 1});
+                product = {id: event.detail.productId, count: 1};
+                basketItems.push(product);
             } else {
                 product.count++;
             }
-               
-            localStorage.setItem('basket', JSON.stringify(window.basket));
+
+            this.basket = basketItems;
 
             const customEvent = new CustomEvent('basket-update',
-            {
-                detail: {
-                    basket: window.basket /* TODO: change to getter zto avoid global scope */           
-                },
-                bubbles: true,
-                cancelable: false,
-                composed: true
-               
-            });
+                {
+                    detail: {
+                        basket: this.basket 
+                    },
+                    bubbles: true,
+                    cancelable: false,
+                    composed: true
+
+                });
 
             this.dispatchEvent(customEvent);
-            
+
         }
     }
 
+
+
+
+
+    get basket() {
+
+        return localStorage.getItem('basket') ? JSON.parse(localStorage.getItem('basket')) : [];
+    }
+
+    set basket(value) {
+        localStorage.setItem('basket', JSON.stringify(value));
+    }
 
 
 

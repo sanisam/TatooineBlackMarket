@@ -7,8 +7,10 @@ export default class ShowBasket extends Shadow () {
     constructor(...args) {
         super(...args);
         this.isOpen = false;
-
+        this.basket = [];
+        
         this.basketUpdateListener = event => {
+            this.basket = event.detail?.basket ?? [];
             this.html = '';
             this.renderHTML();
         };
@@ -16,15 +18,8 @@ export default class ShowBasket extends Shadow () {
 
 
 
-    getBasketItems() {
-        this.basketItems = window.basket ?? []; 
-        return this.basketItems;
-    }
 
-    setSetbasketItems(basketItems) {
-        this.basketItems = basketItems;
-        window.basket = basketItems;
-    }
+
 
     connectedCallback () {
 
@@ -117,6 +112,8 @@ export default class ShowBasket extends Shadow () {
         this.isOpen = true;    
         this.renderHTML();
 
+   
+
         const customEvent = new CustomEvent('openBasket',
         {
             detail: {
@@ -143,9 +140,9 @@ export default class ShowBasket extends Shadow () {
         debugger;
         if (this.isOpen) {
             this.html = '';
-            this.fetchBasket(this.getBasketItems()).then(data => {
+            this.fetchBasket(this.basket).then(data => {
                 debugger;
-                this.basket = document.createElement('div');
+                this.basketContainer = document.createElement('div');
                 this.basketHeader = document.createElement('div');
                 this.basketHeader.className = 'basket-header';
                 this.basketTitle = document.createElement('h4');
@@ -155,7 +152,7 @@ export default class ShowBasket extends Shadow () {
                 this.basketCloseButton.className = 'bi bi-x';
                 this.basketCloseButton.addEventListener('click', event => this.closeBasket(event));
                 this.basketHeader.appendChild(this.basketCloseButton);
-                this.basket.appendChild(this.basketHeader);
+                this.basketContainer.appendChild(this.basketHeader);
                 this.basketContent = document.createElement('div'); 
                 this.basketContent.innerHTML = `
                 <div class="basket-item-container">
@@ -165,17 +162,17 @@ export default class ShowBasket extends Shadow () {
                 </div>`).join('')}</div>
                 <hr />
                 <div class="basket-total"><span>Total:</span> <span>${data.totalPrice} SFr.</span></div>`;
-                this.basket.appendChild(this.basketContent);
-                this.html = this.basket;
+                this.basketContainer.appendChild(this.basketContent);
+                this.html = this.basketContainer;
             });
         } else {
 
-            this.basket = document.createElement('div');
+            this.basketContainer = document.createElement('div');
             this.basketIcon = document.createElement('i');
             this.basketIcon.className = 'bi bi-cart4';
             this.basketIcon.addEventListener('click', event => this.openBasket(event));
-            this.basket.appendChild(this.basketIcon);
-            this.html = this.basket;
+            this.basketContainer.appendChild(this.basketIcon);
+            this.html = this.basketContainer;
         }
 
 
