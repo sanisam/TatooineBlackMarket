@@ -83,7 +83,7 @@ export default class ShowBasket extends Shadow () {
 
     async fetchBasket(data) {
         const response = await fetch('/Umbraco/Api/Basket/GetBasketDetails',{
-            method: 'GET',
+            method: 'POST',
             mode: 'cors',
             cache: 'no-cache',
             credentials: 'same-origin', 

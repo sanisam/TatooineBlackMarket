@@ -25,7 +25,7 @@ namespace Dit.Umb9.Mutobo.ToolBox.ApiControllers
         }
 
         [HttpPost]
-        public  Basket GetBasketBasketDetails(IEnumerable<Product> products)
+        public  Basket GetBasketDetails(IEnumerable<Product> products)
         {
             IUmbracoContext ctx = null;
 
