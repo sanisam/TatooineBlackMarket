@@ -1,4 +1,5 @@
 using System;
+using Dit.Umb9.Mutobo.ToolBox.Shop;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpOverrides;
@@ -8,6 +9,7 @@ using Microsoft.Extensions.Hosting;
 using Umbraco.Cms.Core.DependencyInjection;
 using Umbraco.Extensions;
 using WebMarkupMin.AspNetCore5;
+using Microsoft.EntityFrameworkCore;
 
 namespace Dit.Umb9.Mutobo.Web
 {
@@ -41,8 +43,10 @@ namespace Dit.Umb9.Mutobo.Web
         /// </remarks>
         public void ConfigureServices(IServiceCollection services)
         {
+       
 
-
+            services.AddDbContext<ShopContext>(options =>
+              options.UseSqlServer(_config.GetConnectionString("shop")));
             if (_config.GetValue<bool>("Dit.UseAzureBlobStorage")) {
 #pragma warning disable IDE0022 // Use expression body for methods
                 services.AddUmbraco(_env, _config)

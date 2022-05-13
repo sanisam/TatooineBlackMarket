@@ -6,10 +6,7 @@ using System.Threading.Tasks;
 
 namespace Dit.Umb9.Mutobo.ToolBox.Models.PoCo
 {
-    public class Basket
+    public class Member
     {
-        public Guid BasketId { get; set; }
-        public IEnumerable<Product> Products  { get; set; }
-        public double TotalPrice { get; set; }
     }
 }

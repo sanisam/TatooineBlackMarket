@@ -25,7 +25,7 @@ namespace Dit.Umb9.Mutobo.ToolBox.ApiControllers
         }
 
         [HttpPost]
-        public Basket GetBasket(IEnumerable<Product> products)
+        public  Basket GetBasketBasketDetails(IEnumerable<Product> products)
         {
             IUmbracoContext ctx = null;
 
@@ -50,5 +50,22 @@ namespace Dit.Umb9.Mutobo.ToolBox.ApiControllers
             return null;
 
         }
+
+
+        //[HttpGet]
+        //public Basket GetBasket(Guid id)
+        //{ 
+            
+        
+        //}
+
+
+        //[HttpPost]
+        //public void PersistBasket()
+        //{ 
+        
+        //}
+
+
     }
 }

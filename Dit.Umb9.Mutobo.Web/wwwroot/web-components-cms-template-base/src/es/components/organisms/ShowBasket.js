@@ -82,7 +82,7 @@ export default class ShowBasket extends Shadow () {
     }
 
     async fetchBasket(data) {
-        const response = await fetch('/Umbraco/Api/Basket/GetBasket',{
+        const response = await fetch('/Umbraco/Api/Basket/GetBasketDetails',{
             method: 'POST',
             mode: 'cors',
             cache: 'no-cache',
@@ -92,7 +92,7 @@ export default class ShowBasket extends Shadow () {
             },
             redirect: 'follow',
             referrerPolicy: 'no-referrer', 
-            body: JSON.stringify(data)
+
         });
 
         return response.json();
